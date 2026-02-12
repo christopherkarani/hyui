@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11",
+    "capture_method": "Playwright computed styles"
+  },
+  "tokens": {
+    "text": {
+      "text.primary.dark": "rgb(255, 255, 255)",
+      "text.primary.light": "rgb(0, 0, 0)",
+      "text.muted.dark.50": "rgba(255, 255, 255, 0.5)",
+      "text.muted.dark.61": "rgba(255, 255, 255, 0.61)",
+      "text.muted.dark.87": "rgba(255, 255, 255, 0.87)",
+      "text.muted.light.50": "rgba(0, 0, 0, 0.5)",
+      "text.muted.light.60": "rgba(0, 0, 0, 0.6)",
+      "text.muted.light.30": "rgba(0, 0, 0, 0.3)",
+      "text.success": "rgb(73, 222, 128)",
+      "text.info": "rgb(33, 149, 255)",
+      "text.warning": "rgb(246, 182, 21)",
+      "text.subtle.gray": "rgb(138, 143, 152)",
+      "text.subtle.gray2": "rgb(150, 150, 150)"
+    },
+    "background": {
+      "bg.hero": "rgb(0, 0, 0)",
+      "bg.canvas.dark": "rgb(15, 14, 13)",
+      "bg.surface.light": "rgb(254, 252, 251)",
+      "bg.surface.white": "rgb(255, 255, 255)",
+      "bg.glass.white.05": "rgba(255, 255, 255, 0.05)",
+      "bg.glass.white.07": "rgba(255, 255, 255, 0.07)",
+      "bg.glass.white.10": "rgba(255, 255, 255, 0.1)",
+      "bg.glass.black.20": "rgba(0, 0, 0, 0.2)",
+      "bg.brand.orange": "rgb(254, 44, 2)",
+      "bg.trust.green.50": "rgba(185, 248, 209, 0.5)"
+    },
+    "gradient": {
+      "gradient.page.darkToNearBlack": "linear-gradient(rgb(0, 0, 0) 0%, rgb(15, 14, 13) 8%)",
+      "gradient.hero.vignette": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)"
+    }
+  },
+  "notes": [
+    "Measured from computed styles at 1920x1080 with targeted mobile verification at 390x844.",
+    "Layout/responsiveness was validated across all required viewports in breakpoints/component artifacts.",
+    "Data-URI icon fills were excluded from reusable tokens.",
+    "Anchor text often inherits UA link color in computed style snapshots; clone should override visited/active styles explicitly."
+  ],
+  "evidence": {
+    "screenshots": [
+      "output/playwright/screenshots/full-1920x1080.png",
+      "output/playwright/screenshots/full-1440x900.png",
+      "output/playwright/screenshots/full-1200x900.png",
+      "output/playwright/screenshots/full-1024x768.png",
+      "output/playwright/screenshots/full-810x1080.png",
+      "output/playwright/screenshots/full-390x844.png"
+    ]
+  }
+}

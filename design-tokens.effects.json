@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11"
+  },
+  "radius": {
+    "radius.none": "0px",
+    "radius.pill": "9999px",
+    "radius.pill.alt": "1000px",
+    "radius.sm": "4px",
+    "radius.md": "6px",
+    "radius.lg": "8px",
+    "radius.xl": "12px",
+    "radius.card": "16px",
+    "radius.panel.top": "12px 12px 0px 0px",
+    "radius.panel.bottom": "0px 0px 12px 12px"
+  },
+  "shadow": {
+    "shadow.none": "none",
+    "shadow.brand.glow": "rgba(247, 107, 21, 0.5) 0px 0px 4px 0px",
+    "shadow.panel.outer": "rgba(0, 0, 0, 0.7) 0px 12px 32px -16px, rgba(0, 0, 0, 0.7) 0px 12px 60px 0px, rgba(255, 255, 255, 0.15) 0px 0px 0px 1px",
+    "shadow.panel.inner": "rgba(255, 255, 255, 0.1) 0px 0px 0px 0.508775px inset, rgba(0, 0, 0, 0.19) 0px 10.8539px 24.4212px -13.5673px",
+    "shadow.surface.soft": "rgba(0, 0, 0, 0.1) 0px 4px 16px -8px, rgba(0, 0, 0, 0.1) 0px 3px 12px -4px, rgba(0, 0, 0, 0.06) 0px 2px 3px -2px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"
+  },
+  "blur": {
+    "blur.backdrop.heroCta": "blur(40px)",
+    "blur.backdrop.panel": "blur(10.7561px)",
+    "blur.backdrop.insights": "blur(20px)",
+    "blur.backdrop.footer": "blur(30px)",
+    "blur.backdrop.inline": "blur(6px)"
+  },
+  "opacity": {
+    "opacity.base": "1",
+    "opacity.dim.80": "0.8",
+    "opacity.dim.50": "0.5",
+    "opacity.dim.30": "0.3",
+    "opacity.track.10": "0.1"
+  },
+  "border": {
+    "border.none": "0px none",
+    "border.subtle": "1px solid rgba(0, 0, 0, 0.1)",
+    "border.light": "1px solid rgba(255, 255, 255, 0.15)"
+  }
+}

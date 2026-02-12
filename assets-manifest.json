@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11",
+    "capture_files": [
+      "output/playwright/raw/network-requests.txt",
+      "output/playwright/screenshots/full-1920x1080.png",
+      "output/playwright/screenshots/full-1440x900.png",
+      "output/playwright/screenshots/full-1200x900.png",
+      "output/playwright/screenshots/full-1024x768.png",
+      "output/playwright/screenshots/full-810x1080.png",
+      "output/playwright/screenshots/full-390x844.png"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://framerusercontent.com/images/x1ioW6hoCO0EWJfApnLyqDWxrs.png?scale-down-to=2048&width=6740&height=3332",
+      "usage": "hero background",
+      "rendered_size_1920": "1920x1080",
+      "intrinsic_sample": "1919x948",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/KwSrFTdjUqgh9N8xwlxRBf7qic.png?scale-down-to=2048&width=2640&height=2352",
+      "usage": "agent canvas visual",
+      "rendered_size_1920": "1007.92x731",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/nw1nKNo2mCT3T2ZcAZEbjhzyzIE.png?scale-down-to=1024&width=2736&height=2166",
+      "usage": "insights visual",
+      "rendered_size_1920": "1007.92x702",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/CMSehIg25fZdZaxossQ9pXfXTI.jpg?scale-down-to=4096&width=8192&height=5464",
+      "usage": "customer spotlight card image",
+      "rendered_size_1920": "824.73x552",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/4n345Z2FuAud4fhrJ7Q4FtE5eY.png?width=1322&height=1324",
+      "usage": "voice video poster",
+      "rendered_size_1920": "1007.92x702",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/xbL0ByCm4W8HOXdS9Ky1Em7fMM.png?width=400&height=400",
+      "usage": "avatar",
+      "rendered_size_1920": "48x48",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/ef52GnaQAtuckMwaG3YVm6rNbkQ.png?width=400&height=400",
+      "usage": "avatar",
+      "rendered_size_1920": "48x48",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/p38PV0KbYkrzgJhkEqCyASSOITM.png?width=400&height=400",
+      "usage": "avatar",
+      "rendered_size_1920": "48x48",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/LaQ6HFt6vou1m4B0lxuFvMrjejI.png?width=96&height=96",
+      "usage": "ui icon (panel control)",
+      "rendered_size_1920": "24x24",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/0Tlkpcg0rCJ2VfQzeU83Y6rpg.webp?width=416&height=416",
+      "usage": "spotlight avatar",
+      "rendered_size_1920": "50x50",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png?width=256&height=256",
+      "usage": "favicon/app icon",
+      "rendered_size_1920": "n/a",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/6DMMmv1qq90IndBZJRLHvvJHmE.png",
+      "usage": "site logo/brand image asset",
+      "rendered_size_1920": "n/a",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/6Z4Aldc9q0azIZt1y8QikyWbVis.png?width=80&height=80",
+      "usage": "small iconographic image",
+      "rendered_size_1920": "n/a",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/images/iCYwviY1oz4DvLeRAVJwyI0RT0.png?scale-down-to=1024&width=2640&height=2352",
+      "usage": "section media variant (responsive source)",
+      "rendered_size_1920": "responsive variant",
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://i.ytimg.com/vi_webp/Ct095PlZF3M/sddefault.webp",
+      "usage": "youtube preview",
+      "license_risk": "third-party-youtube"
+    }
+  ],
+  "videos": [
+    {
+      "url": "https://framerusercontent.com/assets/lt3r9RT6cCKh8i9Cy7jtB8i2HI.mp4",
+      "usage": "voice experience section media",
+      "rendered_size_1920": "1007.92x702",
+      "loop": true,
+      "muted": true,
+      "autoplay": false,
+      "license_risk": "unknown-proprietary"
+    },
+    {
+      "url": "https://framerusercontent.com/assets/chRFmBq9ayObGUcObGO5vqKAVQ.mp4",
+      "usage": "footer/background motion layer",
+      "rendered_size_1920": "1920x1028",
+      "loop": true,
+      "muted": true,
+      "autoplay": false,
+      "license_risk": "unknown-proprietary"
+    }
+  ],
+  "fonts": [
+    {
+      "family": "Emilio Light",
+      "src": "https://framerusercontent.com/assets/5gyh90sizT7zuGcWB8UHjZXd3c.woff",
+      "usage": "hero and large section headings",
+      "license_risk": "likely-commercial",
+      "fallback": "\"Playfair Display\", \"Instrument Serif\", serif"
+    },
+    {
+      "family": "Giga Sans Display Trial 400",
+      "src": "https://framerusercontent.com/assets/zbcP3gqwgWZKzR2nnO3wxT9uTVw.woff2",
+      "usage": "product display labels",
+      "license_risk": "trial-proprietary",
+      "fallback": "\"Inter Display\", Inter, sans-serif"
+    },
+    {
+      "family": "Inter",
+      "src": "https://framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2",
+      "usage": "body and button text",
+      "license_risk": "depends-on-license",
+      "fallback": "Inter, \"Segoe UI\", system-ui, sans-serif"
+    },
+    {
+      "family": "Inter Display",
+      "src": "https://framerusercontent.com/assets/iwWTDc49ENF2tCHbqlNARXw6Ug.woff2",
+      "usage": "medium emphasis text",
+      "license_risk": "depends-on-license",
+      "fallback": "Inter, \"Segoe UI\", system-ui, sans-serif"
+    },
+    {
+      "family": "Geist Mono",
+      "src": "https://fonts.gstatic.com/s/geistmono/v4/or3nQ6H-1_WfwkMZI_qYFrcdmg.woff2",
+      "usage": "eyebrow labels",
+      "license_risk": "google-font-license",
+      "fallback": "\"JetBrains Mono\", \"IBM Plex Mono\", monospace"
+    },
+    {
+      "family": "Giga Sans Display Trial 500",
+      "src": "https://framerusercontent.com/assets/O6d3iSZK1sGU0jru1j7OxFwhRw.woff2",
+      "usage": "display medium weight",
+      "license_risk": "trial-proprietary",
+      "fallback": "\"Inter Display\", Inter, sans-serif"
+    },
+    {
+      "family": "Giga Sans Text Trial 500",
+      "src": "https://framerusercontent.com/assets/YgLnYiTfRKd8uvNEalADQAFa3Q.woff2",
+      "usage": "body medium weight",
+      "license_risk": "trial-proprietary",
+      "fallback": "Inter, \"Segoe UI\", system-ui, sans-serif"
+    },
+    {
+      "family": "Giga Sans Text Trial 400",
+      "src": "https://framerusercontent.com/assets/zmRPZZSMbAJ3pU8ZNqgdZvuDxA.woff2",
+      "usage": "body regular weight",
+      "license_risk": "trial-proprietary",
+      "fallback": "Inter, \"Segoe UI\", system-ui, sans-serif"
+    },
+    {
+      "family": "Inter Display (alt file)",
+      "src": "https://framerusercontent.com/assets/bHYNJqzTyl2lqvmMiRRS6Y16Es.woff2",
+      "usage": "display fallback variant",
+      "license_risk": "depends-on-license",
+      "fallback": "Inter, \"Segoe UI\", system-ui, sans-serif"
+    },
+    {
+      "family": "Inter (alt file)",
+      "src": "https://framerusercontent.com/assets/UjlFhCnUjxhNfep4oYBPqnEssyo.woff2",
+      "usage": "body fallback variant",
+      "license_risk": "depends-on-license",
+      "fallback": "Inter, \"Segoe UI\", system-ui, sans-serif"
+    },
+    {
+      "family": "Inter (alt file)",
+      "src": "https://framerusercontent.com/assets/aqiiD4LUKkKzXdjGL5UzHq8bo5w.woff2",
+      "usage": "body fallback variant",
+      "license_risk": "depends-on-license",
+      "fallback": "Inter, \"Segoe UI\", system-ui, sans-serif"
+    }
+  ],
+  "icons_and_svg": {
+    "delivery": "mostly inline SVG and data-URI glyphs",
+    "strategy": "rebuild with open-source icon set + custom SVG drawings to avoid copying proprietary vectors"
+  },
+  "excluded_tracking_assets": [
+    "Google Tag Manager / Analytics",
+    "LinkedIn Insight",
+    "Twitter UWT",
+    "HubSpot scripts",
+    "ZoomInfo pixel"
+  ],
+  "legal_safe_clone_guidance": [
+    "Do not copy framerusercontent media binaries directly into a production clone without asset rights.",
+    "Replace Emilio/Giga trial font families with licensed or open-source alternatives unless explicit license is obtained.",
+    "Recreate SVG icons and decorative vectors from scratch.",
+    "Do not include analytics/marketing trackers from target site in clone baseline."
+  ]
+}

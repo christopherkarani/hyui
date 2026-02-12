@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11",
+    "method": "Web Animations API + computed transition properties"
+  },
+  "page_enter": {
+    "duration": "400ms",
+    "easing": "cubic-bezier(0.01, 0.55, 0.39, 1)",
+    "fill_mode": "both",
+    "delay_variants": [
+      "0ms",
+      "50ms",
+      "100ms",
+      "1000ms"
+    ],
+    "observed_targets": [
+      "a.framer-1fargiu",
+      "svg#0",
+      "div.framer-6azb3",
+      "div#button-1",
+      "div.framer-1cj4qmz-container",
+      "div.framer-13y0fp4",
+      "div.framer-1wfjid4"
+    ]
+  },
+  "component_transitions": {
+    "links.global": {
+      "property": "color",
+      "duration": "0.3s",
+      "timing": "cubic-bezier(0.44, 0, 0.56, 1)",
+      "delay": "0s"
+    },
+    "most_cta_surfaces": {
+      "property": "all",
+      "duration": "0s",
+      "timing": "ease",
+      "delay": "0s"
+    }
+  },
+  "interaction_state_deltas": {
+    "cta.contact": {
+      "default": "background rgb(255,255,255)",
+      "hover": "background rgba(50,50,50,0.616)",
+      "focus": "background rgba(0,0,0,0.592) + outline auto 1px",
+      "active": "background rgba(0,0,0,0.596) + outline auto 1px"
+    },
+    "cta.explore": {
+      "default": "background rgba(255,255,255,0.05)",
+      "hover": {
+        "agent_canvas_and_voice": "background rgba(255,255,255,0.098)",
+        "smart_insights": "background rgba(255,255,255,0.094)"
+      },
+      "focus": {
+        "agent_canvas_and_voice": "background rgba(255,255,255,0.1) + outline auto 1px",
+        "smart_insights": "background rgba(255,255,255,0.094) + outline auto 1px"
+      },
+      "active": "background rgba(255,255,255,0.1) + outline auto 1px"
+    },
+    "nav.signin": {
+      "default": "background transparent",
+      "hover": "background rgba(0,0,0,0.286)",
+      "focus": "background rgba(0,0,0,0.306) + outline auto 1px",
+      "active": "background rgba(0,0,0,0.3) + outline auto 1px"
+    },
+    "disabled": "No meaningful custom disabled styles detected on interactive anchors"
+  },
+  "notes": [
+    "Framer orchestration drives staged reveal sequencing on initial load.",
+    "State values measured on anchor surfaces at 1920x1080 (top nav sign-in + hero/product CTAs).",
+    "Focus state retains browser outline (auto 1px) across sampled interactive anchors."
+  ]
+}

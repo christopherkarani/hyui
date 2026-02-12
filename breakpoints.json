@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11",
+    "framer_breakpoint_hashes": {
+      "119qab9": "(min-width: 1200px)",
+      "grp9jf": "(min-width: 810px) and (max-width: 1199.98px)",
+      "4i2zcu": "(max-width: 809.98px)"
+    }
+  },
+  "breakpoints": [
+    {
+      "name": "desktop",
+      "min_width": 1200,
+      "max_width": null
+    },
+    {
+      "name": "tablet",
+      "min_width": 810,
+      "max_width": 1199.98
+    },
+    {
+      "name": "mobile",
+      "min_width": 0,
+      "max_width": 809.98
+    }
+  ],
+  "viewport_measurements": {
+    "1920x1080": {
+      "hero": { "height": 1080, "width": 1920 },
+      "product_stack": { "height": 3693.8, "padding": "20px", "gap": "160px" },
+      "spotlight": { "height": 954.8, "padding": "100px 20px 40px" },
+      "demo_cta": { "height": 403, "padding": "48px 0px 0px" },
+      "top_nav": { "visible": true, "height": 54 }
+    },
+    "1440x900": {
+      "hero": { "height": 900, "width": 1440 },
+      "product_stack": { "height": 3693.8, "padding": "20px", "gap": "160px" },
+      "spotlight": { "height": 954.8, "padding": "100px 20px 40px" },
+      "demo_cta": { "height": 403, "padding": "48px 0px 0px" },
+      "top_nav": { "visible": true, "height": 54 }
+    },
+    "1200x900": {
+      "hero": { "height": 900, "width": 1200 },
+      "product_stack": { "height": 3693.8, "padding": "20px", "gap": "160px" },
+      "spotlight": { "height": 954.8, "padding": "100px 20px 40px" },
+      "demo_cta": { "height": 403, "padding": "48px 0px 0px" },
+      "top_nav": { "visible": true, "height": 54 }
+    },
+    "1024x768": {
+      "hero": { "height": 800, "width": 1024 },
+      "product_stack": { "height": 3331, "padding": "20px", "gap": "67px" },
+      "spotlight": { "height": 954.796875, "padding": "100px 20px 40px" },
+      "demo_cta": { "height": 424, "padding": "48px 0px 0px" },
+      "top_nav": { "visible": true, "height": 54 }
+    },
+    "810x1080": {
+      "hero": { "height": 1080, "width": 810 },
+      "product_stack": { "height": 3334, "padding": "20px", "gap": "67px" },
+      "spotlight": { "height": 1015.796875, "padding": "100px 20px 40px" },
+      "demo_cta": { "height": 445, "padding": "48px 0px 0px" },
+      "top_nav": { "visible": true, "height": 54 }
+    },
+    "390x844": {
+      "hero": { "height": 1000, "width": 390 },
+      "product_stack": { "height": 5719, "padding": "20px 0px 60px 0px", "gap": "80px" },
+      "spotlight": { "height": 1350.8046875, "padding": "60px 0px 40px" },
+      "demo_cta": { "height": 486, "padding": "0px 20px 0px" },
+      "top_nav": { "visible": false, "replacement": "logo-only top link inside hero" }
+    }
+  },
+  "behavior_map": [
+    "Desktop (>=1200): hero scales with viewport height; product stack uses wide 160px vertical rhythm.",
+    "Tablet (810-1199.98): section widths collapse; product gap drops to 67px; hero text shifts to compact scale.",
+    "Mobile (<=809.98): nav container variant is removed; product stack becomes single-column with 80px spacing and zero horizontal padding; spotlight and CTA gain mobile-specific heights/padding."
+  ]
+}

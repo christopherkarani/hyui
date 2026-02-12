@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11"
+  },
+  "primitives": {
+    "space.0": "0px",
+    "space.3": "12px",
+    "space.4": "16px",
+    "space.5": "20px",
+    "space.6": "24px",
+    "space.10": "40px",
+    "space.12": "48px",
+    "space.15": "60px",
+    "space.17": "67px",
+    "space.20": "80px",
+    "space.25": "100px",
+    "space.40": "160px"
+  },
+  "section_spacing": {
+    "hero": {
+      "padding": "0px",
+      "gap": "normal"
+    },
+    "product_stack": {
+      "desktop": {
+        "padding": "20px",
+        "row_gap": "160px",
+        "column_gap": "160px"
+      },
+      "tablet": {
+        "padding": "20px",
+        "row_gap": "67px",
+        "column_gap": "67px"
+      },
+      "mobile": {
+        "padding": "20px 0px 60px 0px",
+        "row_gap": "80px",
+        "column_gap": "80px"
+      }
+    },
+    "spotlight": {
+      "desktop_tablet": {
+        "padding": "100px 20px 40px",
+        "row_gap": "160px",
+        "column_gap": "160px"
+      },
+      "mobile": {
+        "padding": "60px 0px 40px",
+        "row_gap": "160px",
+        "column_gap": "160px"
+      }
+    },
+    "demo_cta": {
+      "desktop_tablet": {
+        "padding": "48px 0px 0px",
+        "row_gap": "60px",
+        "column_gap": "60px"
+      },
+      "mobile": {
+        "padding": "0px 20px 0px",
+        "row_gap": "60px",
+        "column_gap": "60px"
+      }
+    }
+  },
+  "component_spacing": {
+    "button.pill.primary": "9px 20px",
+    "button.pill.alt": "10px 0px",
+    "card.header": "24px",
+    "panel.edge": "24px 24px 24px 0px",
+    "micro_gap.default": "8px",
+    "grid_kpi": "24px / 24px",
+    "stack_large": "60px / 60px"
+  },
+  "layout_patterns": {
+    "pattern.section.vertical": "display:flex; flex-direction:column; justify-content:flex-start; align-items:center",
+    "pattern.cta.pill": "display:flex; flex-direction:row; justify-content:center; align-items:center",
+    "pattern.content.two_column": "display:flex; flex-direction:row; justify-content:flex-start; align-items:flex-start"
+  }
+}
