@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-02-12T02:52:00.000Z",
+  "status": "blocked",
+  "reason": "No local runnable app found in greenfield repository",
+  "attempted_commands": [
+    {
+      "command": "npm run dev",
+      "exit_code": 1,
+      "error": "npm error Missing script: \"dev\""
+    },
+    {
+      "command": "npm run",
+      "exit_code": 0,
+      "output": "No scripts returned"
+    }
+  ],
+  "package_json": "missing",
+  "captured_viewports": []
+}

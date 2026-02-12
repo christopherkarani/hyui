@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11",
+    "normalized_at": "2026-02-12T02:51:06.416Z",
+    "timezone": "Africa/Nairobi",
+    "requirement": "Every token includes source selector + viewport."
+  },
+  "tokens": [
+    {
+      "token": "space.0",
+      "value": "0px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.3",
+      "value": "12px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.4",
+      "value": "16px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.5",
+      "value": "20px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.6",
+      "value": "24px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.10",
+      "value": "40px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.12",
+      "value": "48px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.15",
+      "value": "60px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.17",
+      "value": "67px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.20",
+      "value": "80px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.25",
+      "value": "100px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "space.40",
+      "value": "160px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "section.hero",
+      "value": {
+        "padding": "0px",
+        "gap": "normal"
+      },
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1ug9l4m",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "section.product_stack",
+      "value": {
+        "desktop": {
+          "padding": "20px",
+          "row_gap": "160px",
+          "column_gap": "160px"
+        },
+        "tablet": {
+          "padding": "20px",
+          "row_gap": "67px",
+          "column_gap": "67px"
+        },
+        "mobile": {
+          "padding": "20px 0px 60px 0px",
+          "row_gap": "80px",
+          "column_gap": "80px"
+        }
+      },
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-390x844"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "section.spotlight",
+      "value": {
+        "desktop_tablet": {
+          "padding": "100px 20px 40px",
+          "row_gap": "160px",
+          "column_gap": "160px"
+        },
+        "mobile": {
+          "padding": "60px 0px 40px",
+          "row_gap": "160px",
+          "column_gap": "160px"
+        }
+      },
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "section.demo_cta",
+      "value": {
+        "desktop_tablet": {
+          "padding": "48px 0px 0px",
+          "row_gap": "60px",
+          "column_gap": "60px"
+        },
+        "mobile": {
+          "padding": "0px 20px 0px",
+          "row_gap": "60px",
+          "column_gap": "60px"
+        }
+      },
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-kuopsy",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "component.button.pill.primary",
+      "value": "9px 20px",
+      "source": {
+        "selector": "[data-framer-name=\"Main CTA\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "component.button.pill.alt",
+      "value": "10px 0px",
+      "source": {
+        "selector": "[data-framer-name=\"Main CTA\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "component.card.header",
+      "value": "24px",
+      "source": {
+        "selector": "[data-framer-name=\"Agent Canvas\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "component.panel.edge",
+      "value": "24px 24px 24px 0px",
+      "source": {
+        "selector": "[data-framer-name=\"Agent Canvas\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "component.micro_gap.default",
+      "value": "8px",
+      "source": {
+        "selector": "[data-framer-name=\"Agent Canvas\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "component.grid_kpi",
+      "value": "24px / 24px",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4 > div.framer-1iialbr",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "component.stack_large",
+      "value": "60px / 60px",
+      "source": {
+        "selector": "[data-framer-name=\"Agent Canvas\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    }
+  ],
+  "layout_patterns": {
+    "pattern.section.vertical": "display:flex; flex-direction:column; justify-content:flex-start; align-items:center",
+    "pattern.cta.pill": "display:flex; flex-direction:row; justify-content:center; align-items:center",
+    "pattern.content.two_column": "display:flex; flex-direction:row; justify-content:flex-start; align-items:flex-start"
+  }
+}

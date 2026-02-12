@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11",
+    "normalized_at": "2026-02-12T02:51:06.416Z",
+    "timezone": "Africa/Nairobi",
+    "requirement": "Every token includes source selector + viewport.",
+    "re_reviewed_at": "2026-02-12T03:05:07.326Z",
+    "re_review_notes": [
+      "Selector resolvability checked live against giga.ai.",
+      "Non-resolvable selectors downgraded and disambiguated with source.match_text/source.state."
+    ]
+  },
+  "tokens": [
+    {
+      "token": "text.primary.dark",
+      "category": "text",
+      "value": "rgb(255, 255, 255)",
+      "source": {
+        "selector": "[data-framer-name=\"Hero\"] h1",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.primary.light",
+      "category": "text",
+      "value": "rgb(0, 0, 0)",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.muted.dark.50",
+      "category": "text",
+      "value": "rgba(255, 255, 255, 0.5)",
+      "source": {
+        "selector": "[data-framer-name=\"Voice Experience\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.muted.dark.61",
+      "category": "text",
+      "value": "rgba(255, 255, 255, 0.61)",
+      "source": {
+        "selector": "[data-framer-name=\"Insights\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.muted.dark.87",
+      "category": "text",
+      "value": "rgba(255, 255, 255, 0.87)",
+      "source": {
+        "selector": "[data-framer-name=\"Agent Canvas\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.muted.light.50",
+      "category": "text",
+      "value": "rgba(0, 0, 0, 0.5)",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.muted.light.60",
+      "category": "text",
+      "value": "rgba(0, 0, 0, 0.6)",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-kuopsy",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.muted.light.30",
+      "category": "text",
+      "value": "rgba(0, 0, 0, 0.3)",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1j0lk2w-container",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.success",
+      "category": "text",
+      "value": "rgb(73, 222, 128)",
+      "source": {
+        "selector": "[data-framer-name=\"Available-2\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.info",
+      "category": "text",
+      "value": "rgb(33, 149, 255)",
+      "source": {
+        "selector": "p.framer-text",
+        "match_text": "Policy Modification",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "text.warning",
+      "category": "text",
+      "value": "rgb(246, 182, 21)",
+      "source": {
+        "selector": "p.framer-text",
+        "match_text": "Knowledge Gap",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "text.subtle.gray",
+      "category": "text",
+      "value": "rgb(138, 143, 152)",
+      "source": {
+        "selector": "[data-framer-name=\"Voice Experience\"]",
+        "viewport": "vp-390x844"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "text.subtle.gray2",
+      "category": "text",
+      "value": "rgb(150, 150, 150)",
+      "source": {
+        "selector": "[data-framer-name=\"Insights\"]",
+        "viewport": "vp-390x844"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "bg.hero",
+      "category": "background",
+      "value": "rgb(0, 0, 0)",
+      "source": {
+        "selector": "[data-framer-name=\"Hero\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "bg.canvas.dark",
+      "category": "background",
+      "value": "rgb(15, 14, 13)",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "bg.surface.light",
+      "category": "background",
+      "value": "rgb(254, 252, 251)",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "bg.surface.white",
+      "category": "background",
+      "value": "rgb(255, 255, 255)",
+      "source": {
+        "selector": "[data-framer-name=\"Main CTA\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "bg.glass.white.05",
+      "category": "background",
+      "value": "rgba(255, 255, 255, 0.05)",
+      "source": {
+        "selector": "a[href=\"./agent-canvas\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "bg.glass.white.07",
+      "category": "background",
+      "value": "rgba(255, 255, 255, 0.07)",
+      "source": {
+        "selector": "[data-framer-name=\"Voice Experience\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "bg.glass.white.10",
+      "category": "background",
+      "value": "rgba(255, 255, 255, 0.1)",
+      "source": {
+        "selector": "a[href=\"./insights\"]",
+        "state": "hover",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "bg.glass.black.20",
+      "category": "background",
+      "value": "rgba(0, 0, 0, 0.2)",
+      "source": {
+        "selector": "[data-framer-name=\"Hero\"] [data-framer-name=\"Desktop\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "bg.brand.orange",
+      "category": "background",
+      "value": "rgb(254, 44, 2)",
+      "source": {
+        "selector": "a[href=\"./doordash\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "bg.trust.green.50",
+      "category": "background",
+      "value": "rgba(185, 248, 209, 0.5)",
+      "source": {
+        "selector": "a[href=\"https://trust.giga.ai/\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "gradient.page.darkToNearBlack",
+      "category": "gradient",
+      "value": "linear-gradient(rgb(0, 0, 0) 0%, rgb(15, 14, 13) 8%)",
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "gradient.hero.vignette",
+      "category": "gradient",
+      "value": "linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
+      "source": {
+        "selector": "[data-framer-name=\"Degrade / Mask\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    }
+  ],
+  "notes": [
+    "Measured from computed styles at 1920x1080 with targeted mobile verification at 390x844.",
+    "Layout/responsiveness was validated across all required viewports in breakpoints/component artifacts.",
+    "Data-URI icon fills were excluded from reusable tokens.",
+    "Anchor text often inherits UA link color in computed style snapshots; clone should override visited/active styles explicitly."
+  ],
+  "evidence": {
+    "screenshots": [
+      "output/playwright/screenshots/full-1920x1080.png",
+      "output/playwright/screenshots/full-1440x900.png",
+      "output/playwright/screenshots/full-1200x900.png",
+      "output/playwright/screenshots/full-1024x768.png",
+      "output/playwright/screenshots/full-810x1080.png",
+      "output/playwright/screenshots/full-390x844.png"
+    ]
+  }
+}

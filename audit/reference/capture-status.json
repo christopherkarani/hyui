@@ -1,0 +1,165 @@
+{
+  "generated_at": "2026-02-12T03:57:19Z",
+  "timezone": "EAT (+0300)",
+  "viewports": [
+    {
+      "viewport": "vp-1920x1080",
+      "full": true,
+      "sections": {
+        "header-nav": true,
+        "hero": true,
+        "social-proof-logos": true,
+        "feature-agent-canvas": true,
+        "feature-insights": true,
+        "feature-voice-experience": true,
+        "cards-customer-spotlight": true,
+        "cta-hero-main": true,
+        "cta-demo": true,
+        "footer": true
+      },
+      "mobileMenuOverlay": false,
+      "capture_quality": {
+        "header_nav": "true_state",
+        "mobile_menu_overlay": "not_applicable"
+      }
+    },
+    {
+      "viewport": "vp-1440x900",
+      "full": true,
+      "sections": {
+        "header-nav": true,
+        "hero": true,
+        "social-proof-logos": true,
+        "feature-agent-canvas": true,
+        "feature-insights": true,
+        "feature-voice-experience": true,
+        "cards-customer-spotlight": true,
+        "cta-hero-main": true,
+        "cta-demo": true,
+        "footer": true
+      },
+      "mobileMenuOverlay": false,
+      "capture_quality": {
+        "header_nav": "true_state",
+        "mobile_menu_overlay": "not_applicable"
+      }
+    },
+    {
+      "viewport": "vp-1200x900",
+      "full": true,
+      "sections": {
+        "header-nav": true,
+        "hero": true,
+        "social-proof-logos": true,
+        "feature-agent-canvas": true,
+        "feature-insights": true,
+        "feature-voice-experience": true,
+        "cards-customer-spotlight": true,
+        "cta-hero-main": true,
+        "cta-demo": true,
+        "footer": true
+      },
+      "mobileMenuOverlay": false,
+      "capture_quality": {
+        "header_nav": "true_state",
+        "mobile_menu_overlay": "not_applicable"
+      }
+    },
+    {
+      "viewport": "vp-1024x768",
+      "full": true,
+      "sections": {
+        "header-nav": true,
+        "hero": true,
+        "social-proof-logos": true,
+        "feature-agent-canvas": true,
+        "feature-insights": true,
+        "feature-voice-experience": true,
+        "cards-customer-spotlight": true,
+        "cta-hero-main": true,
+        "cta-demo": true,
+        "footer": true
+      },
+      "mobileMenuOverlay": false,
+      "capture_quality": {
+        "header_nav": "true_state",
+        "mobile_menu_overlay": "not_applicable"
+      },
+      "evidence_paths": {
+        "header_nav": [
+          "audit/reference/screenshots/vp-1024x768/sections/header-nav-true-state-final.png",
+          "audit/reference/screenshots/vp-1024x768/sections/header-nav-true-state-final-topclip.png"
+        ]
+      }
+    },
+    {
+      "viewport": "vp-810x1080",
+      "full": true,
+      "sections": {
+        "header-nav": true,
+        "hero": true,
+        "social-proof-logos": true,
+        "feature-agent-canvas": true,
+        "feature-insights": true,
+        "feature-voice-experience": true,
+        "cards-customer-spotlight": true,
+        "cta-hero-main": true,
+        "cta-demo": true,
+        "footer": true
+      },
+      "mobileMenuOverlay": false,
+      "capture_quality": {
+        "header_nav": "true_state",
+        "mobile_menu_overlay": "not_applicable_confirmed_no_trigger"
+      },
+      "evidence_paths": {
+        "header_nav": [
+          "audit/reference/screenshots/vp-810x1080/sections/header-nav-true-state-rerun.png",
+          "audit/reference/screenshots/vp-810x1080/sections/header-nav-true-state-final-topclip.png"
+        ],
+        "mobile_menu_overlay": [
+          "audit/reference/screenshots/vp-810x1080/sections/mobile-menu-overlay-true-state-final-not-applicable.png"
+        ]
+      }
+    },
+    {
+      "viewport": "vp-390x844",
+      "full": true,
+      "sections": {
+        "header-nav": true,
+        "hero": true,
+        "social-proof-logos": true,
+        "feature-agent-canvas": true,
+        "feature-insights": true,
+        "feature-voice-experience": true,
+        "cards-customer-spotlight": true,
+        "cta-hero-main": true,
+        "cta-demo": true,
+        "footer": true
+      },
+      "mobileMenuOverlay": true,
+      "capture_quality": {
+        "header_nav": "true_state_partial_logo_plus_topclip",
+        "mobile_menu_overlay": "true_state_opened_via_coordinate_click"
+      },
+      "evidence_paths": {
+        "header_nav": [
+          "audit/reference/screenshots/vp-390x844/sections/header-nav-true-state-rerun.png",
+          "audit/reference/screenshots/vp-390x844/sections/header-nav-true-state-final-topclip.png"
+        ],
+        "mobile_menu_overlay": [
+          "audit/reference/screenshots/vp-390x844/sections/mobile-menu-overlay-true-state-final-open.png"
+        ]
+      }
+    }
+  ],
+  "re_reviewed_at": "2026-02-12T03:57:19Z",
+  "notes": [
+    "true_state = target element-state explicitly located before capture.",
+    "true_state_opened_via_coordinate_click = overlay state confirmed after deterministic top-right click.",
+    "not_applicable_confirmed_no_trigger = overlay pattern does not exist at that breakpoint.",
+    "vp-390x844 mobile menu overlay was opened by deterministic coordinate click after confirming top-right trigger element.",
+    "vp-810x1080 contains desktop/tablet nav links (Product/Company/Sign in/Talk to us) and no mobile trigger.",
+    "vp-1024x768 header nav capture quality upgraded to true_state on 2026-02-12T03:57:19Z."
+  ]
+}

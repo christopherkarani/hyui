@@ -1,4 +1,6 @@
 # 1. Executive summary
+
+Superseded by: `audit/implementation/final-pixel-perfect-blueprint.md` (authoritative final blueprint)
 - Target audited with Playwright at required viewports: `1920x1080`, `1440x900`, `1200x900`, `1024x768`, `810x1080`, `390x844`.
 - Evidence captured: full-page screenshots, per-section screenshots (desktop + mobile), computed style snapshots, animation/timing extraction, network asset capture.
 - Required token/manifests generated:
@@ -17,6 +19,9 @@
 - Background: black base with scenic image + bottom vignette.
 - Typography: Emilio Light display headline, white; Inter white subhead; pill CTA.
 - Desktop size: `1920x1080`; mobile size: `390x1000`.
+- Giant glob rendering rule:
+  - Implement as full-bleed hero image + bottom multiply vignette mask (not a separate circle layer).
+  - Mobile crop uses `object-position: 26.8% 67%`; desktop/tablet use `50% 50%`.
 - Key components:
   - Announcement chip: `a[href="./browser-agent"]`
   - Primary CTA: `#button-1 a[href="./contact"]`
@@ -40,7 +45,7 @@
 
 ## Nav/footer behavior
 - Desktop/tablet: fixed top nav (`.framer-xujnb7-container`) present.
-- Mobile: desktop nav container absent; logo-only top link appears in hero.
+- Mobile: desktop nav container absent; hero top row shows logo + hamburger trigger, and a full-screen black overlay menu opens on trigger click.
 - Footer rendered through SSR variants; desktop and mobile differ by variant classes.
 
 # 3. Complete token tables with exact values
@@ -61,7 +66,7 @@
 - Structural changes:
   - Desktop -> tablet: product-stack gap drops from `160px` to `67px`.
   - Tablet -> mobile: product-stack grows vertically (`3334px` -> `5719px` at sampled viewports), horizontal padding collapses, CTA and spotlight heights increase.
-  - Mobile removes fixed desktop nav container.
+  - Mobile removes fixed desktop nav container and replaces it with a hamburger-triggered overlay menu; tablet keeps desktop/tablet nav.
 
 # 5. Interaction/motion spec
 - Entry animation system:
@@ -86,7 +91,9 @@
 - Proprietary/high-risk assets:
   - Framer-hosted brand media and videos on `framerusercontent.com`.
   - Trial/commercial font families (`Emilio*`, `Giga Sans*`).
-- Legal-safe fallback guidance:
+- Experimental-mode context:
+  - User approved experimentation-only use of upstream assets/fonts in this repository.
+- Production hardening guidance (deferred for experiment):
   - Replace proprietary fonts with licensed/open alternatives before shipping.
   - Rebuild SVG/icon vectors from scratch.
   - Exclude imported trackers/analytics from clone baseline.
@@ -118,6 +125,7 @@
 - Compile JSON tokens to CSS custom properties per breakpoint.
 - Separate semantic tokens from component tokens.
 - Keep motion tokens centralized; avoid inline hard-coded easing/durations.
+- Enforce spacing/padding lock: no shorthand normalization drift; any spacing delta over `0.5px` is a parity failure.
 
 ## Risk list and unknowns
 - Framer class names are obfuscated and unstable; clone must use semantic component names.
@@ -126,8 +134,8 @@
 - Hero fit-text behavior relies on dynamic scaling (not static font-size only).
 
 ## Licensing constraints
-- Do not ship cloned proprietary media/fonts without rights.
-- Use open-source replacements unless legal sign-off is obtained.
+- Experiment run: direct upstream asset/font usage is allowed by user approval.
+- If shipping later: replace proprietary assets/fonts or obtain explicit license rights.
 
 ## Effort estimate (implementation phase)
 - Hero: `1.5-2.5 days`
@@ -142,7 +150,7 @@
 - Section-level visual snapshots and per-component snapshots.
 - Computed-style assertions for key selectors/tokens.
 - Interaction snapshots for hover/focus states.
-- Asset audit checks for missing/licensed replacements.
+- Asset audit checks for missing references and production-hardening follow-ups.
 
 ## Delta audit vs local implementation
 | Expected | Actual | Delta | Severity | Fix recommendation |
@@ -150,6 +158,5 @@
 | Existing local clone implementation available for comparison | No app files found in repo (only generated audit artifacts) | Cannot compute UI diffs | High (blocked) | Implement baseline clone shell first, then re-run automated delta audit against target |
 
 # 8. Open questions/blockers
-- Confirm which proprietary assets/fonts are legally licensed for reuse.
 - Confirm whether clone should include third-party embeds (YouTube, trust badges) or mocked equivalents.
 - Confirm framework target and rendering strategy (SvelteKit/Next/etc.) before implementation.

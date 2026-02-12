@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11",
+    "normalized_at": "2026-02-12T02:51:06.416Z",
+    "timezone": "Africa/Nairobi",
+    "requirement": "Every token includes source selector + viewport.",
+    "re_reviewed_at": "2026-02-12T03:05:07.328Z",
+    "re_review_notes": [
+      "Broad selectors disambiguated with source.match_text where needed.",
+      "Ambiguous sampling tokens downgraded to medium confidence."
+    ]
+  },
+  "font_families": {
+    "font.display.hero": "\"Emilio Light\", \"Emilio Light Placeholder\", sans-serif",
+    "font.display.product": "\"Giga Sans Display Trial 400\", \"Giga Sans Display Trial 400 Placeholder\", sans-serif",
+    "font.display.product.medium": "\"Giga Sans Display Trial 500\", sans-serif",
+    "font.sans": "Inter, \"Inter Placeholder\", sans-serif",
+    "font.sans.gigaText.400": "\"Giga Sans Text Trial 400\", \"Giga Sans Text Trial 400 Placeholder\", sans-serif",
+    "font.sans.gigaText.500": "\"Giga Sans Text Trial 500\", \"Giga Sans Text Trial 500 Placeholder\", sans-serif",
+    "font.sans.display": "\"Inter Display\", \"Inter Display Placeholder\", sans-serif",
+    "font.mono": "\"Geist Mono\", monospace"
+  },
+  "tokens": [
+    {
+      "token": "type.hero.headline.desktop",
+      "value": {
+        "font_family": "font.display.hero",
+        "font_size": "81.6669px",
+        "font_weight": "300",
+        "line_height": "98.0003px",
+        "letter_spacing": "-2.45001px",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Hero\"] h1",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "type.hero.headline.tablet",
+      "value": {
+        "font_family": "font.display.hero",
+        "font_size": "48.8454px",
+        "font_weight": "300",
+        "line_height": "58.6145px",
+        "letter_spacing": "-1.46536px",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Hero\"] h1",
+        "viewport": "vp-810x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "type.hero.headline.mobile",
+      "value": {
+        "font_family": "font.display.hero",
+        "font_size": "44px",
+        "font_weight": "300",
+        "line_height": "52.8px",
+        "letter_spacing": "-1.32px",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Hero\"] h1",
+        "viewport": "vp-390x844"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "type.section.title.desktop",
+      "value": {
+        "font_family": "font.display.hero",
+        "font_size": "48px",
+        "font_weight": "400",
+        "line_height": "62.4px",
+        "letter_spacing": "-0.96px",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Agent Canvas\"] [data-framer-name=\"text\"]",
+        "viewport": "vp-1920x1080",
+        "match_text": "Built to handle complexity"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "type.section.title.compact",
+      "value": {
+        "font_family": "font.display.hero",
+        "font_size": "40px",
+        "font_weight": "400",
+        "line_height": "52px",
+        "letter_spacing": "-0.8px",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Agent Canvas\"] [data-framer-name=\"text\"]",
+        "viewport": "vp-390x844",
+        "match_text": "Built to handle complexity"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "type.kpi.metric",
+      "value": {
+        "font_family": "font.sans",
+        "font_size": "44px",
+        "font_weight": "400",
+        "line_height": "44px",
+        "letter_spacing": "-1.32px",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4 > div.framer-1iialbr",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "type.body.lg",
+      "value": {
+        "font_family": "font.sans",
+        "font_size": "16px",
+        "font_weight": "400",
+        "line_height": "28px",
+        "letter_spacing": "normal",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Hero\"] h2",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "type.body.md",
+      "value": {
+        "font_family": "font.sans",
+        "font_size": "14px",
+        "font_weight": "400",
+        "line_height": "24px",
+        "letter_spacing": "normal",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Agent Canvas\"] [data-framer-name=\"Feature item\"]",
+        "viewport": "vp-1920x1080",
+        "match_text": "Fine-tune every nuance to match your business"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "type.body.sm",
+      "value": {
+        "font_family": "font.sans",
+        "font_size": "13px",
+        "font_weight": "400",
+        "line_height": "20px",
+        "letter_spacing": "normal",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Insights\"] [data-framer-name=\"Feature item\"]",
+        "viewport": "vp-1920x1080",
+        "match_text": "Designed to help you hit KPIs"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "type.button.md",
+      "value": {
+        "font_family": "font.sans",
+        "font_size": "14px",
+        "font_weight": "400",
+        "line_height": "24px",
+        "letter_spacing": "normal",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Main CTA\"]",
+        "viewport": "vp-1920x1080"
+      },
+      "confidence": "high"
+    },
+    {
+      "token": "type.eyebrow",
+      "value": {
+        "font_family": "font.mono",
+        "font_size": "11px",
+        "font_weight": "400",
+        "line_height": "24px",
+        "letter_spacing": "0.1px",
+        "text_transform": "uppercase"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Agent Canvas\"] [data-framer-name=\"text\"]",
+        "viewport": "vp-1920x1080",
+        "match_text": "CUSTOM AGENTS"
+      },
+      "confidence": "medium"
+    },
+    {
+      "token": "type.mono.meta",
+      "value": {
+        "font_family": "font.mono",
+        "font_size": "12px",
+        "font_weight": "400",
+        "line_height": "24px",
+        "letter_spacing": "normal",
+        "text_transform": "none"
+      },
+      "source": {
+        "selector": "[data-framer-name=\"Voice Experience\"] [data-framer-name=\"text\"]",
+        "viewport": "vp-1920x1080",
+        "match_text": "NATURAL VOICE"
+      },
+      "confidence": "medium"
+    }
+  ],
+  "responsive_samples": {
+    "hero_headline": {
+      "1920x1080": "24.1807px base with fit-text expansion to 81.6669px spans",
+      "1440x900": "24.1807px base with fit-text expansion",
+      "1200x900": "24.1807px base with fit-text expansion",
+      "1024x768": "48.8454px",
+      "810x1080": "48.8454px",
+      "390x844": "44px"
+    },
+    "custom_agents_title": {
+      "1920x1080": "48px",
+      "1440x900": "48px",
+      "1200x900": "48px",
+      "1024x768": "40px",
+      "810x1080": "40px",
+      "390x844": "40px"
+    }
+  },
+  "licensing_flags": [
+    "Emilio and Giga Sans (Display/Text) families appear to be trial/commercial assets hosted on framerusercontent.com.",
+    "Use legal fallback stack for clone unless proper licenses are secured: Playfair Display (hero), Instrument Serif (alt), Inter, JetBrains Mono."
+  ]
+}

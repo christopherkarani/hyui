@@ -1,0 +1,507 @@
+{
+  "meta": {
+    "source": "https://giga.ai",
+    "captured_at": "2026-02-11",
+    "normalized_at": "2026-02-12T02:51:06.416Z",
+    "timezone": "Africa/Nairobi",
+    "note": "Values normalized from component-map.json with per-viewport geometry."
+  },
+  "section_order": [
+    "hero",
+    "product_stack",
+    "customer_spotlight",
+    "top_nav_overlay_desktop",
+    "demo_cta",
+    "footer"
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "selector": "#main > div.framer-vTKWY > .framer-1ug9l4m",
+      "desktop_1920": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "mobile_390": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1000
+      },
+      "headings": [
+        "AI that talks like a human. Handles millions of calls.",
+        "AI agents for enterprise support"
+      ],
+      "screenshots": [
+        "output/playwright/screenshots/section-desktop-01-framer-1ug9l4m.png",
+        "output/playwright/screenshots/section-mobile-01-framer-1ug9l4m.png"
+      ],
+      "viewport_boxes": {
+        "1920x1080": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "1440x900": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 900
+        },
+        "1200x900": {
+          "x": 0,
+          "y": 0,
+          "width": 1200,
+          "height": 900
+        },
+        "1024x768": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 800
+        },
+        "810x1080": {
+          "x": 0,
+          "y": 0,
+          "width": 810,
+          "height": 1080
+        },
+        "390x844": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "id": "product_stack",
+      "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+      "desktop_1920": {
+        "x": 0,
+        "y": 1080,
+        "width": 1920,
+        "height": 3693.8
+      },
+      "mobile_390": {
+        "x": 0,
+        "y": 1000,
+        "width": 390,
+        "height": 5719
+      },
+      "modules": [
+        "KPI strip",
+        "Custom Agents / Agent Canvas",
+        "Smart Suggestions / Smart Insights",
+        "Natural Voice / Voice Experience"
+      ],
+      "screenshots": [
+        "output/playwright/screenshots/section-desktop-02-framer-1xxmgs4.png",
+        "output/playwright/screenshots/section-mobile-02-framer-1xxmgs4.png"
+      ],
+      "viewport_boxes": {
+        "1920x1080": {
+          "x": 0,
+          "y": 1080,
+          "width": 1920,
+          "height": 3693.8
+        },
+        "1440x900": {
+          "x": 0,
+          "y": 900,
+          "width": 1440,
+          "height": 3693.8
+        },
+        "1200x900": {
+          "x": 0,
+          "y": 900,
+          "width": 1200,
+          "height": 3693.8
+        },
+        "1024x768": {
+          "x": 0,
+          "y": 800,
+          "width": 1024,
+          "height": 3331
+        },
+        "810x1080": {
+          "x": 0,
+          "y": 1080,
+          "width": 810,
+          "height": 3334
+        },
+        "390x844": {
+          "x": 0,
+          "y": 1000,
+          "width": 390,
+          "height": 5719
+        }
+      }
+    },
+    {
+      "id": "customer_spotlight",
+      "selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+      "desktop_1920": {
+        "x": 0,
+        "y": 4773.8,
+        "width": 1920,
+        "height": 954.8
+      },
+      "mobile_390": {
+        "x": 0,
+        "y": 6719,
+        "width": 390,
+        "height": 1350.8
+      },
+      "screenshots": [
+        "output/playwright/screenshots/section-desktop-03-framer-107a8lb.png",
+        "output/playwright/screenshots/section-mobile-03-framer-107a8lb.png"
+      ],
+      "viewport_boxes": {
+        "1920x1080": {
+          "x": 0,
+          "y": 4773.8,
+          "width": 1920,
+          "height": 954.8
+        },
+        "1440x900": {
+          "x": 0,
+          "y": 4593.8,
+          "width": 1440,
+          "height": 954.8
+        },
+        "1200x900": {
+          "x": 0,
+          "y": 4593.8,
+          "width": 1200,
+          "height": 954.8
+        },
+        "1024x768": {
+          "x": 0,
+          "y": 4131,
+          "width": 1024,
+          "height": 954.8
+        },
+        "810x1080": {
+          "x": 0,
+          "y": 4414,
+          "width": 810,
+          "height": 1015.8
+        },
+        "390x844": {
+          "x": 0,
+          "y": 6719,
+          "width": 390,
+          "height": 1350.8
+        }
+      }
+    },
+    {
+      "id": "top_nav_overlay_desktop",
+      "selector": "#main > div.framer-vTKWY > .framer-xujnb7-container",
+      "desktop_1920": {
+        "x": 0,
+        "y": 20,
+        "width": 1920,
+        "height": 54
+      },
+      "mobile_390": {
+        "present": false,
+        "replacement": ".framer-ran6ch-container (logo-only hero link)"
+      },
+      "viewport_boxes": {
+        "1920x1080": {
+          "x": 0,
+          "y": 20,
+          "width": 1920,
+          "height": 54,
+          "present": true
+        },
+        "1440x900": {
+          "x": 0,
+          "y": 20,
+          "width": 1440,
+          "height": 54,
+          "present": true
+        },
+        "1200x900": {
+          "x": 0,
+          "y": 20,
+          "width": 1200,
+          "height": 54,
+          "present": true
+        },
+        "1024x768": {
+          "x": 0,
+          "y": 20,
+          "width": 1024,
+          "height": 54,
+          "present": true
+        },
+        "810x1080": {
+          "x": 0,
+          "y": 20,
+          "width": 810,
+          "height": 54,
+          "present": true
+        },
+        "390x844": {
+          "present": false
+        }
+      }
+    },
+    {
+      "id": "demo_cta",
+      "selector": "#main > div.framer-vTKWY > .framer-kuopsy",
+      "desktop_1920": {
+        "x": 0,
+        "y": 5728.59,
+        "width": 1920,
+        "height": 403
+      },
+      "mobile_390": {
+        "x": 0,
+        "y": 8069.8,
+        "width": 390,
+        "height": 486
+      },
+      "screenshots": [
+        "output/playwright/screenshots/section-desktop-05-framer-kuopsy.png",
+        "output/playwright/screenshots/section-mobile-04-framer-kuopsy.png"
+      ],
+      "viewport_boxes": {
+        "1920x1080": {
+          "x": 0,
+          "y": 5728.59,
+          "width": 1920,
+          "height": 403
+        },
+        "1440x900": {
+          "x": 0,
+          "y": 5548.59,
+          "width": 1440,
+          "height": 403
+        },
+        "1200x900": {
+          "x": 0,
+          "y": 5548.59,
+          "width": 1200,
+          "height": 403
+        },
+        "1024x768": {
+          "x": 0,
+          "y": 5085.8,
+          "width": 1024,
+          "height": 424
+        },
+        "810x1080": {
+          "x": 0,
+          "y": 5429.8,
+          "width": 810,
+          "height": 445
+        },
+        "390x844": {
+          "x": 0,
+          "y": 8069.8,
+          "width": 390,
+          "height": 486
+        }
+      }
+    },
+    {
+      "id": "footer",
+      "selector": "#main > div.framer-vTKWY > .ssr-variant .framer-1j0lk2w-container",
+      "desktop_1920": {
+        "x": 0,
+        "y": 6131.59,
+        "width": 1920,
+        "height": 740
+      },
+      "mobile_390": {
+        "x": 0,
+        "y": 8555.8,
+        "width": 390,
+        "height": 1010
+      },
+      "notes": [
+        "Rendered through SSR breakpoint variants with shared container class.",
+        "Desktop and mobile footer internals differ by framer variant class."
+      ],
+      "viewport_boxes": {
+        "1920x1080": {
+          "x": 0,
+          "y": 6131.59,
+          "width": 1920,
+          "height": 740
+        },
+        "1440x900": {
+          "x": 0,
+          "y": 5951.59,
+          "width": 1440,
+          "height": 740
+        },
+        "1200x900": {
+          "x": 0,
+          "y": 5951.59,
+          "width": 1200,
+          "height": 740
+        },
+        "1024x768": {
+          "x": 0,
+          "y": 5509.8,
+          "width": 1024,
+          "height": 740
+        },
+        "810x1080": {
+          "x": 0,
+          "y": 5874.8,
+          "width": 810,
+          "height": 740
+        },
+        "390x844": {
+          "x": 0,
+          "y": 8555.8,
+          "width": 390,
+          "height": 1010
+        }
+      }
+    }
+  ],
+  "components": [
+    {
+      "id": "hero_announcement_chip",
+      "selector": "a[href=\"./browser-agent\"]",
+      "desktop_1920": {
+        "x": 838.55,
+        "y": 355.2,
+        "width": 242.91,
+        "height": 28
+      },
+      "mobile_390": {
+        "x": 73.55,
+        "y": 142,
+        "width": 242.91,
+        "height": 28
+      }
+    },
+    {
+      "id": "hero_primary_cta",
+      "selector": "#button-1 a[href=\"./contact\"]",
+      "desktop_1920": {
+        "x": 908.34,
+        "y": 684.8,
+        "width": 103.33,
+        "height": 42
+      },
+      "mobile_390": {
+        "x": 143.34,
+        "y": 495.19,
+        "width": 103.33,
+        "height": 42
+      }
+    },
+    {
+      "id": "top_nav_desktop",
+      "selector": "#main > div.framer-vTKWY > .framer-xujnb7-container",
+      "desktop_1920": {
+        "x": 0,
+        "y": 20,
+        "width": 1920,
+        "height": 54
+      },
+      "mobile_390": {
+        "present": false
+      }
+    },
+    {
+      "id": "kpi_strip",
+      "selector": "#main > div.framer-vTKWY > .framer-1xxmgs4 > div.framer-1iialbr",
+      "desktop_1920": {
+        "x": 160,
+        "y": 1100,
+        "width": 1600,
+        "height": 200
+      },
+      "mobile_390": {
+        "x": 0,
+        "y": 1020,
+        "width": 390,
+        "height": 381
+      }
+    },
+    {
+      "id": "agent_canvas_cta",
+      "selector": "a[href=\"./agent-canvas\"]",
+      "desktop_1920": {
+        "x": 184,
+        "y": 1864.8,
+        "width": 177.96,
+        "height": 38
+      },
+      "mobile_390": {
+        "x": 40,
+        "y": 2296,
+        "width": 177.96,
+        "height": 38
+      }
+    },
+    {
+      "id": "insights_cta",
+      "selector": "a[href=\"./insights\"]",
+      "desktop_1920": {
+        "x": 1239.92,
+        "y": 3093.8,
+        "width": 180.18,
+        "height": 38
+      },
+      "mobile_390": {
+        "x": 40,
+        "y": 4217,
+        "width": 137.06,
+        "height": 38
+      }
+    },
+    {
+      "id": "voice_cta",
+      "selector": "a[href=\"./voice-experience\"]",
+      "desktop_1920": {
+        "x": 184,
+        "y": 4265.8,
+        "width": 200.66,
+        "height": 38
+      },
+      "mobile_390": {
+        "x": 40,
+        "y": 6108,
+        "width": 200.66,
+        "height": 38
+      }
+    },
+    {
+      "id": "spotlight_primary_card",
+      "selector": "a[href=\"./doordash\"]",
+      "desktop_1920": {
+        "x": 184,
+        "y": 5112.59,
+        "width": 824.73,
+        "height": 552
+      },
+      "mobile_390": {
+        "x": 30,
+        "y": 7035,
+        "width": 330,
+        "height": 336
+      }
+    }
+  ],
+  "reusable_modules": [
+    "pill_cta_link",
+    "mono_eyebrow + display_heading pair",
+    "dark_glass_panel + nested cards",
+    "metric_strip (label + large value)",
+    "testimonial split-card"
+  ]
+}

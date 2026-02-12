@@ -1,0 +1,1386 @@
+{
+  "meta": {
+    "generated_at": "2026-02-12T02:51:49.398Z",
+    "timezone": "Africa/Nairobi",
+    "local_app_status": {
+      "runnable": false,
+      "reason": "greenfield repository contains no app scaffold",
+      "evidence": [
+        "npm error Missing script: \"dev\"",
+        "package.json:missing"
+      ]
+    },
+    "acceptance_thresholds": {
+      "desktop_geometry_px": 1,
+      "mobile_geometry_px": 2
+    },
+    "breakpoint_context": [
+      {
+        "name": "desktop",
+        "min_width": 1200,
+        "max_width": null
+      },
+      {
+        "name": "tablet",
+        "min_width": 810,
+        "max_width": 1199.98
+      },
+      {
+        "name": "mobile",
+        "min_width": 0,
+        "max_width": 809.98
+      }
+    ],
+    "re_reviewed_at": "2026-02-12T03:05:28.018Z",
+    "viewport_key_format": "vp-WIDTHxHEIGHT",
+    "delta_method": {
+      "geometry": "expected minus missing-local baseline",
+      "typography": "numeric px/weight deltas from missing-local baseline",
+      "color": "RGBA channel deltas from transparent baseline"
+    }
+  },
+  "rows": [
+    {
+      "id": "GM-SEC-hero-1920x1080",
+      "page_section": "hero",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1ug9l4m",
+      "viewport": "vp-1920x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement hero with exact x/y/width/height target for 1920x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-hero-1440x900",
+      "page_section": "hero",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1ug9l4m",
+      "viewport": "vp-1440x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement hero with exact x/y/width/height target for 1440x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-hero-1200x900",
+      "page_section": "hero",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1ug9l4m",
+      "viewport": "vp-1200x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 0,
+        "width": 1200,
+        "height": 900
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 0,
+        "width": 1200,
+        "height": 900
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement hero with exact x/y/width/height target for 1200x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-hero-1024x768",
+      "page_section": "hero",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1ug9l4m",
+      "viewport": "vp-1024x768",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 800
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 800
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement hero with exact x/y/width/height target for 1024x768.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-hero-810x1080",
+      "page_section": "hero",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1ug9l4m",
+      "viewport": "vp-810x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 0,
+        "width": 810,
+        "height": 1080
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 0,
+        "width": 810,
+        "height": 1080
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement hero with exact x/y/width/height target for 810x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-hero-390x844",
+      "page_section": "hero",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1ug9l4m",
+      "viewport": "vp-390x844",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1000
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1000
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement hero with exact x/y/width/height target for 390x844.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-product_stack-1920x1080",
+      "page_section": "product_stack",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+      "viewport": "vp-1920x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 1080,
+        "width": 1920,
+        "height": 3693.8
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 1080,
+        "width": 1920,
+        "height": 3693.8
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement product_stack with exact x/y/width/height target for 1920x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-product_stack-1440x900",
+      "page_section": "product_stack",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+      "viewport": "vp-1440x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 900,
+        "width": 1440,
+        "height": 3693.8
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 900,
+        "width": 1440,
+        "height": 3693.8
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement product_stack with exact x/y/width/height target for 1440x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-product_stack-1200x900",
+      "page_section": "product_stack",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+      "viewport": "vp-1200x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 900,
+        "width": 1200,
+        "height": 3693.8
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 900,
+        "width": 1200,
+        "height": 3693.8
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement product_stack with exact x/y/width/height target for 1200x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-product_stack-1024x768",
+      "page_section": "product_stack",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+      "viewport": "vp-1024x768",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 800,
+        "width": 1024,
+        "height": 3331
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 800,
+        "width": 1024,
+        "height": 3331
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement product_stack with exact x/y/width/height target for 1024x768.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-product_stack-810x1080",
+      "page_section": "product_stack",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+      "viewport": "vp-810x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 1080,
+        "width": 810,
+        "height": 3334
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 1080,
+        "width": 810,
+        "height": 3334
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement product_stack with exact x/y/width/height target for 810x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-product_stack-390x844",
+      "page_section": "product_stack",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+      "viewport": "vp-390x844",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 1000,
+        "width": 390,
+        "height": 5719
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 1000,
+        "width": 390,
+        "height": 5719
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement product_stack with exact x/y/width/height target for 390x844.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-customer_spotlight-1920x1080",
+      "page_section": "customer_spotlight",
+      "element_selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+      "viewport": "vp-1920x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 4773.8,
+        "width": 1920,
+        "height": 954.8
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 4773.8,
+        "width": 1920,
+        "height": 954.8
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement customer_spotlight with exact x/y/width/height target for 1920x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-customer_spotlight-1440x900",
+      "page_section": "customer_spotlight",
+      "element_selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+      "viewport": "vp-1440x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 4593.8,
+        "width": 1440,
+        "height": 954.8
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 4593.8,
+        "width": 1440,
+        "height": 954.8
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement customer_spotlight with exact x/y/width/height target for 1440x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-customer_spotlight-1200x900",
+      "page_section": "customer_spotlight",
+      "element_selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+      "viewport": "vp-1200x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 4593.8,
+        "width": 1200,
+        "height": 954.8
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 4593.8,
+        "width": 1200,
+        "height": 954.8
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement customer_spotlight with exact x/y/width/height target for 1200x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-customer_spotlight-1024x768",
+      "page_section": "customer_spotlight",
+      "element_selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+      "viewport": "vp-1024x768",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 4131,
+        "width": 1024,
+        "height": 954.8
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 4131,
+        "width": 1024,
+        "height": 954.8
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement customer_spotlight with exact x/y/width/height target for 1024x768.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-customer_spotlight-810x1080",
+      "page_section": "customer_spotlight",
+      "element_selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+      "viewport": "vp-810x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 4414,
+        "width": 810,
+        "height": 1015.8
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 4414,
+        "width": 810,
+        "height": 1015.8
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement customer_spotlight with exact x/y/width/height target for 810x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-customer_spotlight-390x844",
+      "page_section": "customer_spotlight",
+      "element_selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+      "viewport": "vp-390x844",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 6719,
+        "width": 390,
+        "height": 1350.8
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 6719,
+        "width": 390,
+        "height": 1350.8
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement customer_spotlight with exact x/y/width/height target for 390x844.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-top_nav_overlay_desktop-1920x1080",
+      "page_section": "top_nav_overlay_desktop",
+      "element_selector": "#main > div.framer-vTKWY > .framer-xujnb7-container",
+      "viewport": "vp-1920x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 20,
+        "width": 1920,
+        "height": 54,
+        "present": true
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 20,
+        "width": 1920,
+        "height": 54
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement top_nav_overlay_desktop with exact x/y/width/height target for 1920x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-top_nav_overlay_desktop-1440x900",
+      "page_section": "top_nav_overlay_desktop",
+      "element_selector": "#main > div.framer-vTKWY > .framer-xujnb7-container",
+      "viewport": "vp-1440x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 20,
+        "width": 1440,
+        "height": 54,
+        "present": true
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 20,
+        "width": 1440,
+        "height": 54
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement top_nav_overlay_desktop with exact x/y/width/height target for 1440x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-top_nav_overlay_desktop-1200x900",
+      "page_section": "top_nav_overlay_desktop",
+      "element_selector": "#main > div.framer-vTKWY > .framer-xujnb7-container",
+      "viewport": "vp-1200x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 20,
+        "width": 1200,
+        "height": 54,
+        "present": true
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 20,
+        "width": 1200,
+        "height": 54
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement top_nav_overlay_desktop with exact x/y/width/height target for 1200x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-top_nav_overlay_desktop-1024x768",
+      "page_section": "top_nav_overlay_desktop",
+      "element_selector": "#main > div.framer-vTKWY > .framer-xujnb7-container",
+      "viewport": "vp-1024x768",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 20,
+        "width": 1024,
+        "height": 54,
+        "present": true
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 20,
+        "width": 1024,
+        "height": 54
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement top_nav_overlay_desktop with exact x/y/width/height target for 1024x768.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-top_nav_overlay_desktop-810x1080",
+      "page_section": "top_nav_overlay_desktop",
+      "element_selector": "#main > div.framer-vTKWY > .framer-xujnb7-container",
+      "viewport": "vp-810x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 20,
+        "width": 810,
+        "height": 54,
+        "present": true
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 20,
+        "width": 810,
+        "height": 54
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement top_nav_overlay_desktop with exact x/y/width/height target for 810x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-top_nav_overlay_desktop-390x844",
+      "page_section": "top_nav_overlay_desktop",
+      "element_selector": "#main > div.framer-vTKWY > .framer-xujnb7-container",
+      "viewport": "vp-390x844",
+      "property": "geometry.presence",
+      "expected": {
+        "present": false
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing (matches reference for mobile)"
+      },
+      "numeric_delta": {
+        "present_delta": 0
+      },
+      "severity": "low",
+      "fix_recommendation": "No action for mobile: desktop top nav is intentionally absent at vp-390x844.",
+      "confidence": "high",
+      "row_status": "match"
+    },
+    {
+      "id": "GM-SEC-demo_cta-1920x1080",
+      "page_section": "demo_cta",
+      "element_selector": "#main > div.framer-vTKWY > .framer-kuopsy",
+      "viewport": "vp-1920x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 5728.59,
+        "width": 1920,
+        "height": 403
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 5728.59,
+        "width": 1920,
+        "height": 403
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement demo_cta with exact x/y/width/height target for 1920x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-demo_cta-1440x900",
+      "page_section": "demo_cta",
+      "element_selector": "#main > div.framer-vTKWY > .framer-kuopsy",
+      "viewport": "vp-1440x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 5548.59,
+        "width": 1440,
+        "height": 403
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 5548.59,
+        "width": 1440,
+        "height": 403
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement demo_cta with exact x/y/width/height target for 1440x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-demo_cta-1200x900",
+      "page_section": "demo_cta",
+      "element_selector": "#main > div.framer-vTKWY > .framer-kuopsy",
+      "viewport": "vp-1200x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 5548.59,
+        "width": 1200,
+        "height": 403
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 5548.59,
+        "width": 1200,
+        "height": 403
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement demo_cta with exact x/y/width/height target for 1200x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-demo_cta-1024x768",
+      "page_section": "demo_cta",
+      "element_selector": "#main > div.framer-vTKWY > .framer-kuopsy",
+      "viewport": "vp-1024x768",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 5085.8,
+        "width": 1024,
+        "height": 424
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 5085.8,
+        "width": 1024,
+        "height": 424
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement demo_cta with exact x/y/width/height target for 1024x768.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-demo_cta-810x1080",
+      "page_section": "demo_cta",
+      "element_selector": "#main > div.framer-vTKWY > .framer-kuopsy",
+      "viewport": "vp-810x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 5429.8,
+        "width": 810,
+        "height": 445
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 5429.8,
+        "width": 810,
+        "height": 445
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement demo_cta with exact x/y/width/height target for 810x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-demo_cta-390x844",
+      "page_section": "demo_cta",
+      "element_selector": "#main > div.framer-vTKWY > .framer-kuopsy",
+      "viewport": "vp-390x844",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 8069.8,
+        "width": 390,
+        "height": 486
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 8069.8,
+        "width": 390,
+        "height": 486
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement demo_cta with exact x/y/width/height target for 390x844.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-footer-1920x1080",
+      "page_section": "footer",
+      "element_selector": "#main > div.framer-vTKWY > .ssr-variant .framer-1j0lk2w-container",
+      "viewport": "vp-1920x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 6131.59,
+        "width": 1920,
+        "height": 740
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 6131.59,
+        "width": 1920,
+        "height": 740
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement footer with exact x/y/width/height target for 1920x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-footer-1440x900",
+      "page_section": "footer",
+      "element_selector": "#main > div.framer-vTKWY > .ssr-variant .framer-1j0lk2w-container",
+      "viewport": "vp-1440x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 5951.59,
+        "width": 1440,
+        "height": 740
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 5951.59,
+        "width": 1440,
+        "height": 740
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement footer with exact x/y/width/height target for 1440x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-footer-1200x900",
+      "page_section": "footer",
+      "element_selector": "#main > div.framer-vTKWY > .ssr-variant .framer-1j0lk2w-container",
+      "viewport": "vp-1200x900",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 5951.59,
+        "width": 1200,
+        "height": 740
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 5951.59,
+        "width": 1200,
+        "height": 740
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement footer with exact x/y/width/height target for 1200x900.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-footer-1024x768",
+      "page_section": "footer",
+      "element_selector": "#main > div.framer-vTKWY > .ssr-variant .framer-1j0lk2w-container",
+      "viewport": "vp-1024x768",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 5509.8,
+        "width": 1024,
+        "height": 740
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 5509.8,
+        "width": 1024,
+        "height": 740
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement footer with exact x/y/width/height target for 1024x768.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-footer-810x1080",
+      "page_section": "footer",
+      "element_selector": "#main > div.framer-vTKWY > .ssr-variant .framer-1j0lk2w-container",
+      "viewport": "vp-810x1080",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 5874.8,
+        "width": 810,
+        "height": 740
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 5874.8,
+        "width": 810,
+        "height": 740
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement footer with exact x/y/width/height target for 810x1080.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-SEC-footer-390x844",
+      "page_section": "footer",
+      "element_selector": "#main > div.framer-vTKWY > .ssr-variant .framer-1j0lk2w-container",
+      "viewport": "vp-390x844",
+      "property": "geometry",
+      "expected": {
+        "x": 0,
+        "y": 8555.8,
+        "width": 390,
+        "height": 1010
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "x": 0,
+        "y": 8555.8,
+        "width": 390,
+        "height": 1010
+      },
+      "severity": "critical",
+      "fix_recommendation": "Implement footer with exact x/y/width/height target for 390x844.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-TYPO-type.hero.headline.desktop",
+      "page_section": "typography",
+      "element_selector": "[data-framer-name=\"Hero\"] h1",
+      "viewport": "vp-1920x1080",
+      "property": "typography",
+      "expected": {
+        "font_family": "font.display.hero",
+        "font_size": "81.6669px",
+        "font_weight": "300",
+        "line_height": "98.0003px",
+        "letter_spacing": "-2.45001px",
+        "text_transform": "none"
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "font_size_px": 81.6669,
+        "line_height_px": 98.0003,
+        "letter_spacing_px": -2.45001,
+        "font_weight": 300,
+        "baseline_assumption": "actual missing => treated as 0 baseline"
+      },
+      "severity": "critical",
+      "fix_recommendation": "Apply token type.hero.headline.desktop exactly to [data-framer-name=\"Hero\"] h1.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-TYPO-type.hero.headline.tablet",
+      "page_section": "typography",
+      "element_selector": "[data-framer-name=\"Hero\"] h1",
+      "viewport": "vp-810x1080",
+      "property": "typography",
+      "expected": {
+        "font_family": "font.display.hero",
+        "font_size": "48.8454px",
+        "font_weight": "300",
+        "line_height": "58.6145px",
+        "letter_spacing": "-1.46536px",
+        "text_transform": "none"
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "font_size_px": 48.8454,
+        "line_height_px": 58.6145,
+        "letter_spacing_px": -1.46536,
+        "font_weight": 300,
+        "baseline_assumption": "actual missing => treated as 0 baseline"
+      },
+      "severity": "critical",
+      "fix_recommendation": "Apply token type.hero.headline.tablet exactly to [data-framer-name=\"Hero\"] h1.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-TYPO-type.hero.headline.mobile",
+      "page_section": "typography",
+      "element_selector": "[data-framer-name=\"Hero\"] h1",
+      "viewport": "vp-390x844",
+      "property": "typography",
+      "expected": {
+        "font_family": "font.display.hero",
+        "font_size": "44px",
+        "font_weight": "300",
+        "line_height": "52.8px",
+        "letter_spacing": "-1.32px",
+        "text_transform": "none"
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "font_size_px": 44,
+        "line_height_px": 52.8,
+        "letter_spacing_px": -1.32,
+        "font_weight": 300,
+        "baseline_assumption": "actual missing => treated as 0 baseline"
+      },
+      "severity": "critical",
+      "fix_recommendation": "Apply token type.hero.headline.mobile exactly to [data-framer-name=\"Hero\"] h1.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-TYPO-type.section.title.desktop",
+      "page_section": "typography",
+      "element_selector": "[data-framer-name=\"Agent Canvas\"] [data-framer-name=\"text\"]",
+      "viewport": "vp-1920x1080",
+      "property": "typography",
+      "expected": {
+        "font_family": "font.display.hero",
+        "font_size": "48px",
+        "font_weight": "400",
+        "line_height": "62.4px",
+        "letter_spacing": "-0.96px",
+        "text_transform": "none"
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "font_size_px": 48,
+        "line_height_px": 62.4,
+        "letter_spacing_px": -0.96,
+        "font_weight": 400,
+        "baseline_assumption": "actual missing => treated as 0 baseline"
+      },
+      "severity": "high",
+      "fix_recommendation": "Apply token type.section.title.desktop exactly to [data-framer-name=\"Agent Canvas\"] [data-framer-name=\"text\"].",
+      "confidence": "medium",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-TYPO-type.section.title.compact",
+      "page_section": "typography",
+      "element_selector": "[data-framer-name=\"Agent Canvas\"] [data-framer-name=\"text\"]",
+      "viewport": "vp-390x844",
+      "property": "typography",
+      "expected": {
+        "font_family": "font.display.hero",
+        "font_size": "40px",
+        "font_weight": "400",
+        "line_height": "52px",
+        "letter_spacing": "-0.8px",
+        "text_transform": "none"
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "font_size_px": 40,
+        "line_height_px": 52,
+        "letter_spacing_px": -0.8,
+        "font_weight": 400,
+        "baseline_assumption": "actual missing => treated as 0 baseline"
+      },
+      "severity": "high",
+      "fix_recommendation": "Apply token type.section.title.compact exactly to [data-framer-name=\"Agent Canvas\"] [data-framer-name=\"text\"].",
+      "confidence": "medium",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-TYPO-type.body.lg",
+      "page_section": "typography",
+      "element_selector": "[data-framer-name=\"Hero\"] h2",
+      "viewport": "vp-1920x1080",
+      "property": "typography",
+      "expected": {
+        "font_family": "font.sans",
+        "font_size": "16px",
+        "font_weight": "400",
+        "line_height": "28px",
+        "letter_spacing": "normal",
+        "text_transform": "none"
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "font_size_px": 16,
+        "line_height_px": 28,
+        "letter_spacing_px": null,
+        "font_weight": 400,
+        "baseline_assumption": "actual missing => treated as 0 baseline"
+      },
+      "severity": "high",
+      "fix_recommendation": "Apply token type.body.lg exactly to [data-framer-name=\"Hero\"] h2.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-TYPO-type.button.md",
+      "page_section": "typography",
+      "element_selector": "[data-framer-name=\"Main CTA\"]",
+      "viewport": "vp-1920x1080",
+      "property": "typography",
+      "expected": {
+        "font_family": "font.sans",
+        "font_size": "14px",
+        "font_weight": "400",
+        "line_height": "24px",
+        "letter_spacing": "normal",
+        "text_transform": "none"
+      },
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "font_size_px": 14,
+        "line_height_px": 24,
+        "letter_spacing_px": null,
+        "font_weight": 400,
+        "baseline_assumption": "actual missing => treated as 0 baseline"
+      },
+      "severity": "high",
+      "fix_recommendation": "Apply token type.button.md exactly to [data-framer-name=\"Main CTA\"].",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-COLOR-bg.hero",
+      "page_section": "color",
+      "element_selector": "[data-framer-name=\"Hero\"]",
+      "viewport": "vp-1920x1080",
+      "property": "color",
+      "expected": "rgb(0, 0, 0)",
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "delta_r": 0,
+        "delta_g": 0,
+        "delta_b": 0,
+        "delta_a": 1,
+        "baseline_assumption": "actual missing => transparent black baseline rgba(0,0,0,0)"
+      },
+      "severity": "high",
+      "fix_recommendation": "Apply token bg.hero on [data-framer-name=\"Hero\"].",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-COLOR-bg.canvas.dark",
+      "page_section": "color",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+      "viewport": "vp-1920x1080",
+      "property": "color",
+      "expected": "rgb(15, 14, 13)",
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "delta_r": 15,
+        "delta_g": 14,
+        "delta_b": 13,
+        "delta_a": 1,
+        "baseline_assumption": "actual missing => transparent black baseline rgba(0,0,0,0)"
+      },
+      "severity": "medium",
+      "fix_recommendation": "Apply token bg.canvas.dark on #main > div.framer-vTKWY > .framer-1xxmgs4.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-COLOR-bg.surface.light",
+      "page_section": "color",
+      "element_selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+      "viewport": "vp-1920x1080",
+      "property": "color",
+      "expected": "rgb(254, 252, 251)",
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "delta_r": 254,
+        "delta_g": 252,
+        "delta_b": 251,
+        "delta_a": 1,
+        "baseline_assumption": "actual missing => transparent black baseline rgba(0,0,0,0)"
+      },
+      "severity": "medium",
+      "fix_recommendation": "Apply token bg.surface.light on #main > div.framer-vTKWY > .framer-107a8lb.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-COLOR-bg.surface.white",
+      "page_section": "color",
+      "element_selector": "[data-framer-name=\"Main CTA\"]",
+      "viewport": "vp-1920x1080",
+      "property": "color",
+      "expected": "rgb(255, 255, 255)",
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "delta_r": 255,
+        "delta_g": 255,
+        "delta_b": 255,
+        "delta_a": 1,
+        "baseline_assumption": "actual missing => transparent black baseline rgba(0,0,0,0)"
+      },
+      "severity": "medium",
+      "fix_recommendation": "Apply token bg.surface.white on [data-framer-name=\"Main CTA\"].",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-COLOR-gradient.page.darkToNearBlack",
+      "page_section": "color",
+      "element_selector": "#main > div.framer-vTKWY > .framer-1xxmgs4",
+      "viewport": "vp-1920x1080",
+      "property": "color",
+      "expected": "linear-gradient(rgb(0, 0, 0) 0%, rgb(15, 14, 13) 8%)",
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "delta_r": 0,
+        "delta_g": 0,
+        "delta_b": 0,
+        "delta_a": 1,
+        "baseline_assumption": "actual missing => transparent black baseline rgba(0,0,0,0)"
+      },
+      "severity": "high",
+      "fix_recommendation": "Apply token gradient.page.darkToNearBlack on #main > div.framer-vTKWY > .framer-1xxmgs4.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-COLOR-text.primary.dark",
+      "page_section": "color",
+      "element_selector": "[data-framer-name=\"Hero\"] h1",
+      "viewport": "vp-1920x1080",
+      "property": "color",
+      "expected": "rgb(255, 255, 255)",
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "delta_r": 255,
+        "delta_g": 255,
+        "delta_b": 255,
+        "delta_a": 1,
+        "baseline_assumption": "actual missing => transparent black baseline rgba(0,0,0,0)"
+      },
+      "severity": "medium",
+      "fix_recommendation": "Apply token text.primary.dark on [data-framer-name=\"Hero\"] h1.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    },
+    {
+      "id": "GM-COLOR-text.primary.light",
+      "page_section": "color",
+      "element_selector": "#main > div.framer-vTKWY > .framer-107a8lb",
+      "viewport": "vp-1920x1080",
+      "property": "color",
+      "expected": "rgb(0, 0, 0)",
+      "actual": {
+        "present": false,
+        "reason": "local implementation missing"
+      },
+      "numeric_delta": {
+        "delta_r": 0,
+        "delta_g": 0,
+        "delta_b": 0,
+        "delta_a": 1,
+        "baseline_assumption": "actual missing => transparent black baseline rgba(0,0,0,0)"
+      },
+      "severity": "medium",
+      "fix_recommendation": "Apply token text.primary.light on #main > div.framer-vTKWY > .framer-107a8lb.",
+      "confidence": "high",
+      "row_status": "mismatch"
+    }
+  ]
+}
