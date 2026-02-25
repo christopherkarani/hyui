@@ -1,0 +1,228 @@
+- generic [ref=e3]:
+  - main [ref=e21]:
+    - generic [ref=e25]:
+      - generic [ref=e261]:
+        - link "Giga" [ref=e262] [cursor=pointer]:
+          - /url: /
+          - img [ref=e263]
+          - generic [ref=e267]: Giga
+        - button "Open menu" [ref=e268] [cursor=pointer]:
+          - img [ref=e269]
+      - generic [ref=e26]:
+        - link "GIGA LAUNCHES BROWSER AGENT" [ref=e27] [cursor=pointer]:
+          - /url: ./browser-agent
+          - generic [ref=e28]: GIGA LAUNCHES BROWSER AGENT
+          - img [ref=e29]
+        - heading "AI that talks like a human. Handles millions of calls." [level=1] [ref=e31]:
+          - text: AI that talks like a human.
+          - text: Handles millions of calls.
+        - heading "AI agents for enterprise support" [level=2] [ref=e32]
+        - link "Talk to us" [ref=e34] [cursor=pointer]:
+          - /url: ./contact
+      - generic [ref=e36]:
+        - img [ref=e38]:
+          - generic [ref=e40]: POSTMAN
+        - img [ref=e42]:
+          - generic [ref=e43]: Rio
+        - img [ref=e45]:
+          - generic [ref=e47]: DOORDASH
+        - img [ref=e49]:
+          - generic [ref=e50]: capital.com
+        - img [ref=e52]:
+          - generic [ref=e54]: afriex
+        - img [ref=e56]:
+          - generic [ref=e57]: Sendoso
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - paragraph [ref=e62]: Solve your most complex support issues with AI, up and running in two weeks.
+        - generic [ref=e63]:
+          - generic [ref=e64]: DEFLECTION RATE
+          - generic [ref=e65]: 70%
+        - generic [ref=e66]:
+          - generic [ref=e67]: SUPPORTED LANGUAGES
+          - generic [ref=e68]: "100"
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - heading "Built to handle complexity" [level=2] [ref=e71]
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e74]: 🔧
+              - heading "Extremely customizable" [level=3] [ref=e75]
+              - paragraph [ref=e76]: Build agents tailored to your exact workflow and policies.
+            - generic [ref=e77]:
+              - generic [ref=e78]: ✏️
+              - heading "Auto policy writing" [level=3] [ref=e79]
+              - paragraph [ref=e80]: Automatically generate and refine support policies.
+            - generic [ref=e81]:
+              - generic [ref=e82]: ✨
+              - heading "Built-in Copilot" [level=3] [ref=e83]
+              - paragraph [ref=e84]: AI-assisted agent creation and optimization.
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - generic [ref=e89]: CUSTOM AGENTS
+            - heading "Built to handle complexity" [level=3] [ref=e90]
+            - paragraph [ref=e91]: Design, deploy, and manage AI agents that handle your most nuanced support scenarios.
+            - link "Explore Agent Canvas" [ref=e92] [cursor=pointer]:
+              - /url: ./agent-canvas
+              - text: Explore Agent Canvas
+              - img [ref=e93]
+            - generic [ref=e95]:
+              - button "Create the agent Start with a template or build from scratch with custom training data." [ref=e96] [cursor=pointer]:
+                - generic [ref=e97]: Create the agent
+                - paragraph [ref=e98]: Start with a template or build from scratch with custom training data.
+              - button "Define policies" [ref=e99] [cursor=pointer]:
+                - generic [ref=e100]: Define policies
+              - button "Design the logic" [ref=e101] [cursor=pointer]:
+                - generic [ref=e102]: Design the logic
+              - button "Test and launch" [ref=e103] [cursor=pointer]:
+                - generic [ref=e104]: Test and launch
+              - button "Monitor and improve" [ref=e105] [cursor=pointer]:
+                - generic [ref=e106]: Monitor and improve
+          - img "Agent Canvas interface showing create new agent dialog" [ref=e108]
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - heading "Improve as you go" [level=2] [ref=e111]
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]: 📈
+              - heading "Performance enhancement" [level=3] [ref=e115]
+              - paragraph [ref=e116]: Identify and resolve performance bottlenecks.
+            - generic [ref=e117]:
+              - generic [ref=e118]: 💡
+              - heading "Custom suggestions" [level=3] [ref=e119]
+              - paragraph [ref=e120]: Receive tailored improvement recommendations.
+            - generic [ref=e121]:
+              - generic [ref=e122]: 📊
+              - heading "Auto improve" [level=3] [ref=e123]
+              - paragraph [ref=e124]: Automatically apply validated optimizations.
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e129]: SMART INSIGHTS
+            - heading "Improve as you go" [level=3] [ref=e130]
+            - paragraph [ref=e131]: Automatically surface performance gaps and generate targeted improvements across your AI agents.
+            - link "Explore Smart Insights" [ref=e132] [cursor=pointer]:
+              - /url: ./insights
+              - text: Explore Smart Insights
+              - img [ref=e133]
+            - generic [ref=e135]:
+              - button "Choose an objective Select a KPI to optimize such as resolution rate or CSAT." [ref=e136] [cursor=pointer]:
+                - generic [ref=e137]: Choose an objective
+                - paragraph [ref=e138]: Select a KPI to optimize such as resolution rate or CSAT.
+              - button "Generate insights" [ref=e139] [cursor=pointer]:
+                - generic [ref=e140]: Generate insights
+              - button "Validate at scale" [ref=e141] [cursor=pointer]:
+                - generic [ref=e142]: Validate at scale
+          - img "Smart Insights dashboard showing resolution rate improvement" [ref=e144]
+      - generic [ref=e145]:
+        - generic [ref=e146]:
+          - heading "Engage with empathy" [level=2] [ref=e147]
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - generic [ref=e150]: 🎤
+              - heading "Personalized voices" [level=3] [ref=e151]
+              - paragraph [ref=e152]: Create custom voice personas that match your brand.
+            - generic [ref=e153]:
+              - generic [ref=e154]: ⚡
+              - heading "Dynamic interrupts" [level=3] [ref=e155]
+              - paragraph [ref=e156]: Handle natural conversation flow and interruptions.
+            - generic [ref=e157]:
+              - generic [ref=e158]: 🚀
+              - heading "Ultra-low latency" [level=3] [ref=e159]
+              - paragraph [ref=e160]: Sub-300ms response times for natural conversations.
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - generic [ref=e165]: VOICE EXPERIENCE
+            - heading "Engage with empathy" [level=3] [ref=e166]
+            - paragraph [ref=e167]: Voice agents that listen, understand context, and respond with genuine emotional intelligence.
+            - link "Explore Voice Experience" [ref=e168] [cursor=pointer]:
+              - /url: ./voice-experience
+              - text: Explore Voice Experience
+              - img [ref=e169]
+            - generic [ref=e171]:
+              - button "Choose a voice Select from a library of natural-sounding voices or create your own." [ref=e172] [cursor=pointer]:
+                - generic [ref=e173]: Choose a voice
+                - paragraph [ref=e174]: Select from a library of natural-sounding voices or create your own.
+              - button "Set the tone" [ref=e175] [cursor=pointer]:
+                - generic [ref=e176]: Set the tone
+              - button "Go live" [ref=e177] [cursor=pointer]:
+                - generic [ref=e178]: Go live
+          - img "Voice Experience interface with mountain lake video preview" [ref=e180]
+    - link "DoorDash delivery interaction DWR RATE 80% How DoorDash and Giga built reliable support at scale Learn more Andy Fang Andy Fang Co-Founder at DoorDash" [ref=e184] [cursor=pointer]:
+      - /url: ./doordash
+      - generic [ref=e185]:
+        - img "DoorDash delivery interaction" [ref=e186]
+        - generic [ref=e188]:
+          - generic [ref=e189]: DWR RATE
+          - generic [ref=e190]: 80%
+      - generic [ref=e191]:
+        - img [ref=e193]:
+          - generic [ref=e194]: DoorDash
+        - heading "How DoorDash and Giga built reliable support at scale" [level=2] [ref=e195]
+        - generic [ref=e196]:
+          - text: Learn more
+          - img [ref=e197]
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - img "Andy Fang" [ref=e201]
+            - generic [ref=e202]:
+              - generic [ref=e203]: Andy Fang
+              - generic [ref=e204]: Co-Founder at DoorDash
+          - blockquote [ref=e205]: At DoorDash, we operate at a massive scale across services, platforms, and languages. Giga leveraged usage data to deliver measurable improvements, including fewer escalations, faster resolution paths, and more efficient workflows across our teams.
+    - generic [ref=e208]:
+      - generic [ref=e209]:
+        - generic [ref=e212]: GET A PERSONALIZED DEMO
+        - heading "Ready to see the Giga AI agent in action?" [level=2] [ref=e213]
+      - generic [ref=e214]:
+        - paragraph [ref=e215]: Giga's AI agents handle complex workflows at scale, from live delivery issues to compliance decisions, while maintaining over 90% resolution accuracy in production.
+        - link "Talk to us" [ref=e216] [cursor=pointer]:
+          - /url: ./contact
+  - generic [ref=e218]:
+    - generic: Giga
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - img [ref=e222]
+          - generic [ref=e226]: Giga
+        - generic [ref=e227]:
+          - generic [ref=e228]: Compliant
+          - generic [ref=e229]:
+            - generic [ref=e230]: SOC2
+            - generic [ref=e231]: ISO 42001
+            - generic [ref=e232]: ISO 27001
+      - generic [ref=e233]:
+        - generic [ref=e234]:
+          - heading "Product" [level=4] [ref=e235]
+          - link "Agent Canvas" [ref=e236] [cursor=pointer]:
+            - /url: ./agent-canvas
+          - link "Insights" [ref=e237] [cursor=pointer]:
+            - /url: ./insights
+          - link "Voice Experience" [ref=e238] [cursor=pointer]:
+            - /url: ./voice-experience
+          - link "Browser Agent" [ref=e239] [cursor=pointer]:
+            - /url: ./browser-agent
+        - generic [ref=e240]:
+          - heading "Company" [level=4] [ref=e241]
+          - link "Careers" [ref=e242] [cursor=pointer]:
+            - /url: ./careers
+          - link "Contact" [ref=e243] [cursor=pointer]:
+            - /url: ./contact
+          - link "Trust Center" [ref=e244] [cursor=pointer]:
+            - /url: ./trust
+        - generic [ref=e245]:
+          - heading "Resources" [level=4] [ref=e246]
+          - link "News" [ref=e247] [cursor=pointer]:
+            - /url: ./news
+          - link "Privacy Policy" [ref=e248] [cursor=pointer]:
+            - /url: ./privacy
+          - link "Terms Of Service" [ref=e249] [cursor=pointer]:
+            - /url: ./terms
+    - generic [ref=e250]:
+      - generic [ref=e251]: © 2026 Giga AI, Inc.
+      - generic [ref=e252]:
+        - link "X (Twitter)" [ref=e253] [cursor=pointer]:
+          - /url: https://x.com
+          - img [ref=e254]
+        - generic [ref=e256]: "|"
+        - link "LinkedIn" [ref=e257] [cursor=pointer]:
+          - /url: https://linkedin.com
+          - img [ref=e258]
