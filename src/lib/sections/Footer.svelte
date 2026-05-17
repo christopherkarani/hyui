@@ -1,74 +1,65 @@
 <section class="footer">
-	<video
-		src="/videos/footer-bg.mp4"
-		class="footer-video"
-		autoplay
-		muted
-		loop
-		playsinline
-		aria-hidden="true"
-	></video>
-	<div class="footer-watermark">
-		<span class="watermark-text">Giga</span>
-	</div>
-
 	<div class="footer-inner">
 		<div class="footer-left">
 			<div class="footer-brand">
-				<svg class="footer-logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-					<circle cx="12" cy="12" r="11" stroke="black" stroke-width="1.5"/>
-					<path d="M6 12C6 8.68629 8.68629 6 12 6" stroke="black" stroke-width="1.5"/>
-					<path d="M18 12C18 15.3137 15.3137 18 12 18" stroke="black" stroke-width="1.5"/>
-					<path d="M4 12H20" stroke="black" stroke-width="1" opacity="0.3"/>
+				<svg class="footer-logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+					<path d="M16 3 C22 5, 28 10, 30 16 C28 23, 22 27, 16 30 C13 25, 16 20, 21 16 C16 14, 11 16, 6 21 C4 14, 9 7, 16 3 Z" fill="#0c121d"/>
 				</svg>
-				<span class="footer-brand-text">Giga</span>
+				<span class="footer-brand-text">Pantaa</span>
 			</div>
 
 			<div class="footer-compliance">
-				<span class="compliance-badge">Compliant</span>
+				<div class="compliance-eyebrow">
+					<span class="compliance-dot" aria-hidden="true"></span>
+					<span class="compliance-text">COMPLIANT</span>
+				</div>
 				<div class="compliance-certs">
-					<span class="cert-badge">SOC2</span>
-					<span class="cert-badge">ISO 42001</span>
-					<span class="cert-badge">ISO 27001</span>
+					<img class="cert-badge" src="/pantaa/images/cert-soc2.png" alt="SOC 2 Type 2" width="44" height="44" loading="lazy" />
+					<img class="cert-badge" src="/pantaa/images/cert-iso42001.png" alt="ISO 42001" width="44" height="44" loading="lazy" />
+					<img class="cert-badge" src="/pantaa/images/cert-iso27001.png" alt="ISO 27001" width="44" height="44" loading="lazy" />
+					<span class="cert-more">5+</span>
 				</div>
 			</div>
 		</div>
 
 		<div class="footer-links">
 			<div class="footer-column">
-				<h4 class="footer-column-title">Product</h4>
+				<h4 class="footer-column-title">PRODUCT</h4>
 				<a href="./agent-canvas" class="footer-link">Agent Canvas</a>
 				<a href="./insights" class="footer-link">Insights</a>
 				<a href="./voice-experience" class="footer-link">Voice Experience</a>
 				<a href="./browser-agent" class="footer-link">Browser Agent</a>
 			</div>
 			<div class="footer-column">
-				<h4 class="footer-column-title">Company</h4>
+				<h4 class="footer-column-title">COMPANY</h4>
 				<a href="./careers" class="footer-link">Careers</a>
 				<a href="./contact" class="footer-link">Contact</a>
 				<a href="./trust" class="footer-link">Trust Center</a>
 			</div>
 			<div class="footer-column">
-				<h4 class="footer-column-title">Resources</h4>
+				<h4 class="footer-column-title">RESOURCES</h4>
 				<a href="./news" class="footer-link">News</a>
 				<a href="./privacy" class="footer-link">Privacy Policy</a>
-				<a href="./terms" class="footer-link">Terms Of Service</a>
+				<a href="./terms" class="footer-link">Terms of Service</a>
 			</div>
 		</div>
 	</div>
 
+	<div class="footer-watermark" aria-hidden="true">
+		<span class="watermark-text">Pantaa</span>
+	</div>
+
 	<div class="footer-bottom">
-		<span class="footer-copyright">© 2026 Giga AI, Inc.</span>
+		<span class="footer-copyright">© 2026 Pantaa AI, Inc.</span>
 		<div class="footer-social">
 			<a href="https://x.com" class="social-link" aria-label="X (Twitter)">
 				<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-					<path d="M12.6 1H15L9.7 7.2L16 15H11.1L7.2 10.1L2.8 15H0.4L6 8.4L0 1H5L8.6 5.5L12.6 1ZM11.7 13.6H13.1L4.3 2.5H2.8L11.7 13.6Z" fill="currentColor"/>
+					<path d="M12.6 1H15L9.7 7.2L16 15H11.1L7.2 10.1L2.8 15H0.4L6 8.4L0 1H5L8.6 5.5L12.6 1ZM11.7 13.6H13.1L4.3 2.5H2.8L11.7 13.6Z" fill="currentColor" />
 				</svg>
 			</a>
-			<span class="social-divider">|</span>
 			<a href="https://linkedin.com" class="social-link" aria-label="LinkedIn">
 				<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-					<path d="M3.6 1.8C3.6 2.8 2.8 3.6 1.8 3.6C0.8 3.6 0 2.8 0 1.8C0 0.8 0.8 0 1.8 0C2.8 0 3.6 0.8 3.6 1.8ZM3.6 5H0V16H3.6V5ZM8.6 5H5V16H8.6V10.2C8.6 7 12.8 6.7 12.8 10.2V16H16V9C16 3.7 10 3.9 8.6 6.5V5Z" fill="currentColor"/>
+					<path d="M3.6 1.8C3.6 2.8 2.8 3.6 1.8 3.6C0.8 3.6 0 2.8 0 1.8C0 0.8 0.8 0 1.8 0C2.8 0 3.6 0.8 3.6 1.8ZM3.6 5H0V16H3.6V5ZM8.6 5H5V16H8.6V10.2C8.6 7 12.8 6.7 12.8 10.2V16H16V9C16 3.7 10 3.9 8.6 6.5V5Z" fill="currentColor" />
 				</svg>
 			</a>
 		</div>
@@ -78,220 +69,203 @@
 <style>
 	.footer {
 		position: relative;
-		background: var(--bg-surface-white);
-		color: var(--text-primary-light);
-		padding: 80px 0 40px;
+		background: rgb(255, 255, 255);
+		color: rgb(12, 18, 29);
+		padding: 80px 36px 40px;
 		overflow: hidden;
-		min-height: 740px;
 		width: 100%;
-	}
-
-	.footer-video {
-		position: absolute;
-		inset: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		opacity: 0.15;
-		pointer-events: none;
-		z-index: 0;
 	}
 
 	.footer-watermark {
-		position: absolute;
-		top: -40px;
-		left: 50%;
-		transform: translateX(-50%);
-		pointer-events: none;
-		z-index: 1;
-	}
-
-	.watermark-text {
-		font-family: var(--font-display-hero);
-		font-size: 300px;
-		font-weight: 300;
-		color: rgba(0, 0, 0, 0.04);
-		white-space: nowrap;
-		line-height: 1;
+		display: none;
 	}
 
 	.footer-inner {
-		display: flex;
-		justify-content: space-between;
-		max-width: 1600px;
+		display: grid;
+		grid-template-columns: 1fr 2.2fr;
+		gap: 80px;
+		max-width: 1320px;
 		margin: 0 auto;
-		padding: 0 var(--space-5);
+		padding: 0;
 		position: relative;
 		z-index: 1;
-		background: rgba(255, 255, 255, 0.85);
-		backdrop-filter: blur(10px);
+		background: transparent;
 	}
 
 	.footer-left {
 		display: flex;
 		flex-direction: column;
-		gap: 24px;
+		gap: 32px;
 	}
 
 	.footer-brand {
 		display: flex;
 		align-items: center;
-		gap: 8px;
+		gap: 10px;
 	}
 
 	.footer-brand-text {
-		font-family: var(--font-sans);
-		font-size: 18px;
-		font-weight: 600;
-		letter-spacing: -0.3px;
+		font-family: var(--font-sans-display);
+		font-size: 24px;
+		font-weight: 500;
+		letter-spacing: -0.4px;
+		color: rgb(12, 18, 29);
 	}
 
 	.footer-compliance {
 		display: flex;
 		flex-direction: column;
-		gap: 12px;
+		gap: 14px;
 	}
 
-	.compliance-badge {
+	.compliance-eyebrow {
 		display: inline-flex;
 		align-items: center;
-		padding: 4px 12px;
-		border-radius: var(--radius-pill);
-		background: var(--bg-trust-green-50);
-		font-family: var(--font-sans);
-		font-size: var(--type-body-sm-size);
-		font-weight: 500;
-		line-height: var(--type-body-sm-lh);
-		color: rgb(22, 101, 52);
-		width: fit-content;
-	}
-
-	.compliance-certs {
-		display: flex;
 		gap: 8px;
 	}
 
-	.cert-badge {
+	.compliance-dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: rgb(132, 204, 90);
+		box-shadow: 0 0 0 3px rgba(132, 204, 90, 0.18);
+	}
+
+	.compliance-text {
+		font-family: var(--font-mono);
+		font-size: 11px;
+		font-weight: 400;
+		letter-spacing: 0.6px;
+		text-transform: uppercase;
+		color: rgba(12, 18, 29, 0.78);
+	}
+
+	.compliance-certs {
 		display: inline-flex;
 		align-items: center;
-		justify-content: center;
-		padding: 4px 10px;
-		border-radius: var(--radius-pill);
-		border: var(--border-subtle);
-		font-family: var(--font-mono);
-		font-size: 10px;
+		gap: 0;
+	}
+
+	.cert-badge {
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		object-fit: contain;
+		background: rgba(12, 18, 29, 0.04);
+		margin-left: -8px;
+	}
+
+	.cert-badge:first-child {
+		margin-left: 0;
+	}
+
+	.cert-more {
+		margin-left: 8px;
+		font-family: var(--font-sans);
+		font-size: 13px;
 		font-weight: 500;
-		color: var(--text-subtle-gray);
-		white-space: nowrap;
+		color: rgba(12, 18, 29, 0.62);
 	}
 
 	.footer-links {
-		display: flex;
-		gap: 80px;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 64px;
 	}
 
 	.footer-column {
 		display: flex;
 		flex-direction: column;
-		gap: 12px;
+		gap: 14px;
 	}
 
 	.footer-column-title {
-		font-family: var(--font-sans);
-		font-size: var(--type-body-md-size);
-		font-weight: 600;
-		line-height: var(--type-body-md-lh);
-		color: var(--text-primary-light);
-		margin-bottom: 4px;
+		font-family: var(--font-mono);
+		font-size: 11px;
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: 0.6px;
+		text-transform: uppercase;
+		color: rgba(12, 18, 29, 0.52);
+		margin-bottom: 6px;
 	}
 
 	.footer-link {
 		font-family: var(--font-sans);
-		font-size: var(--type-body-md-size);
-		font-weight: var(--type-body-md-weight);
-		line-height: var(--type-body-md-lh);
-		color: var(--text-muted-light-60);
-		transition: color var(--motion-link-duration) var(--motion-link-easing);
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 1.5;
+		color: rgb(12, 18, 29);
 	}
 
-	.footer-link:hover {
-		color: var(--text-primary-light);
+	.footer-link:hover,
+	.footer-link:focus-visible {
+		color: rgba(12, 18, 29, 0.62);
 	}
 
 	.footer-bottom {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		max-width: 1600px;
-		margin: 60px auto 0;
-		padding: 20px var(--space-5) 0;
-		border-top: var(--border-subtle);
+		max-width: 1320px;
+		margin: 120px auto 0;
+		padding: 24px 0 0;
+		border-top: 1px solid rgba(12, 18, 29, 0.08);
 		position: relative;
 		z-index: 1;
-		background: rgba(255, 255, 255, 0.85);
-		backdrop-filter: blur(10px);
 	}
 
 	.footer-copyright {
 		font-family: var(--font-sans);
-		font-size: var(--type-body-sm-size);
-		font-weight: var(--type-body-sm-weight);
-		line-height: var(--type-body-sm-lh);
-		color: var(--text-muted-light-50);
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 1.4;
+		color: rgba(12, 18, 29, 0.52);
 	}
 
 	.footer-social {
 		display: flex;
 		align-items: center;
-		gap: 12px;
+		gap: 16px;
 	}
 
 	.social-link {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		color: var(--text-muted-light-50);
-		transition: color var(--motion-link-duration) var(--motion-link-easing);
+		color: rgba(12, 18, 29, 0.62);
 	}
 
-	.social-link:hover {
-		color: var(--text-primary-light);
-	}
-
-	.social-divider {
-		color: var(--text-muted-light-30);
-		font-size: 12px;
+	.social-link:hover,
+	.social-link:focus-visible {
+		color: rgb(12, 18, 29);
 	}
 
 	@media (max-width: 809.98px) {
 		.footer {
-			padding: 60px 0 40px;
+			padding: 60px 24px 32px;
 		}
 
 		.footer-inner {
-			flex-direction: column;
+			grid-template-columns: 1fr;
 			gap: 48px;
 		}
 
 		.footer-links {
-			flex-direction: column;
+			grid-template-columns: 1fr 1fr;
 			gap: 32px;
 		}
 
 		.watermark-text {
-			font-size: 160px;
+			font-size: 200px;
 		}
 
 		.footer-bottom {
 			flex-direction: column;
 			align-items: flex-start;
 			gap: 16px;
+			margin-top: 60px;
 		}
 	}
-
-@media (max-width: 809px) {
-	.footer {
-		min-height: 1010px;
-	}
-}
 </style>

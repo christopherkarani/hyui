@@ -5,16 +5,14 @@
 				<span class="demo-dot"></span>
 				<span class="demo-eyebrow">GET A PERSONALIZED DEMO</span>
 			</div>
-			<h2 class="demo-cta-heading">Ready to see the Giga AI agent in action?</h2>
+			<h2 class="demo-cta-heading">See Pantaa operating on your real support workflows.</h2>
 		</div>
 
 		<div class="demo-cta-right">
 			<p class="demo-cta-desc">
-				Giga's AI agents handle complex workflows at scale, from live delivery issues to compliance decisions, while maintaining over 90% resolution accuracy in production.
+				Run a guided deployment with governance and observability from day one. Teams typically reach production-ready deflection in weeks, not quarters.
 			</p>
-			<a href="./contact" class="demo-cta-button">
-				Talk to us
-			</a>
+			<a href="./contact" class="demo-cta-button">Talk to us</a>
 		</div>
 	</div>
 </section>
@@ -24,135 +22,120 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		background: linear-gradient(90deg, rgb(255, 154, 234) -10%, rgb(255, 255, 255) 28%);
-		padding: var(--demo-cta-padding);
-		gap: var(--demo-cta-gap);
-		min-height: 403px;
-		color: var(--text-primary-light);
+		background:
+			radial-gradient(ellipse 60% 80% at 18% 90%, rgba(255, 195, 175, 0.55) 0%, rgba(255, 195, 175, 0) 60%),
+			radial-gradient(ellipse 55% 70% at 82% 95%, rgba(218, 188, 240, 0.5) 0%, rgba(218, 188, 240, 0) 60%),
+			radial-gradient(ellipse 50% 60% at 50% 100%, rgba(189, 210, 245, 0.45) 0%, rgba(189, 210, 245, 0) 65%),
+			rgb(255, 255, 255);
+		padding: 140px 36px 200px;
+		color: rgb(12, 18, 29);
 		width: 100%;
 	}
 
 	.demo-cta-inner {
-		display: flex;
-		gap: var(--demo-cta-gap);
+		display: grid;
+		grid-template-columns: 1.4fr 1fr;
+		gap: 100px;
+		align-items: end;
 		width: 100%;
-		max-width: 1600px;
-		padding: var(--space-12) var(--space-5);
+		max-width: 1320px;
+		padding: 0;
+		border: none;
+		background: transparent;
 	}
 
 	.demo-cta-left {
-		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
 	}
 
 	.demo-cta-label {
 		display: flex;
 		align-items: center;
-		gap: 8px;
-		margin-bottom: 16px;
+		gap: 10px;
 	}
 
 	.demo-dot {
 		width: 8px;
 		height: 8px;
-		border-radius: 2px;
-		background: var(--bg-brand-orange);
-		box-shadow: var(--shadow-brand-glow);
-		animation: pulse-dot 2s ease-in-out infinite;
-	}
-
-	@keyframes pulse-dot {
-		0%, 100% {
-			box-shadow: rgba(247, 107, 21, 0.5) 0px 0px 4px 0px;
-		}
-		50% {
-			box-shadow: rgba(247, 107, 21, 0.8) 0px 0px 8px 2px;
-		}
+		border-radius: 999px;
+		background: rgb(255, 132, 92);
 	}
 
 	.demo-eyebrow {
 		font-family: var(--font-mono);
-		font-size: var(--type-eyebrow-size);
-		font-weight: var(--type-eyebrow-weight);
-		line-height: var(--type-eyebrow-lh);
-		letter-spacing: var(--type-eyebrow-ls);
+		font-size: 11px;
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: 0.6px;
 		text-transform: uppercase;
-		color: var(--text-muted-light-50);
+		color: rgba(12, 18, 29, 0.82);
 	}
 
 	.demo-cta-heading {
 		font-family: var(--font-display-hero);
-		font-size: var(--type-section-title-size);
-		font-weight: var(--type-section-title-weight);
-		line-height: var(--type-section-title-lh);
-		letter-spacing: var(--type-section-title-ls);
-		background: linear-gradient(90deg, rgb(247, 107, 21), var(--text-primary-light));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		color: var(--text-primary-light);
+		font-size: clamp(40px, 5.2vw, 72px);
+		font-weight: 300;
+		line-height: 1.06;
+		letter-spacing: -1.4px;
+		color: rgb(12, 18, 29);
+		max-width: 16ch;
 	}
 
 	.demo-cta-right {
-		flex: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		gap: 24px;
+		gap: 28px;
+		padding-bottom: 8px;
 	}
 
 	.demo-cta-desc {
 		font-family: var(--font-sans);
-		font-size: var(--type-body-lg-size);
-		font-weight: var(--type-body-lg-weight);
-		line-height: var(--type-body-lg-lh);
-		color: var(--text-muted-light-60);
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 1.6;
+		color: rgba(12, 18, 29, 0.72);
+		max-width: 40ch;
 	}
 
 	.demo-cta-button {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: 9px 20px;
+		padding: 14px 30px;
 		border-radius: var(--radius-pill);
-		background: var(--bg-cta-dark);
-		color: var(--text-primary-dark);
+		background: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
 		font-family: var(--font-sans);
-		font-size: var(--type-button-md-size);
-		font-weight: var(--type-button-md-weight);
-		line-height: var(--type-button-md-lh);
+		font-size: 15px;
+		font-weight: 500;
+		line-height: 1.4;
 		width: fit-content;
-		transition: opacity 0.2s ease-in-out;
+		border: none;
+		transition: background 160ms ease;
 	}
 
-	.demo-cta-button:hover {
-		opacity: 0.85;
+	.demo-cta-button:hover,
+	.demo-cta-button:focus-visible {
+		background: rgb(28, 28, 28);
+		color: rgb(255, 255, 255);
 	}
 
 	@media (max-width: 809.98px) {
+		.demo-cta {
+			padding: 80px 24px 100px;
+		}
+
 		.demo-cta-inner {
-			flex-direction: column;
-			gap: var(--space-5);
-			padding: var(--space-6) var(--space-5);
+			grid-template-columns: 1fr;
+			gap: 32px;
 		}
 
 		.demo-cta-right {
-			gap: 16px;
+			gap: 20px;
+			padding-bottom: 0;
 		}
 	}
-
-@media (max-width: 1024px) and (min-width: 811px) {
-	.demo-cta {
-		min-height: 424px;
-	}
-}
-@media (max-width: 810px) {
-	.demo-cta {
-		min-height: 445px;
-	}
-}
-@media (max-width: 809px) {
-	.demo-cta {
-		min-height: 486px;
-	}
-}
 </style>

@@ -1,5 +1,5 @@
 {
-  "name": "giga-clone",
+  "name": "pantaa-clone",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -17,10 +17,11 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.45.0",
-    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.5.0",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "@testing-library/svelte": "^5.0.0",
+    "@types/three": "^0.183.1",
     "postcss": "^8.4.38",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
@@ -29,6 +30,7 @@
     "vitest": "^2.0.0"
   },
   "dependencies": {
-    "motion": "^11.0.0"
+    "motion": "^11.0.0",
+    "three": "^0.183.1"
   }
 }

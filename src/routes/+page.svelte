@@ -9,26 +9,26 @@
 </script>
 
 <svelte:head>
-	<title>Giga – AI agents for enterprise support</title>
-	<meta name="description" content="AI that talks like a human. Handles millions of calls." />
+	<title>Pantaa – AI agents for enterprise support</title>
+	<meta name="description" content="Enterprise AI agents for support operations with policy-safe automation and measurable outcomes." />
 </svelte:head>
 
 <TopNavDesktop />
 
-<main>
+<main aria-label="Main content">
 	<Hero />
-	<AnimateEntry delay={100}>
+	<AnimateEntry delay={80}>
 		<ProductStack />
 	</AnimateEntry>
-	<AnimateEntry delay={50}>
+	<AnimateEntry delay={60}>
 		<CustomerSpotlight />
 	</AnimateEntry>
-	<AnimateEntry delay={50}>
+	<AnimateEntry delay={60}>
 		<DemoCTA />
 	</AnimateEntry>
 </main>
 
-<AnimateEntry delay={100}>
+<AnimateEntry delay={90}>
 	<Footer />
 </AnimateEntry>
 
@@ -36,5 +36,6 @@
 	main {
 		display: flex;
 		flex-direction: column;
+		scroll-margin-top: 90px;
 	}
 </style>

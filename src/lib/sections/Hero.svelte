@@ -1,5 +1,10 @@
 <script lang="ts">
+	import { tick } from 'svelte';
+
 	let menuOpen = $state(false);
+	let menuButton = $state<HTMLButtonElement | null>(null);
+	let mobileOverlay = $state<HTMLElement | null>(null);
+	let lastFocusedElement: HTMLElement | null = null;
 
 	const heroLogoList = [
 		{ id: 'postman', label: 'Postman' },
@@ -11,63 +16,166 @@
 	];
 
 	const heroLogoSvgs: Record<string, string> = {
-		postman: `<svg role="img" viewBox="0 0 120 36" xmlns="http://www.w3.org/2000/svg"><polygon points="16 4 104 4 116 18 104 32 16 32 4 18" fill="#FF3008"/><text x="34" y="24" font-family="Inter" font-size="12" font-weight="600" fill="#fff">POSTMAN</text></svg>`,
-		rio: `<svg role="img" viewBox="0 0 64 36" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="Emilio Light, serif" font-size="24" fill="#fff" font-style="italic">Rio</text></svg>`,
-		doordash: `<svg role="img" viewBox="0 0 130 36" xmlns="http://www.w3.org/2000/svg"><path d="M0 4L45 4L70 32H40L0 18Z" fill="#FF3008" opacity="0.85"/><text x="78" y="24" font-family="Inter" font-size="14" font-weight="600" fill="#fff">DoorDash</text></svg>`,
-		capital: `<svg role="img" viewBox="0 0 140 36" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="Inter" font-size="16" font-weight="500" fill="#fff">capital.com</text></svg>`,
-		afriex: `<svg role="img" viewBox="0 0 110 36" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="8" width="16" height="16" rx="4" fill="#fff" opacity="0.25"/><text x="26" y="24" font-family="Inter" font-size="16" font-weight="600" fill="#fff">afriex</text></svg>`,
-		sendoso: `<svg role="img" viewBox="0 0 120 36" xmlns="http://www.w3.org/2000/svg"><text x="0" y="24" font-family="Emilio Light, serif" font-size="18" fill="#fff" font-style="italic">Sendoso</text><path d="M0 32H38" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>`
+		postman: `<svg role="img" viewBox="0 0 130 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" font-family="Inter, sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#fff">POSTMAN</text></svg>`,
+		rio: `<svg role="img" viewBox="0 0 70 32" xmlns="http://www.w3.org/2000/svg"><text x="0" y="22" font-family="Georgia, serif" font-size="22" fill="#fff" font-style="italic" font-weight="400">Rio</text></svg>`,
+		doordash: `<svg role="img" viewBox="0 0 150 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 8 L11 8 L7 16 L-1 16 Z" fill="#fff"/><text x="18" y="20" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#fff">DOORDASH</text></svg>`,
+		capital: `<svg role="img" viewBox="0 0 130 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#fff" letter-spacing="-0.4">capital.com</text></svg>`,
+		afriex: `<svg role="img" viewBox="0 0 120 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 18 L8 4 L16 18 Z M3 14 H13" stroke="#fff" stroke-width="1.6" fill="none" stroke-linejoin="round"/><text x="22" y="20" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#fff" letter-spacing="-0.5">afriex</text></svg>`,
+		sendoso: `<svg role="img" viewBox="0 0 130 32" xmlns="http://www.w3.org/2000/svg"><text x="0" y="22" font-family="Georgia, serif" font-size="22" fill="#fff" font-style="italic" font-weight="400">Sendoso</text><line x1="0" y1="27" x2="78" y2="27" stroke="#fff" stroke-width="1.4"/></svg>`
 	};
+
+	const menuFocusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+	function closeMenu() {
+		menuOpen = false;
+	}
 
 	function toggleMenu() {
 		menuOpen = !menuOpen;
 	}
+
+	function focusFirstOverlayControl() {
+		if (!mobileOverlay) {
+			return;
+		}
+		const focusableElements = mobileOverlay.querySelectorAll<HTMLElement>(menuFocusableSelector);
+		focusableElements[0]?.focus();
+	}
+
+	function handleOverlayKeydown(event: KeyboardEvent) {
+		if (!mobileOverlay) {
+			return;
+		}
+
+		if (event.key === 'Escape') {
+			event.preventDefault();
+			closeMenu();
+			return;
+		}
+
+		if (event.key !== 'Tab') {
+			return;
+		}
+
+		const focusableElements = Array.from(
+			mobileOverlay.querySelectorAll<HTMLElement>(menuFocusableSelector)
+		).filter((element) => !element.hasAttribute('disabled'));
+
+		if (focusableElements.length === 0) {
+			return;
+		}
+
+		const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+		const firstElement = focusableElements[0];
+		const lastElement = focusableElements[focusableElements.length - 1];
+
+		if (event.shiftKey && (currentIndex <= 0 || document.activeElement === firstElement)) {
+			event.preventDefault();
+			lastElement.focus();
+			return;
+		}
+
+		if (!event.shiftKey && (currentIndex === -1 || document.activeElement === lastElement)) {
+			event.preventDefault();
+			firstElement.focus();
+		}
+	}
+
+	$effect(() => {
+		if (!menuOpen) {
+			return;
+		}
+
+		const previousBodyOverflow = document.body.style.overflow;
+		const onDocumentKeydown = (event: KeyboardEvent) => {
+			handleOverlayKeydown(event);
+		};
+
+		lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+		document.body.style.overflow = 'hidden';
+		document.addEventListener('keydown', onDocumentKeydown);
+
+		void tick().then(() => {
+			focusFirstOverlayControl();
+		});
+
+		return () => {
+			document.removeEventListener('keydown', onDocumentKeydown);
+			document.body.style.overflow = previousBodyOverflow;
+			(lastFocusedElement ?? menuButton)?.focus();
+		};
+	});
 </script>
 
 <section class="hero">
 	<div class="hero-bg">
-		<img
-			src="/images/hero-bg.png"
-			alt=""
-			class="hero-image"
-			loading="eager"
-		/>
+		<picture class="hero-picture">
+			<source
+				type="image/webp"
+				srcset="
+					/pantaa/images/optimized/hero-bg-768.webp 768w,
+					/pantaa/images/optimized/hero-bg-1440.webp 1440w,
+					/pantaa/images/optimized/hero-bg-1920.webp 1920w,
+					/pantaa/images/optimized/hero-bg-2560.webp 2560w
+				"
+				sizes="100vw"
+			/>
+			<img
+				src="/pantaa/images/optimized/hero-bg-2560.jpg"
+				alt=""
+				class="hero-image"
+				width="2560"
+				height="1266"
+				loading="eager"
+				fetchpriority="high"
+				decoding="async"
+			/>
+		</picture>
 		<div class="hero-vignette"></div>
 	</div>
 
 	<div class="hero-content">
 		<div class="hero-mobile-top">
 			<a href="/" class="mobile-logo">
-				<svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-					<circle cx="12" cy="12" r="11" stroke="white" stroke-width="1.5"/>
-					<path d="M6 12C6 8.68629 8.68629 6 12 6" stroke="white" stroke-width="1.5"/>
-					<path d="M18 12C18 15.3137 15.3137 18 12 18" stroke="white" stroke-width="1.5"/>
-					<path d="M4 12H20" stroke="white" stroke-width="1" opacity="0.3"/>
+				<svg class="logo-icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+					<path d="M14 2 C19 4, 24 8, 26 14 C24 20, 19 24, 14 26 C12 22, 14 18, 18 14 C14 12, 10 14, 6 18 C4 12, 8 6, 14 2 Z" fill="white"/>
 				</svg>
-				<span class="logo-text">Giga</span>
+				<span class="logo-text">Pantaa</span>
 			</a>
-			<button class="hamburger" onclick={toggleMenu} aria-label="Open menu">
+			<button
+				type="button"
+				bind:this={menuButton}
+				class="hamburger"
+				onclick={toggleMenu}
+				aria-controls="mobile-nav"
+				aria-expanded={menuOpen}
+				aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+			>
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-					<line x1="4" y1="8" x2="20" y2="8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-					<line x1="4" y1="14" x2="20" y2="14" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+					<line x1="4" y1="8" x2="20" y2="8" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+					<line x1="4" y1="14" x2="20" y2="14" stroke="white" stroke-width="1.5" stroke-linecap="round" />
 				</svg>
 			</button>
 		</div>
 
 		<div class="hero-center">
 			<a href="./browser-agent" class="announcement-chip">
-				<span class="chip-text">GIGA LAUNCHES BROWSER AGENT</span>
-				<svg width="6" height="10" viewBox="0 0 6 10" fill="none">
-					<path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<span class="chip-dot" aria-hidden="true"></span>
+				<span class="chip-text">ENTERPRISE RELEASE: BROWSER AGENT</span>
+				<svg class="chip-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none">
+					<path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
 			</a>
 
-			<h1 class="hero-headline">AI that talks like a human.<br/>Handles millions of calls.</h1>
+			<h1 class="hero-headline">
+				<span class="headline-line">AI that resolves support</span>
+				<span class="headline-line">like your top operators.</span>
+			</h1>
 
-			<h2 class="hero-subheadline">AI agents for enterprise support</h2>
+			<p class="hero-subheadline">Enterprise AI agents for support operations</p>
 
-			<div id="button-1">
-				<a href="./contact" class="hero-cta">Talk to us</a>
+			<div class="hero-actions">
+				<a href="./contact" class="hero-cta hero-cta-primary">Talk to us</a>
 			</div>
 		</div>
 
@@ -84,50 +192,52 @@
 </section>
 
 {#if menuOpen}
-	<div class="mobile-overlay" role="dialog" aria-modal="true">
+	<nav id="mobile-nav" bind:this={mobileOverlay} class="mobile-overlay" aria-label="Mobile navigation panel">
 		<div class="overlay-header">
 			<a href="/" class="mobile-logo">
 				<svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-					<circle cx="12" cy="12" r="11" stroke="white" stroke-width="1.5"/>
-					<path d="M6 12C6 8.68629 8.68629 6 12 6" stroke="white" stroke-width="1.5"/>
-					<path d="M18 12C18 15.3137 15.3137 18 12 18" stroke="white" stroke-width="1.5"/>
-					<path d="M4 12H20" stroke="white" stroke-width="1" opacity="0.3"/>
+					<circle cx="12" cy="12" r="11" stroke="white" stroke-width="1.5" />
+					<path d="M6 12C6 8.68629 8.68629 6 12 6" stroke="white" stroke-width="1.5" />
+					<path d="M18 12C18 15.3137 15.3137 18 12 18" stroke="white" stroke-width="1.5" />
+					<path d="M4 12H20" stroke="white" stroke-width="1" opacity="0.3" />
 				</svg>
-				<span class="logo-text">Giga</span>
+				<span class="logo-text">Pantaa</span>
 			</a>
-			<button class="close-btn" onclick={toggleMenu} aria-label="Close menu">
+			<button type="button" class="close-btn" onclick={closeMenu} aria-label="Close menu">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-					<line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-					<line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+					<line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+					<line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round" />
 				</svg>
 			</button>
 		</div>
-		<nav class="overlay-nav">
+
+		<div class="overlay-trust-pill">SOC2 • ISO 42001 • ISO 27001</div>
+
+		<div class="overlay-nav">
 			<div class="overlay-group">
-				<h3 class="overlay-group-title">Product</h3>
-				<a href="./agent-canvas" class="overlay-link">Agent Canvas</a>
-				<a href="./insights" class="overlay-link">Insights</a>
-				<a href="./voice-experience" class="overlay-link">Voice Experience</a>
-				<a href="./browser-agent" class="overlay-link">Browser Agent</a>
+				<h3 class="overlay-group-title">Platform</h3>
+				<a href="./agent-canvas" class="overlay-link" onclick={closeMenu}>Agent Canvas</a>
+				<a href="./insights" class="overlay-link" onclick={closeMenu}>Insights</a>
+				<a href="./voice-experience" class="overlay-link" onclick={closeMenu}>Voice Experience</a>
+				<a href="./browser-agent" class="overlay-link" onclick={closeMenu}>Browser Agent</a>
 			</div>
 			<div class="overlay-group">
 				<h3 class="overlay-group-title">Company</h3>
-				<a href="./careers" class="overlay-link">Careers</a>
-				<a href="./contact" class="overlay-link">Contact</a>
-				<a href="./trust" class="overlay-link">Trust Center</a>
+				<a href="./careers" class="overlay-link" onclick={closeMenu}>Careers</a>
+				<a href="./contact" class="overlay-link" onclick={closeMenu}>Contact</a>
+				<a href="./trust" class="overlay-link" onclick={closeMenu}>Trust Center</a>
 			</div>
-		</nav>
-	</div>
+		</div>
+	</nav>
 {/if}
 
 <style>
 	.hero {
 		position: relative;
 		width: 100%;
-		height: 100vh;
-		min-height: 800px;
+		min-height: 100svh;
 		overflow: clip;
-		background: var(--bg-hero);
+		background: rgb(0, 0, 0);
 		z-index: 3;
 	}
 
@@ -136,38 +246,40 @@
 		inset: 0;
 	}
 
+	.hero-picture,
 	.hero-image {
+		position: absolute;
+		inset: 0;
 		width: 100%;
 		height: 100%;
+		display: block;
+	}
+
+	.hero-image {
 		object-fit: cover;
 		object-position: 50% 50%;
+		opacity: 0.55;
+		filter: saturate(0.85) brightness(0.7) contrast(1.05);
 	}
 
 	.hero-vignette {
 		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 270px;
-		background: var(--gradient-hero-vignette);
-		mix-blend-mode: multiply;
-	}
-
-	@media (max-width: 1440px) {
-		.hero-vignette {
-			height: 225px;
-		}
+		inset: 0;
+		background:
+			linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.15) 18%, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.05) 60%, rgba(0, 0, 0, 0.95) 100%);
 	}
 
 	.hero-content {
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		height: 100%;
-		padding: 0 20px;
+		justify-content: flex-start;
+		min-height: 100svh;
+		width: 100%;
+		margin-inline: auto;
+		padding: clamp(180px, 26vh, 280px) 36px 56px;
 	}
 
 	.hero-mobile-top {
@@ -178,157 +290,132 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 20px;
+		gap: 26px;
 		text-align: center;
-		max-width: 900px;
+		max-width: 1120px;
 	}
 
 	.announcement-chip {
 		display: inline-flex;
 		align-items: center;
-		gap: 6px;
-		padding: 4px 12px;
+		gap: 10px;
+		padding: 6px 10px 6px 8px;
 		border-radius: var(--radius-pill);
-		background: var(--bg-glass-white-10);
-		backdrop-filter: var(--blur-hero-cta);
+		background: rgba(0, 0, 0, 0.42);
+		backdrop-filter: blur(14px);
+		-webkit-backdrop-filter: blur(14px);
+		border: 1px solid rgba(255, 255, 255, 0.16);
 		font-family: var(--font-mono);
-		font-size: var(--type-eyebrow-size);
-		font-weight: var(--type-eyebrow-weight);
-		line-height: var(--type-eyebrow-lh);
-		letter-spacing: var(--type-eyebrow-ls);
+		font-size: 11px;
+		font-weight: 400;
+		line-height: 1;
+		letter-spacing: 0.4px;
 		text-transform: uppercase;
-		color: var(--text-primary-dark);
+		color: rgba(255, 255, 255, 0.96);
 	}
 
-	.chip-text {
-		font-size: inherit;
+	.chip-dot {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: rgb(255, 255, 255);
+		margin-left: 4px;
 	}
 
 	.hero-headline {
 		font-family: var(--font-display-hero);
-		font-size: var(--type-hero-headline-size);
-		font-weight: var(--type-hero-headline-weight);
-		line-height: var(--type-hero-headline-lh);
-		letter-spacing: var(--type-hero-headline-ls);
-		color: var(--text-primary-dark);
-		text-transform: none;
+		font-size: clamp(44px, 5.4vw, 80px);
+		font-weight: 300;
+		line-height: 1.04;
+		letter-spacing: -1.5px;
+		color: rgb(255, 255, 255);
+		max-width: 18ch;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.headline-line {
+		display: block;
 	}
 
 	.hero-subheadline {
-		font-family: var(--font-sans);
-		font-size: var(--type-body-lg-size);
-		font-weight: var(--type-body-lg-weight);
-		line-height: var(--type-body-lg-lh);
-		color: var(--text-muted-dark-87);
+		font-family: var(--font-sans-display);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+		color: rgba(255, 255, 255, 0.94);
+		max-width: 60ch;
+		margin-top: -8px;
+	}
+
+	.hero-actions {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin-top: 18px;
 	}
 
 	.hero-cta {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: 9px 20px;
+		padding: 13px 28px;
 		border-radius: var(--radius-pill);
-		background: var(--bg-surface-white);
-		color: var(--text-primary-light);
-		font-family: var(--font-sans);
-		font-size: var(--type-button-md-size);
-		font-weight: var(--type-button-md-weight);
-		line-height: var(--type-button-md-lh);
-		transition: background 0.2s ease-in-out;
+		font-family: var(--font-sans-display);
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 1.4;
+		border: 1px solid transparent;
 	}
 
-	.hero-cta:hover {
-		background: rgba(50, 50, 50, 0.616);
-		color: var(--text-primary-dark);
+	.hero-cta-primary {
+		background: rgb(255, 255, 255);
+		color: rgb(0, 0, 0);
 	}
 
-	.hero-cta:focus-visible {
-		background: rgba(0, 0, 0, 0.592);
-		color: var(--text-primary-dark);
-		outline: auto 1px;
+	.hero-cta-primary:hover,
+	.hero-cta-primary:focus-visible {
+		background: rgba(255, 255, 255, 0.88);
+		color: rgb(0, 0, 0);
 	}
 
 	.hero-logos {
-		position: absolute;
-		bottom: 60px;
-		left: 0;
-		right: 0;
+		margin-top: auto;
+		width: 100%;
 		display: flex;
-		justify-content: center;
-		pointer-events: none;
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
+		padding-top: 80px;
 	}
 
 	.logo-row {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
-		gap: 40px;
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+		gap: 64px;
 		justify-content: center;
 		align-items: center;
-		opacity: 0.85;
+		opacity: 0.42;
+		width: 100%;
+		max-width: 1320px;
 	}
 
 	.partner-logo {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-width: 120px;
+		min-width: 0;
 		max-width: 160px;
-		color: var(--text-primary-dark);
+		color: rgb(255, 255, 255);
+		margin-inline: auto;
 	}
 
-	.partner-logo svg {
+	:global(.partner-logo svg) {
 		width: 100%;
-		height: auto;
-	}
-
-	@media (max-width: 809.98px) {
-		.hero {
-			min-height: 1000px;
-		}
-
-		.hero-image {
-			object-position: 26.8% 67%;
-		}
-
-		.hero-vignette {
-			height: 360px;
-		}
-
-		.hero-mobile-top {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			position: absolute;
-			top: 20px;
-			left: 20px;
-			right: 20px;
-			z-index: 10;
-		}
-
-		.hero-headline {
-			font-size: var(--type-hero-headline-size);
-			line-height: var(--type-hero-headline-lh);
-			letter-spacing: var(--type-hero-headline-ls);
-		}
-
-		.logo-row {
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 24px 32px;
-			padding: 0 20px;
-		}
-	}
-
-	@media (min-width: 810px) and (max-width: 1199.98px) {
-		.hero-headline {
-			font-size: var(--type-hero-headline-size);
-			line-height: var(--type-hero-headline-lh);
-			letter-spacing: var(--type-hero-headline-ls);
-		}
-
-		.hero-vignette {
-			height: 200px;
-		}
+		max-width: 130px;
+		height: 22px;
 	}
 
 	.mobile-logo {
@@ -353,16 +440,21 @@
 		width: 40px;
 		height: 40px;
 		border-radius: var(--radius-lg);
+		background: rgba(209, 225, 255, 0.08);
+		border: var(--border-glass);
 	}
 
 	.mobile-overlay {
 		position: fixed;
 		inset: 0;
 		z-index: 100;
-		background: rgb(0, 0, 0);
+		background: rgba(7, 10, 16, 0.98);
 		padding: 20px;
 		display: flex;
 		flex-direction: column;
+		backdrop-filter: blur(18px);
+		-webkit-backdrop-filter: blur(18px);
+		animation: mobile-overlay-enter var(--motion-duration-base) var(--motion-enter-easing) both;
 	}
 
 	.overlay-header {
@@ -371,11 +463,26 @@
 		justify-content: space-between;
 	}
 
+	.overlay-trust-pill {
+		display: inline-flex;
+		align-self: flex-start;
+		margin-top: 28px;
+		padding: 8px 12px;
+		border-radius: var(--radius-pill);
+		background: rgba(210, 225, 255, 0.1);
+		border: var(--border-glass);
+		font-family: var(--font-mono);
+		font-size: 10px;
+		letter-spacing: 0.36px;
+		text-transform: uppercase;
+		color: var(--text-muted-dark-87);
+	}
+
 	.overlay-nav {
 		display: flex;
 		flex-direction: column;
-		gap: 40px;
-		margin-top: 60px;
+		gap: 32px;
+		margin-top: 28px;
 	}
 
 	.overlay-group {
@@ -396,9 +503,97 @@
 
 	.overlay-link {
 		font-family: var(--font-sans);
-		font-size: 24px;
-		font-weight: 400;
-		line-height: 36px;
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 1.45;
 		color: var(--text-primary-dark);
+	}
+
+	.overlay-link:hover,
+	.overlay-link:focus-visible {
+		color: var(--color-accent);
+	}
+
+	@keyframes mobile-overlay-enter {
+		from {
+			opacity: 0;
+			transform: translateY(-8px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@media (max-width: 809.98px) {
+		.hero {
+			min-height: 760px;
+		}
+
+		.hero-image {
+			object-position: 33% 63%;
+		}
+
+		.hero-grid-overlay {
+			background-size: 52px 52px;
+			opacity: 0.26;
+		}
+
+		.hero-mobile-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			right: 20px;
+			z-index: 10;
+		}
+
+		.hero-content {
+			width: 100%;
+			padding: 120px 20px var(--space-12);
+		}
+
+		.hero-center {
+			max-width: 100%;
+			gap: var(--space-4);
+		}
+
+		.hero-subheadline {
+			font-size: 15px;
+			max-width: 34ch;
+		}
+
+		.hero-actions {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.hero-cta {
+			width: min(320px, 100%);
+		}
+
+		.hero-logos {
+			padding-top: var(--space-10);
+		}
+
+		.logo-row {
+			grid-template-columns: repeat(2, minmax(120px, 1fr));
+			gap: 20px 28px;
+			max-width: 360px;
+		}
+	}
+
+	@media (min-width: 810px) and (max-width: 1199.98px) {
+		.hero-content {
+			padding-top: 172px;
+		}
+
+		.logo-row {
+			grid-template-columns: repeat(3, minmax(120px, 1fr));
+			gap: 28px 40px;
+			max-width: 620px;
+		}
 	}
 </style>

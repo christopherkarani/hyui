@@ -1,27 +1,94 @@
+/* === Emilio (display serif) — sourced from pantaa.ai === */
 @font-face {
   font-family: 'Emilio Light';
-  src: url('/fonts/emilio-light.woff') format('woff');
+  src: url('/pantaa/fonts/emilio-light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Giga Sans Display Trial 400';
-  src: url('/fonts/giga-sans-display-400.woff2') format('woff2');
+  font-family: 'Emilio Light';
+  src: url('/pantaa/fonts/emilio-light-italic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Emilio Regular';
+  src: url('/pantaa/fonts/emilio-regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Giga Sans Display Trial 500';
-  src: url('/fonts/giga-sans-display-500.woff2') format('woff2');
-  font-weight: 500;
+  font-family: 'Emilio Regular';
+  src: url('/pantaa/fonts/emilio-regular-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Emilio Semibold';
+  src: url('/pantaa/fonts/emilio-semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Emilio Thin';
+  src: url('/pantaa/fonts/emilio-thin.woff') format('woff');
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
+/* === Pantaa Sans Display (UI sans) === */
+@font-face {
+  font-family: 'Pantaa Sans Display Trial 400';
+  src: url('/pantaa/fonts/pantaa-sans-display-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pantaa Sans Display Trial 500';
+  src: url('/pantaa/fonts/pantaa-sans-display-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pantaa Sans Display Trial 600';
+  src: url('/pantaa/fonts/pantaa-sans-display-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Pantaa Sans Text (body sans) === */
+@font-face {
+  font-family: 'Pantaa Sans Text Trial 400';
+  src: url('/pantaa/fonts/pantaa-sans-text-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pantaa Sans Text Trial 500';
+  src: url('/pantaa/fonts/pantaa-sans-text-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pantaa Sans Text Trial 600';
+  src: url('/pantaa/fonts/pantaa-sans-text-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* === Inter (kept local for fallback weights) === */
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/inter.woff2') format('woff2');
@@ -29,7 +96,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: 'Inter Display';
   src: url('/fonts/inter-display.woff2') format('woff2');
@@ -38,22 +104,7 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Giga Sans Text Trial 400';
-  src: url('/fonts/giga-sans-text-400.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Giga Sans Text Trial 500';
-  src: url('/fonts/giga-sans-text-500.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* === Geist Mono === */
 @font-face {
   font-family: 'Geist Mono';
   src: url('/fonts/geist-mono.woff2') format('woff2');
@@ -63,47 +114,60 @@
 }
 
 :root {
+  color-scheme: dark;
+
   /* Font stacks */
-  --font-display-hero: 'Emilio Light', 'Playfair Display', 'Instrument Serif', serif;
-  --font-display-product: 'Giga Sans Display Trial 400', 'Inter Display', Inter, sans-serif;
-  --font-display-product-medium: 'Giga Sans Display Trial 500', 'Inter Display', Inter, sans-serif;
+  --font-display-hero: 'Emilio Light', 'Instrument Serif', 'Times New Roman', serif;
+  --font-display-product: 'Pantaa Sans Display Trial 400', 'Inter Display', Inter, sans-serif;
+  --font-display-product-medium: 'Pantaa Sans Display Trial 500', 'Inter Display', Inter, sans-serif;
   --font-sans: Inter, 'Segoe UI', system-ui, sans-serif;
-  --font-sans-giga-400: 'Giga Sans Text Trial 400', Inter, 'Segoe UI', system-ui, sans-serif;
-  --font-sans-giga-500: 'Giga Sans Text Trial 500', Inter, 'Segoe UI', system-ui, sans-serif;
+  --font-sans-pantaa-400: 'Pantaa Sans Text Trial 400', Inter, 'Segoe UI', system-ui, sans-serif;
+  --font-sans-pantaa-500: 'Pantaa Sans Text Trial 500', Inter, 'Segoe UI', system-ui, sans-serif;
   --font-sans-display: 'Inter Display', Inter, 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'JetBrains Mono', 'IBM Plex Mono', monospace;
 
   /* Text colors */
-  --text-primary-dark: rgb(255, 255, 255);
-  --text-primary-light: rgb(0, 0, 0);
-  --text-muted-dark-50: rgba(255, 255, 255, 0.5);
-  --text-muted-dark-61: rgba(255, 255, 255, 0.61);
-  --text-muted-dark-87: rgba(255, 255, 255, 0.87);
-  --text-muted-light-50: rgba(0, 0, 0, 0.5);
-  --text-muted-light-60: rgba(0, 0, 0, 0.6);
-  --text-muted-light-30: rgba(0, 0, 0, 0.3);
-  --text-success: rgb(73, 222, 128);
-  --text-info: rgb(33, 149, 255);
+  --text-primary-dark: rgb(243, 247, 255);
+  --text-primary-light: rgb(12, 18, 29);
+  --text-muted-dark-50: rgba(226, 236, 255, 0.56);
+  --text-muted-dark-61: rgba(226, 236, 255, 0.68);
+  --text-muted-dark-87: rgba(235, 243, 255, 0.88);
+  --text-muted-light-50: rgba(12, 18, 29, 0.56);
+  --text-muted-light-60: rgba(12, 18, 29, 0.67);
+  --text-muted-light-30: rgba(12, 18, 29, 0.34);
+  --text-success: rgb(53, 205, 131);
+  --text-info: rgb(76, 166, 255);
   --text-warning: rgb(246, 182, 21);
-  --text-subtle-gray: rgb(138, 143, 152);
-  --text-subtle-gray2: rgb(150, 150, 150);
+  --text-subtle-gray: rgb(116, 129, 152);
+  --text-subtle-gray2: rgb(138, 149, 169);
 
-  /* Backgrounds */
-  --bg-hero: rgb(5, 5, 5);
-  --bg-canvas-dark: rgb(22, 23, 23);
-  --bg-surface-light: rgb(254, 252, 251);
+  /* Backgrounds — pure black canvas, white pill CTA, mineral accent */
+  --bg-hero: rgb(0, 0, 0);
+  --bg-canvas-dark: rgb(0, 0, 0);
+  --bg-surface-light: rgb(243, 247, 255);
   --bg-surface-white: rgb(255, 255, 255);
-  --bg-glass-white-05: rgba(255, 255, 255, 0.05);
-  --bg-glass-white-07: rgba(255, 255, 255, 0.07);
-  --bg-glass-white-10: rgba(255, 255, 255, 0.1);
-  --bg-glass-black-20: rgba(0, 0, 0, 0.2);
-  --bg-brand-orange: rgb(247, 107, 21);
+  --bg-glass-white-05: rgba(229, 238, 255, 0.05);
+  --bg-glass-white-07: rgba(229, 238, 255, 0.07);
+  --bg-glass-white-10: rgba(229, 238, 255, 0.1);
+  --bg-glass-black-20: rgba(7, 11, 18, 0.24);
+  --bg-brand-accent: rgb(255, 132, 92);
   --bg-trust-green-50: rgba(185, 248, 209, 0.5);
-  --bg-cta-dark: rgb(19, 19, 19);
+  --bg-cta-dark: rgb(0, 0, 0);
+  --bg-cta-white: rgb(255, 255, 255);
+
+  /* Palette aliases */
+  --color-ink: var(--text-primary-dark);
+  --color-ink-soft: var(--text-muted-dark-61);
+  --color-surface-muted: var(--bg-canvas-dark);
+  --color-surface-panel: rgba(8, 9, 12, 0.66);
+  --color-accent: var(--bg-brand-accent);
+  --color-accent-soft: rgba(255, 132, 92, 0.24);
+  --focus-ring: rgba(255, 255, 255, 0.94);
+  --focus-ring-soft: rgba(255, 255, 255, 0.35);
 
   /* Gradients */
-  --gradient-page-dark: linear-gradient(rgb(5, 5, 5) 0%, rgb(22, 23, 23) 8%);
-  --gradient-hero-vignette: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(5, 5, 5) 100%);
+  --gradient-page-dark: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  --gradient-hero-vignette: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.96) 100%);
 
   /* Radius */
   --radius-none: 0px;
@@ -114,131 +178,151 @@
   --radius-lg: 8px;
   --radius-xl: 12px;
   --radius-card: 16px;
+  --radius-2xl: 20px;
   --radius-panel-top: 12px 12px 0px 0px;
   --radius-panel-bottom: 0px 0px 12px 12px;
 
   /* Shadows */
   --shadow-none: none;
-  --shadow-brand-glow: rgba(247, 107, 21, 0.5) 0px 0px 4px 0px;
-  --shadow-panel-outer: rgba(0, 0, 0, 0.7) 0px 12px 32px -16px, rgba(0, 0, 0, 0.7) 0px 12px 60px 0px;
-  --shadow-panel-inner: rgba(255, 255, 255, 0.1) 0px 0px 0px 0.508775px inset, rgba(0, 0, 0, 0.19) 0px 10.8539px 24.4212px -13.5673px;
-  --shadow-surface-soft: rgba(0, 0, 0, 0.1) 0px 4px 16px -8px, rgba(0, 0, 0, 0.1) 0px 3px 12px -4px, rgba(0, 0, 0, 0.06) 0px 2px 3px -2px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --shadow-brand-glow: rgba(96, 155, 255, 0.45) 0px 0px 10px 0px;
+  --shadow-panel-outer: rgba(1, 4, 9, 0.62) 0px 20px 48px -28px, rgba(0, 2, 6, 0.45) 0px 14px 42px -28px;
+  --shadow-panel-inner: rgba(225, 236, 255, 0.12) 0px 0px 0px 0.5px inset, rgba(0, 0, 0, 0.25) 0px 14px 28px -20px;
+  --shadow-surface-soft: rgba(9, 16, 28, 0.14) 0px 20px 40px -30px, rgba(9, 16, 28, 0.08) 0px 8px 20px -18px, rgba(9, 16, 28, 0.12) 0px 1px 0px 0px;
 
   /* Blur */
-  --blur-hero-cta: blur(40px);
-  --blur-panel: blur(10.7561px);
+  --blur-hero-cta: blur(32px);
+  --blur-panel: blur(14px);
   --blur-insights: blur(20px);
   --blur-footer: blur(30px);
   --blur-inline: blur(6px);
 
   /* Borders */
   --border-none: 0px none;
-  --border-subtle: 1px solid rgba(0, 0, 0, 0.1);
-  --border-light: 1px solid rgba(255, 255, 255, 0.15);
+  --border-subtle: 1px solid rgba(20, 31, 49, 0.12);
+  --border-light: 1px solid rgba(224, 234, 255, 0.18);
+  --border-glass: 1px solid rgba(224, 234, 255, 0.12);
+  --border-light-panel: 1px solid rgba(224, 234, 255, 0.08);
 
   /* Spacing primitives */
   --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
   --space-5: 20px;
   --space-6: 24px;
+  --space-8: 32px;
   --space-10: 40px;
   --space-12: 48px;
   --space-15: 60px;
+  --space-16: 64px;
   --space-17: 67px;
   --space-20: 80px;
+  --space-24: 96px;
   --space-25: 100px;
+  --space-28: 112px;
+  --space-32: 128px;
   --space-40: 160px;
 
   /* Motion */
-  --motion-enter-duration: 400ms;
-  --motion-enter-easing: cubic-bezier(0.01, 0.55, 0.39, 1);
-  --motion-link-duration: 0.3s;
+  --motion-duration-fast: 160ms;
+  --motion-duration-base: 280ms;
+  --motion-duration-slow: 420ms;
+  --motion-enter-duration: var(--motion-duration-slow);
+  --motion-enter-easing: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-link-duration: var(--motion-duration-base);
   --motion-link-easing: cubic-bezier(0.44, 0, 0.56, 1);
 
   /* Typography scale - Desktop */
-  --type-hero-headline-size: 81.6669px;
+  --type-hero-headline-size: clamp(56px, 7.5vw, 84px);
   --type-hero-headline-weight: 300;
-  --type-hero-headline-lh: 98.0003px;
-  --type-hero-headline-ls: -2.45001px;
+  --type-hero-headline-lh: 1.15;
+  --type-hero-headline-ls: -1.8px;
 
   --type-section-title-size: 48px;
   --type-section-title-weight: 400;
-  --type-section-title-lh: 62.4px;
+  --type-section-title-lh: 1.25;
   --type-section-title-ls: -0.96px;
 
   --type-kpi-metric-size: 44px;
-  --type-kpi-metric-weight: 400;
-  --type-kpi-metric-lh: 44px;
+  --type-kpi-metric-weight: 500;
+  --type-kpi-metric-lh: 1;
   --type-kpi-metric-ls: -1.32px;
 
   --type-body-lg-size: 16px;
   --type-body-lg-weight: 400;
-  --type-body-lg-lh: 28px;
+  --type-body-lg-lh: 1.75;
 
   --type-body-md-size: 14px;
   --type-body-md-weight: 400;
-  --type-body-md-lh: 24px;
+  --type-body-md-lh: 1.6;
 
   --type-body-sm-size: 13px;
   --type-body-sm-weight: 400;
-  --type-body-sm-lh: 20px;
+  --type-body-sm-lh: 1.5;
 
   --type-button-md-size: 14px;
-  --type-button-md-weight: 400;
-  --type-button-md-lh: 24px;
+  --type-button-md-weight: 500;
+  --type-button-md-lh: 1.5;
 
   --type-eyebrow-size: 11px;
   --type-eyebrow-weight: 400;
-  --type-eyebrow-lh: 24px;
-  --type-eyebrow-ls: 0.1px;
+  --type-eyebrow-lh: 1.6;
+  --type-eyebrow-ls: 0.24px;
 
   --type-mono-meta-size: 12px;
   --type-mono-meta-weight: 400;
-  --type-mono-meta-lh: 24px;
+  --type-mono-meta-lh: 1.8;
+
+  /* Layout */
+  --layout-max-width: 1320px;
 
   /* Section gaps - Desktop */
-  --product-stack-gap: 160px;
-  --product-stack-padding: 20px;
-  --spotlight-padding: 100px 20px 40px;
-  --spotlight-gap: 160px;
-  --demo-cta-padding: 48px 0px 0px;
-  --demo-cta-gap: 60px;
+  --product-stack-gap: 128px;
+  --product-stack-padding: 40px 20px 120px;
+  --spotlight-padding: 120px 20px 120px;
+  --spotlight-gap: 120px;
+  --demo-cta-padding: 0px 20px 120px;
+  --demo-cta-gap: 48px;
 }
 
 /* Tablet: 810px - 1199.98px */
 @media (min-width: 810px) and (max-width: 1199.98px) {
   :root {
-    --type-hero-headline-size: 48.8454px;
-    --type-hero-headline-weight: 300;
-    --type-hero-headline-lh: 58.6145px;
-    --type-hero-headline-ls: -1.46536px;
+    --type-hero-headline-size: clamp(44px, 7vw, 58px);
+    --type-hero-headline-lh: 1.16;
+    --type-hero-headline-ls: -1.2px;
 
     --type-section-title-size: 40px;
-    --type-section-title-lh: 52px;
+    --type-section-title-lh: 1.28;
     --type-section-title-ls: -0.8px;
 
-    --product-stack-gap: 67px;
-    --product-stack-padding: 20px;
+    --product-stack-gap: 88px;
+    --product-stack-padding: 40px 20px 96px;
+    --spotlight-padding: 96px 20px 96px;
+    --spotlight-gap: 96px;
+    --demo-cta-padding: 0px 20px 96px;
+    --demo-cta-gap: 40px;
   }
 }
 
 /* Mobile: max-width 809.98px */
 @media (max-width: 809.98px) {
   :root {
-    --type-hero-headline-size: 44px;
-    --type-hero-headline-weight: 300;
-    --type-hero-headline-lh: 52.8px;
-    --type-hero-headline-ls: -1.32px;
+    --type-hero-headline-size: clamp(39px, 12vw, 48px);
+    --type-hero-headline-lh: 1.2;
+    --type-hero-headline-ls: -1px;
 
-    --type-section-title-size: 40px;
-    --type-section-title-lh: 52px;
-    --type-section-title-ls: -0.8px;
+    --type-section-title-size: 34px;
+    --type-section-title-lh: 1.3;
+    --type-section-title-ls: -0.6px;
 
     --product-stack-gap: 80px;
-    --product-stack-padding: 20px 0px 60px 0px;
-    --spotlight-padding: 60px 0px 40px;
-    --demo-cta-padding: 0px 20px 0px;
+    --product-stack-padding: 24px 20px 80px;
+    --spotlight-padding: 80px 20px 80px;
+    --spotlight-gap: 80px;
+    --demo-cta-padding: 0px 20px 80px;
+    --demo-cta-gap: 32px;
   }
 }
 
@@ -254,6 +338,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  height: 100%;
+  background: var(--bg-hero);
 }
 
 body {
@@ -261,23 +347,28 @@ body {
   font-size: var(--type-body-lg-size);
   font-weight: var(--type-body-lg-weight);
   line-height: var(--type-body-lg-lh);
-  color: var(--text-primary-dark);
-  background: var(--bg-hero);
+  color: var(--color-ink);
+  background: var(--gradient-page-dark);
   overflow-x: hidden;
+  min-height: 100%;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color var(--motion-link-duration) var(--motion-link-easing);
+  transition:
+    color var(--motion-link-duration) var(--motion-link-easing),
+    border-color var(--motion-link-duration) var(--motion-link-easing),
+    background-color var(--motion-link-duration) var(--motion-link-easing),
+    box-shadow var(--motion-link-duration) var(--motion-link-easing),
+    opacity var(--motion-link-duration) var(--motion-link-easing);
 }
 
-/* Global link hover state */
-a:hover {
-  color: var(--text-muted-dark-61);
+a:hover,
+a:focus-visible {
+  color: var(--color-accent);
 }
 
-/* Light background links */
 .light-bg a:hover,
 a.light:hover {
   color: var(--text-muted-light-60);
@@ -294,4 +385,39 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+  transition:
+    color var(--motion-link-duration) var(--motion-link-easing),
+    border-color var(--motion-link-duration) var(--motion-link-easing),
+    background-color var(--motion-link-duration) var(--motion-link-easing),
+    box-shadow var(--motion-link-duration) var(--motion-link-easing),
+    opacity var(--motion-link-duration) var(--motion-link-easing);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  box-shadow: 0 0 0 4px var(--focus-ring-soft);
+}
+
+.container {
+  width: min(100% - 40px, var(--layout-max-width));
+  margin-inline: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-fast: 1ms;
+    --motion-duration-base: 1ms;
+    --motion-duration-slow: 1ms;
+    --motion-enter-duration: 1ms;
+    --motion-link-duration: 1ms;
+  }
+
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 }
