@@ -11,7 +11,9 @@
 		</a>
 
 		<div class="nav-actions">
-			<a href="./contact" class="nav-cta">Talk to sales</a>
+			<a href="#workflows" class="nav-link">Workflows</a>
+			<a href="#process" class="nav-link">Process</a>
+			<a href="./contact" class="nav-cta">Book setup call</a>
 		</div>
 	</div>
 </nav>
@@ -61,6 +63,19 @@
 		align-items: center;
 		gap: 18px;
 		margin-left: auto;
+	}
+
+	.nav-link {
+		font-family: var(--font-sans-display);
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.4;
+		color: rgba(255, 255, 255, 0.78);
+	}
+
+	.nav-link:hover,
+	.nav-link:focus-visible {
+		color: rgb(255, 255, 255);
 	}
 
 	.nav-cta {

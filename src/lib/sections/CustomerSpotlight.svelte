@@ -1,59 +1,64 @@
-<section class="spotlight">
+<section id="process" class="spotlight">
 	<div class="spotlight-inner">
 		<header class="spotlight-header">
 			<div class="spotlight-eyebrow">
 				<span class="eyebrow-dot" aria-hidden="true"></span>
-				<span class="eyebrow-text">CUSTOMER SPOTLIGHT</span>
+				<span class="eyebrow-text">SETUP PROCESS</span>
 			</div>
 			<h2 class="spotlight-headline">
-				See how enterprises scaled customer support with Pantaa
+				A practical path from messy workflows to a working AI employee.
 			</h2>
 		</header>
 
-		<a href="./doordash" class="spotlight-card">
+		<div class="spotlight-card">
 			<div class="spotlight-image-side">
 				<img
-					src="/pantaa/images/spotlight-doordash.jpg"
-					alt="DoorDash delivery interaction"
+					src="/pantaa/images/optimized/insights-ui-1600.jpg"
+					alt=""
 					class="spotlight-photo"
 					loading="lazy"
 				/>
 				<div class="spotlight-image-overlay">
 					<div class="spotlight-stat">
-						<span class="spotlight-stat-label">DWR RATE</span>
-						<span class="spotlight-stat-value">80%</span>
+						<span class="spotlight-stat-label">FIRST WORKFLOWS</span>
+						<span class="spotlight-stat-value">3-5</span>
 					</div>
 				</div>
 			</div>
 
 			<div class="spotlight-content-side">
-				<div class="spotlight-brand">
-					<svg class="doordash-logo" width="160" height="22" viewBox="0 0 160 22" fill="none">
-						<path d="M0 6 L13 6 L9 16 L-3 16 Z" fill="#EB1700"/>
-						<text x="22" y="18" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#EB1700">DOORDASH</text>
-					</svg>
+				<div class="process-grid">
+					<div class="process-step">
+						<span class="process-index">01</span>
+						<h3>Workflow audit</h3>
+						<p>We map the repetitive admin, revenue, and research tasks that should move into your agent first.</p>
+					</div>
+					<div class="process-step">
+						<span class="process-index">02</span>
+						<h3>Agent setup</h3>
+						<p>We install the agent system, configure model routing, connect approved tools, and prepare the workspace.</p>
+					</div>
+					<div class="process-step">
+						<span class="process-index">03</span>
+						<h3>Live task testing</h3>
+						<p>We test with real examples until the agent can draft useful output your team can review.</p>
+					</div>
+					<div class="process-step">
+						<span class="process-index">04</span>
+						<h3>Managed operations</h3>
+						<p>We monitor stuck work, handle change requests, and improve workflows as usage becomes routine.</p>
+					</div>
 				</div>
 
-				<h3 class="spotlight-title">How DoorDash and Pantaa scaled enterprise support reliability</h3>
-
-				<span class="spotlight-cta-link">
-					Learn more
-				</span>
-
-				<div class="spotlight-testimonial">
-					<div class="testimonial-attribution">
-						<img src="/pantaa/images/spotlight-avatar.webp" alt="Andy Fang" class="testimonial-avatar" loading="lazy" />
-						<div class="testimonial-meta">
-							<span class="testimonial-name">Andy Fang</span>
-							<span class="testimonial-role">Co-Founder at DoorDash</span>
-						</div>
-					</div>
-					<blockquote class="testimonial-quote">
-						"At DoorDash, we operate at massive scale across services, platforms, and languages. Pantaa delivered measurable gains in resolution quality, escalation control, and operational efficiency across our teams."
-					</blockquote>
+				<div id="fit" class="fit-panel">
+					<span class="fit-label">Best fit</span>
+					<p>
+						Legacy service firms with repeatable client work: law firms, insurance agencies, real estate teams,
+						manufacturers, wholesalers, and marketing agencies.
+					</p>
 				</div>
 			</div>
-		</a>
+		</div>
 	</div>
 </section>
 
@@ -94,13 +99,19 @@
 		background: rgb(255, 132, 92);
 	}
 
-	.eyebrow-text {
+	.eyebrow-text,
+	.spotlight-stat-label,
+	.process-index,
+	.fit-label {
 		font-family: var(--font-mono);
 		font-size: 11px;
 		font-weight: 400;
 		line-height: 1;
 		letter-spacing: 0.6px;
 		text-transform: uppercase;
+	}
+
+	.eyebrow-text {
 		color: rgba(12, 18, 29, 0.78);
 	}
 
@@ -111,7 +122,7 @@
 		line-height: 1.06;
 		letter-spacing: -1.4px;
 		color: rgb(12, 18, 29);
-		max-width: 22ch;
+		max-width: 24ch;
 	}
 
 	.spotlight-card {
@@ -120,29 +131,30 @@
 		overflow: hidden;
 		background: rgb(10, 10, 10);
 		border: 1px solid rgba(255, 255, 255, 0.06);
-		text-decoration: none;
 		color: inherit;
 	}
 
 	.spotlight-image-side {
-		flex: 0 0 44%;
+		flex: 0 0 38%;
 		position: relative;
-		min-height: 540px;
+		min-height: 560px;
+		background: rgb(8, 8, 8);
 	}
 
 	.spotlight-photo {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		opacity: 0.32;
+		filter: saturate(0.7) contrast(1.1);
 	}
 
 	.spotlight-image-overlay {
 		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		top: 0;
-		background: linear-gradient(180deg, rgba(235, 23, 0, 0) 0%, rgba(235, 23, 0, 0) 38%, rgba(235, 23, 0, 0.72) 100%);
+		inset: 0;
+		background:
+			linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.72) 100%),
+			radial-gradient(circle at 18% 82%, rgba(255, 132, 92, 0.72), rgba(255, 132, 92, 0) 52%);
 		display: flex;
 		align-items: flex-end;
 		padding: 36px;
@@ -155,12 +167,6 @@
 	}
 
 	.spotlight-stat-label {
-		font-family: var(--font-mono);
-		font-size: 11px;
-		font-weight: 400;
-		line-height: 1;
-		letter-spacing: 0.6px;
-		text-transform: uppercase;
 		color: rgb(255, 255, 255);
 	}
 
@@ -175,101 +181,70 @@
 
 	.spotlight-content-side {
 		flex: 1;
-		padding: 56px 56px 48px;
+		padding: 56px;
 		display: flex;
 		flex-direction: column;
+		gap: 42px;
 	}
 
-	.doordash-logo {
-		margin-bottom: 28px;
+	.process-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 28px;
 	}
 
-	.spotlight-title {
+	.process-step {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		padding-top: 24px;
+		border-top: 1px solid rgba(255, 255, 255, 0.12);
+	}
+
+	.process-index {
+		color: rgba(255, 132, 92, 0.92);
+	}
+
+	.process-step h3 {
 		font-family: var(--font-sans-display);
-		font-size: clamp(24px, 2vw, 30px);
+		font-size: 22px;
 		font-weight: 500;
 		line-height: 1.25;
-		letter-spacing: -0.4px;
-		color: rgb(255, 255, 255);
-		margin-bottom: 28px;
-		max-width: 22ch;
-	}
-
-	.spotlight-cta-link {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		padding: 12px 24px;
-		border-radius: var(--radius-pill);
-		background: rgb(0, 0, 0);
-		color: rgb(255, 255, 255);
-		font-family: var(--font-sans);
-		font-size: 14px;
-		font-weight: 500;
-		line-height: 1.4;
-		width: fit-content;
-		margin-bottom: 56px;
-		border: 1px solid rgba(255, 255, 255, 0.18);
-	}
-
-	.spotlight-cta-link:hover,
-	.spotlight-cta-link:focus-visible {
-		background: rgba(255, 255, 255, 0.08);
-		color: rgb(255, 255, 255);
-		border-color: rgba(255, 255, 255, 0.32);
-	}
-
-	.spotlight-testimonial {
-		margin-top: auto;
-	}
-
-	.testimonial-attribution {
-		display: flex;
-		align-items: center;
-		gap: 14px;
-		margin-bottom: 22px;
-	}
-
-	.testimonial-avatar {
-		width: 48px;
-		height: 48px;
-		border-radius: 50%;
-		object-fit: cover;
-	}
-
-	.testimonial-meta {
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-	}
-
-	.testimonial-name {
-		font-family: var(--font-sans);
-		font-size: 15px;
-		font-weight: 500;
-		line-height: 1.4;
+		letter-spacing: -0.3px;
 		color: rgb(255, 255, 255);
 	}
 
-	.testimonial-role {
-		font-family: var(--font-sans);
-		font-size: 13px;
-		font-weight: 400;
-		line-height: 1.4;
-		color: rgba(255, 255, 255, 0.55);
-	}
-
-	.testimonial-quote {
+	.process-step p,
+	.fit-panel p {
 		font-family: var(--font-sans);
 		font-size: 15px;
 		font-weight: 400;
 		line-height: 1.6;
-		color: rgba(255, 255, 255, 0.78);
+		color: rgba(255, 255, 255, 0.68);
+	}
+
+	.fit-panel {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		margin-top: auto;
+		padding: 24px;
+		border-radius: 14px;
+		background: rgba(255, 255, 255, 0.06);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.fit-label {
+		color: rgba(255, 255, 255, 0.54);
 	}
 
 	@media (max-width: 809.98px) {
 		.spotlight {
 			padding: 80px 20px;
+		}
+
+		.spotlight-header {
+			margin-bottom: 56px;
 		}
 
 		.spotlight-card {
@@ -278,7 +253,7 @@
 
 		.spotlight-image-side {
 			flex: none;
-			min-height: 320px;
+			min-height: 300px;
 		}
 
 		.spotlight-content-side {
@@ -286,8 +261,9 @@
 			padding: 32px 24px;
 		}
 
-		.spotlight-title {
-			max-width: 22ch;
+		.process-grid {
+			grid-template-columns: 1fr;
+			gap: 24px;
 		}
 	}
 </style>

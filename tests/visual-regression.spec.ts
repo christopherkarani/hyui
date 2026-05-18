@@ -89,12 +89,12 @@ test.describe('Interaction states', () => {
 		expect(bg).not.toBe('rgb(255, 255, 255)');
 	});
 
-	test('nav sign-in hover state', async ({ page }) => {
+	test('nav CTA hover state', async ({ page }) => {
 		await page.goto('/');
 		await page.waitForLoadState('networkidle');
-		const signin = page.locator('.nav-signin');
-		await signin.hover();
-		const bg = await signin.evaluate((el) => getComputedStyle(el).backgroundColor);
+		const navCta = page.locator('.nav-cta');
+		await navCta.hover();
+		const bg = await navCta.evaluate((el) => getComputedStyle(el).backgroundColor);
 		expect(bg).not.toBe('rgba(0, 0, 0, 0)');
 	});
 });

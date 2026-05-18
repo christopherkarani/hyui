@@ -1,5 +1,25 @@
 # Enterprise Redesign TODO
 
+# AI Agent Agency Homepage Reposition TODO (2026-05-17)
+
+## Plan
+- [x] Add regression tests for AI agent positioning and stale-claim removal.
+- [x] Verify the new tests fail against the current Pantaa enterprise-support page.
+- [x] Rewrite page metadata, navigation, hero, offer blocks, process/proof, CTA, and footer around the autonomous AI agent agency offer.
+- [x] Run verification (`npm run check`, `npm test`, `npm run build`) and inspect the responsive page.
+- [x] Document results and residual risks in Review.
+
+## Review
+- Repositioned the homepage around Pantaa as an AI automation agency that sets up, runs, and monitors autonomous AI employees for legacy service firms.
+- Replaced stale enterprise-support copy, product taxonomy, customer spotlight, certification badges, and unsupported customer proof with setup/process/workflow/fit messaging.
+- Added `tests/homepage-positioning.test.ts` to enforce AI agent positioning and prevent stale claims such as DoorDash, SOC/ISO badges, old product names, and deflection claims from returning.
+- Updated the stale nav hover visual-regression selector from `.nav-signin` to `.nav-cta`.
+- Verification passed: focused red test failed first, then `npm test`, `npm run check`, `npm run build`, `git diff --check`, and a Playwright desktop/mobile smoke against `http://127.0.0.1:4173/`.
+- Residual note: `npm run check` and `npm run build` still report the pre-existing unused `.hero-grid-overlay` selector warning in `Hero.svelte`.
+- Follow-up copy pass: removed tool-specific agent platform language entirely and kept the public offer in plain-language autonomous AI agent / AI employee metaphors.
+
+---
+
 ## Plan
 - [x] Load project baseline and inspect all page sections/components.
 - [x] Attempt requested skill/reference clone: `git clone https://github.com/pinkforest/threejs-playground.git` (failed: repository not found / 404).

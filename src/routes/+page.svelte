@@ -9,8 +9,8 @@
 </script>
 
 <svelte:head>
-	<title>Pantaa – AI agents for enterprise support</title>
-	<meta name="description" content="Enterprise AI agents for support operations with policy-safe automation and measurable outcomes." />
+	<title>Pantaa - autonomous AI agents for service firms</title>
+	<meta name="description" content="Pantaa is an AI automation agency that sets up, runs, and monitors autonomous AI employees for legacy service firms." />
 </svelte:head>
 
 <TopNavDesktop />

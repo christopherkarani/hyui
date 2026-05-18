@@ -3,16 +3,17 @@
 		<div class="demo-cta-left">
 			<div class="demo-cta-label">
 				<span class="demo-dot"></span>
-				<span class="demo-eyebrow">GET A PERSONALIZED DEMO</span>
+				<span class="demo-eyebrow">BOOK THE SETUP CALL</span>
 			</div>
-			<h2 class="demo-cta-heading">See Pantaa operating on your real support workflows.</h2>
+			<h2 class="demo-cta-heading">Find the first workflows your AI employee should own.</h2>
 		</div>
 
 		<div class="demo-cta-right">
 			<p class="demo-cta-desc">
-				Run a guided deployment with governance and observability from day one. Teams typically reach production-ready deflection in weeks, not quarters.
+				In 15 minutes we will identify where an AI employee can remove admin drag, then scope the setup,
+				tool connections, monitoring loop, and first change requests.
 			</p>
-			<a href="./contact" class="demo-cta-button">Talk to us</a>
+			<a href="./contact" class="demo-cta-button">Book a 15-minute setup call</a>
 		</div>
 	</div>
 </section>

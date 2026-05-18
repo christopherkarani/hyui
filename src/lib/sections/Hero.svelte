@@ -7,21 +7,21 @@
 	let lastFocusedElement: HTMLElement | null = null;
 
 	const heroLogoList = [
-		{ id: 'postman', label: 'Postman' },
-		{ id: 'rio', label: 'Rio' },
-		{ id: 'doordash', label: 'DoorDash' },
-		{ id: 'capital', label: 'capital.com' },
-		{ id: 'afriex', label: 'Afriex' },
-		{ id: 'sendoso', label: 'Sendoso' }
+		{ id: 'law', label: 'law firms' },
+		{ id: 'insurance', label: 'insurance agencies' },
+		{ id: 'realEstate', label: 'real estate teams' },
+		{ id: 'manufacturing', label: 'manufacturers' },
+		{ id: 'wholesale', label: 'wholesalers' },
+		{ id: 'agencies', label: 'marketing agencies' }
 	];
 
 	const heroLogoSvgs: Record<string, string> = {
-		postman: `<svg role="img" viewBox="0 0 130 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" font-family="Inter, sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#fff">POSTMAN</text></svg>`,
-		rio: `<svg role="img" viewBox="0 0 70 32" xmlns="http://www.w3.org/2000/svg"><text x="0" y="22" font-family="Georgia, serif" font-size="22" fill="#fff" font-style="italic" font-weight="400">Rio</text></svg>`,
-		doordash: `<svg role="img" viewBox="0 0 150 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 8 L11 8 L7 16 L-1 16 Z" fill="#fff"/><text x="18" y="20" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#fff">DOORDASH</text></svg>`,
-		capital: `<svg role="img" viewBox="0 0 130 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" font-family="Inter, sans-serif" font-size="20" font-weight="500" fill="#fff" letter-spacing="-0.4">capital.com</text></svg>`,
-		afriex: `<svg role="img" viewBox="0 0 120 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 18 L8 4 L16 18 Z M3 14 H13" stroke="#fff" stroke-width="1.6" fill="none" stroke-linejoin="round"/><text x="22" y="20" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#fff" letter-spacing="-0.5">afriex</text></svg>`,
-		sendoso: `<svg role="img" viewBox="0 0 130 32" xmlns="http://www.w3.org/2000/svg"><text x="0" y="22" font-family="Georgia, serif" font-size="22" fill="#fff" font-style="italic" font-weight="400">Sendoso</text><line x1="0" y1="27" x2="78" y2="27" stroke="#fff" stroke-width="1.4"/></svg>`
+		law: `<svg role="img" viewBox="0 0 120 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#fff">law firms</text></svg>`,
+		insurance: `<svg role="img" viewBox="0 0 170 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#fff">insurance agencies</text></svg>`,
+		realEstate: `<svg role="img" viewBox="0 0 160 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#fff">real estate teams</text></svg>`,
+		manufacturing: `<svg role="img" viewBox="0 0 145 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#fff">manufacturers</text></svg>`,
+		wholesale: `<svg role="img" viewBox="0 0 125 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#fff">wholesalers</text></svg>`,
+		agencies: `<svg role="img" viewBox="0 0 155 24" xmlns="http://www.w3.org/2000/svg"><text x="0" y="18" font-family="Inter, sans-serif" font-size="15" font-weight="600" fill="#fff">marketing agencies</text></svg>`
 	};
 
 	const menuFocusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -159,23 +159,23 @@
 		</div>
 
 		<div class="hero-center">
-			<a href="./browser-agent" class="announcement-chip">
+			<a href="./contact" class="announcement-chip">
 				<span class="chip-dot" aria-hidden="true"></span>
-				<span class="chip-text">ENTERPRISE RELEASE: BROWSER AGENT</span>
+				<span class="chip-text">AI AUTOMATION AGENCY FOR AUTONOMOUS AGENTS</span>
 				<svg class="chip-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none">
 					<path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
 			</a>
 
-			<h1 class="hero-headline">
-				<span class="headline-line">AI that resolves support</span>
-				<span class="headline-line">like your top operators.</span>
+			<h1 class="hero-headline" aria-label="We set up autonomous AI agents for your business">
+				<span class="headline-line">We set up autonomous</span>
+				<span class="headline-line">AI agents for your business.</span>
 			</h1>
 
-			<p class="hero-subheadline">Enterprise AI agents for support operations</p>
+			<p class="hero-subheadline">Pantaa installs, configures, and manages AI employees that handle follow-up, inbox triage, CRM updates, research, and reporting.</p>
 
 			<div class="hero-actions">
-				<a href="./contact" class="hero-cta hero-cta-primary">Talk to us</a>
+				<a href="./contact" class="hero-cta hero-cta-primary">Book a 15-minute setup call</a>
 			</div>
 		</div>
 
@@ -211,21 +211,20 @@
 			</button>
 		</div>
 
-		<div class="overlay-trust-pill">SOC2 • ISO 42001 • ISO 27001</div>
+		<div class="overlay-trust-pill">AI agent setup • workflow buildout • monitoring</div>
 
 		<div class="overlay-nav">
 			<div class="overlay-group">
-				<h3 class="overlay-group-title">Platform</h3>
-				<a href="./agent-canvas" class="overlay-link" onclick={closeMenu}>Agent Canvas</a>
-				<a href="./insights" class="overlay-link" onclick={closeMenu}>Insights</a>
-				<a href="./voice-experience" class="overlay-link" onclick={closeMenu}>Voice Experience</a>
-				<a href="./browser-agent" class="overlay-link" onclick={closeMenu}>Browser Agent</a>
+				<h3 class="overlay-group-title">Offer</h3>
+				<a href="#workflows" class="overlay-link" onclick={closeMenu}>Workflows</a>
+				<a href="#process" class="overlay-link" onclick={closeMenu}>Setup process</a>
+				<a href="#fit" class="overlay-link" onclick={closeMenu}>Best fit</a>
 			</div>
 			<div class="overlay-group">
 				<h3 class="overlay-group-title">Company</h3>
-				<a href="./careers" class="overlay-link" onclick={closeMenu}>Careers</a>
-				<a href="./contact" class="overlay-link" onclick={closeMenu}>Contact</a>
-				<a href="./trust" class="overlay-link" onclick={closeMenu}>Trust Center</a>
+				<a href="./contact" class="overlay-link" onclick={closeMenu}>Book setup call</a>
+				<a href="./privacy" class="overlay-link" onclick={closeMenu}>Privacy</a>
+				<a href="./terms" class="overlay-link" onclick={closeMenu}>Terms</a>
 			</div>
 		</div>
 	</nav>

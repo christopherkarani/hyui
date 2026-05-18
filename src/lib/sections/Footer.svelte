@@ -8,37 +8,33 @@
 				<span class="footer-brand-text">Pantaa</span>
 			</div>
 
-			<div class="footer-compliance">
-				<div class="compliance-eyebrow">
-					<span class="compliance-dot" aria-hidden="true"></span>
-					<span class="compliance-text">COMPLIANT</span>
+			<div class="footer-note">
+				<div class="note-eyebrow">
+					<span class="note-dot" aria-hidden="true"></span>
+					<span class="note-text">AI AUTOMATION AGENCY</span>
 				</div>
-				<div class="compliance-certs">
-					<img class="cert-badge" src="/pantaa/images/cert-soc2.png" alt="SOC 2 Type 2" width="44" height="44" loading="lazy" />
-					<img class="cert-badge" src="/pantaa/images/cert-iso42001.png" alt="ISO 42001" width="44" height="44" loading="lazy" />
-					<img class="cert-badge" src="/pantaa/images/cert-iso27001.png" alt="ISO 27001" width="44" height="44" loading="lazy" />
-					<span class="cert-more">5+</span>
-				</div>
+				<p>We set up autonomous AI agent systems for businesses that want outcomes before tooling overhead.</p>
 			</div>
 		</div>
 
 		<div class="footer-links">
 			<div class="footer-column">
-				<h4 class="footer-column-title">PRODUCT</h4>
-				<a href="./agent-canvas" class="footer-link">Agent Canvas</a>
-				<a href="./insights" class="footer-link">Insights</a>
-				<a href="./voice-experience" class="footer-link">Voice Experience</a>
-				<a href="./browser-agent" class="footer-link">Browser Agent</a>
+				<h4 class="footer-column-title">OFFER</h4>
+				<a href="#workflows" class="footer-link">AI agent setup</a>
+				<a href="#workflows" class="footer-link">Workflow buildout</a>
+				<a href="#process" class="footer-link">Managed operations</a>
+				<a href="./contact" class="footer-link">Setup call</a>
+			</div>
+			<div class="footer-column">
+				<h4 class="footer-column-title">WHO WE HELP</h4>
+				<a href="#fit" class="footer-link">law firms</a>
+				<a href="#fit" class="footer-link">insurance agencies</a>
+				<a href="#fit" class="footer-link">real estate teams</a>
+				<a href="#fit" class="footer-link">manufacturers</a>
 			</div>
 			<div class="footer-column">
 				<h4 class="footer-column-title">COMPANY</h4>
-				<a href="./careers" class="footer-link">Careers</a>
 				<a href="./contact" class="footer-link">Contact</a>
-				<a href="./trust" class="footer-link">Trust Center</a>
-			</div>
-			<div class="footer-column">
-				<h4 class="footer-column-title">RESOURCES</h4>
-				<a href="./news" class="footer-link">News</a>
 				<a href="./privacy" class="footer-link">Privacy Policy</a>
 				<a href="./terms" class="footer-link">Terms of Service</a>
 			</div>
@@ -98,7 +94,8 @@
 		gap: 32px;
 	}
 
-	.footer-brand {
+	.footer-brand,
+	.note-eyebrow {
 		display: flex;
 		align-items: center;
 		gap: 10px;
@@ -112,19 +109,14 @@
 		color: rgb(12, 18, 29);
 	}
 
-	.footer-compliance {
+	.footer-note {
 		display: flex;
 		flex-direction: column;
 		gap: 14px;
+		max-width: 34ch;
 	}
 
-	.compliance-eyebrow {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-	}
-
-	.compliance-dot {
+	.note-dot {
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
@@ -132,39 +124,23 @@
 		box-shadow: 0 0 0 3px rgba(132, 204, 90, 0.18);
 	}
 
-	.compliance-text {
+	.note-text,
+	.footer-column-title {
 		font-family: var(--font-mono);
 		font-size: 11px;
 		font-weight: 400;
 		letter-spacing: 0.6px;
 		text-transform: uppercase;
+	}
+
+	.note-text {
 		color: rgba(12, 18, 29, 0.78);
 	}
 
-	.compliance-certs {
-		display: inline-flex;
-		align-items: center;
-		gap: 0;
-	}
-
-	.cert-badge {
-		width: 44px;
-		height: 44px;
-		border-radius: 50%;
-		object-fit: contain;
-		background: rgba(12, 18, 29, 0.04);
-		margin-left: -8px;
-	}
-
-	.cert-badge:first-child {
-		margin-left: 0;
-	}
-
-	.cert-more {
-		margin-left: 8px;
+	.footer-note p {
 		font-family: var(--font-sans);
-		font-size: 13px;
-		font-weight: 500;
+		font-size: 15px;
+		line-height: 1.6;
 		color: rgba(12, 18, 29, 0.62);
 	}
 
@@ -181,12 +157,7 @@
 	}
 
 	.footer-column-title {
-		font-family: var(--font-mono);
-		font-size: 11px;
-		font-weight: 400;
 		line-height: 1;
-		letter-spacing: 0.6px;
-		text-transform: uppercase;
 		color: rgba(12, 18, 29, 0.52);
 		margin-bottom: 6px;
 	}
