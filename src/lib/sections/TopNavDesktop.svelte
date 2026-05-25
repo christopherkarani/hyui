@@ -13,7 +13,7 @@
 		<div class="nav-actions">
 			<a href="#workflows" class="nav-link">Workflows</a>
 			<a href="#process" class="nav-link">Process</a>
-			<a href="./contact" class="nav-cta">Book setup call</a>
+			<a href="https://calendly.com/carltonkarani/30min" class="nav-cta">Book setup call</a>
 		</div>
 	</div>
 </nav>

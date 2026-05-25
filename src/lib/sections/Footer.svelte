@@ -23,7 +23,7 @@
 				<a href="#workflows" class="footer-link">AI agent setup</a>
 				<a href="#workflows" class="footer-link">Workflow buildout</a>
 				<a href="#process" class="footer-link">Managed operations</a>
-				<a href="./contact" class="footer-link">Setup call</a>
+				<a href="https://calendly.com/carltonkarani/30min" class="footer-link">Setup call</a>
 			</div>
 			<div class="footer-column">
 				<h4 class="footer-column-title">WHO WE HELP</h4>

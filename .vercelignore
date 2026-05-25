@@ -1,0 +1,9 @@
+.DS_Store
+.wax-repo/
+.svelte-kit/
+.vercel/
+build/
+node_modules/
+output/
+test-results/
+playwright-report/

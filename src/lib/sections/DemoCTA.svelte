@@ -13,7 +13,7 @@
 				In 15 minutes we will identify where an AI employee can remove admin drag, then scope the setup,
 				tool connections, monitoring loop, and first change requests.
 			</p>
-			<a href="./contact" class="demo-cta-button">Book a 15-minute setup call</a>
+			<a href="https://calendly.com/carltonkarani/30min" class="demo-cta-button">Book a 15-minute setup call</a>
 		</div>
 	</div>
 </section>

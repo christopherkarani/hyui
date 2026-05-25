@@ -175,7 +175,7 @@
 			<p class="hero-subheadline">Pantaa installs, configures, and manages AI employees that handle follow-up, inbox triage, CRM updates, research, and reporting.</p>
 
 			<div class="hero-actions">
-				<a href="./contact" class="hero-cta hero-cta-primary">Book a 15-minute setup call</a>
+				<a href="https://calendly.com/carltonkarani/30min" class="hero-cta hero-cta-primary">Book a 15-minute setup call</a>
 			</div>
 		</div>
 
@@ -222,7 +222,7 @@
 			</div>
 			<div class="overlay-group">
 				<h3 class="overlay-group-title">Company</h3>
-				<a href="./contact" class="overlay-link" onclick={closeMenu}>Book setup call</a>
+				<a href="https://calendly.com/carltonkarani/30min" class="overlay-link" onclick={closeMenu}>Book setup call</a>
 				<a href="./privacy" class="overlay-link" onclick={closeMenu}>Privacy</a>
 				<a href="./terms" class="overlay-link" onclick={closeMenu}>Terms</a>
 			</div>
