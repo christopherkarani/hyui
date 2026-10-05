@@ -12,7 +12,7 @@ const config = {
 			strict: false
 		}),
 		prerender: {
-			entries: ['/'],
+			entries: ['/', '/receptionist'],
 			crawl: false
 		}
 	}
