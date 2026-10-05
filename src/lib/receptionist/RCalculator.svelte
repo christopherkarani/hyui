@@ -5,10 +5,27 @@
 	let missedPerWeek = $state(35);
 	let bookRate = $state(40);
 	let repeatVisits = $state(2.0);
+	let currency = $state<'USD' | 'KES'>('USD');
+
+	const USD_TO_KES = 129;
 
 	let bookingsPerWeek = $derived((missedPerWeek * bookRate) / 100);
 	let yearly = $derived(Math.round(bookingsPerWeek * bookingValue * repeatVisits * 52));
 	let monthly = $derived(Math.round(yearly / 12));
+
+	// Internal math stays in USD; display converts.
+	let bookingDisplay = $derived(
+		currency === 'USD' ? Math.round(bookingValue * 100) / 100 : Math.round(bookingValue * USD_TO_KES)
+	);
+	let shownYearly = $derived(currency === 'USD' ? yearly : Math.round(yearly * USD_TO_KES));
+	let shownMonthly = $derived(currency === 'USD' ? monthly : Math.round(monthly * USD_TO_KES));
+	let curSymbol = $derived(currency === 'USD' ? '$' : 'KSh\u00A0');
+	let curName = $derived(currency === 'USD' ? 'US dollars' : 'Kenya shillings');
+
+	function onBookingInput(v: string) {
+		const n = Math.max(0, num(v, 0));
+		bookingValue = currency === 'USD' ? n : n / USD_TO_KES;
+	}
 
 	function fmt(n: number) {
 		return n.toLocaleString('en-US');
@@ -39,16 +56,37 @@
 							<label class="r-field">
 								<span class="r-field-label">Average booking value</span>
 								<span class="r-pill-input">
-									<span class="r-unit">$</span>
+									<span class="r-unit">{currency === 'USD' ? '$' : 'KSh'}</span>
 									<input
 										type="number"
 										min="0"
-										value={bookingValue}
-										oninput={(e) => (bookingValue = Math.max(0, num(e.currentTarget.value, 0)))}
-										aria-label="Average booking value in dollars"
+										value={bookingDisplay}
+										oninput={(e) => onBookingInput(e.currentTarget.value)}
+										aria-label="Average booking value in {curName}"
 									/>
 								</span>
 							</label>
+							<div class="r-field">
+								<span class="r-field-label" id="rc-cur-label">Currency</span>
+								<div class="r-seg" role="group" aria-labelledby="rc-cur-label">
+									<button
+										type="button"
+										class:active={currency === 'USD'}
+										aria-pressed={currency === 'USD'}
+										onclick={() => (currency = 'USD')}
+									>
+										USD
+									</button>
+									<button
+										type="button"
+										class:active={currency === 'KES'}
+										aria-pressed={currency === 'KES'}
+										onclick={() => (currency = 'KES')}
+									>
+										KES
+									</button>
+								</div>
+							</div>
 						</div>
 
 						<div class="r-slider-card">
@@ -149,12 +187,12 @@
 					<div class="r-results">
 						<div class="r-result-card">
 							<p class="r-result-label">Potential missed revenue</p>
-							<p class="r-result-big">${fmt(yearly)}</p>
+							<p class="r-result-big">{curSymbol}{fmt(shownYearly)}</p>
 							<p class="r-result-sub">per year</p>
 							<div class="r-result-split">
 								<div>
 									<p class="r-split-label">Monthly</p>
-									<p class="r-split-value">${fmt(monthly)}</p>
+									<p class="r-split-value">{curSymbol}{fmt(shownMonthly)}</p>
 								</div>
 								<div>
 									<p class="r-split-label">Bookings</p>
@@ -167,6 +205,9 @@
 						<p class="r-disclaimer">
 							Estimate only. Actual recovered revenue depends on call volume, lead quality,
 							scheduling capacity, and more.
+							{#if currency === 'KES'}
+								Converted at $1 ≈ KSh {USD_TO_KES}.
+							{/if}
 						</p>
 					</div>
 				</div>
@@ -288,6 +329,37 @@
 
 	.r-pill-input.sm .r-unit {
 		margin-left: 0.25rem;
+	}
+
+	.r-seg {
+		margin-top: 0.375rem;
+		display: inline-flex;
+		border-radius: 9999px;
+		background: #fff;
+		padding: 0.25rem;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+	}
+
+	.r-seg button {
+		border: none;
+		background: transparent;
+		border-radius: 9999px;
+		padding: 0.375rem 0.875rem;
+		font: inherit;
+		font-size: 0.8125rem;
+		font-weight: 500;
+		color: var(--r-muted);
+		cursor: pointer;
+	}
+
+	.r-seg button.active {
+		background: var(--r-foreground);
+		color: #fff;
+	}
+
+	.r-seg button:focus-visible {
+		outline: 2px solid var(--r-foreground);
+		outline-offset: 2px;
 	}
 
 	.r-slider-card {
