@@ -36,13 +36,13 @@
 						</svg>
 					</div>
 				{:else}
+					<!-- svelte-ignore a11y_media_has_caption: demo clip ships without a caption track -->
 					<video
 						bind:this={videoEl}
 						class="r-el"
 						src="/receptionist/reception-preview.mp4"
 						poster="/receptionist/images/poster.png"
 						controls
-						muted
 						loop
 						playsinline
 						autoplay
