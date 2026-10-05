@@ -1,3 +1,24 @@
+/**
+ * Conversational AI voice agent ID (Agents dashboard, starts with `agent_`).
+ * The agent must be public for a keyless browser embed. Empty = voice demo
+ * stays disabled and the floating pill falls back to the contact page.
+ */
+export const VOICE_AGENT_ID = 'agent_2701m46b263petjtzz380yqrqtzm';
+
+/**
+ * Which voice UI to render. `custom` = Pantaa-built controls over the client
+ * SDK (`voice.ts`); `widget` = the official drop-in widget (`RWidget.svelte`).
+ * One-line switch; the inactive path stays in the repo untouched.
+ */
+export const VOICE_UI: 'custom' | 'widget' = 'custom';
+
+/**
+ * Master kill-switch for the live voice feature (both UIs). `false` hides the
+ * call button, text input, floating pill, and drop-in widget, leaving the hero
+ * orb as a static visual. No session, script, or credit burn while off.
+ */
+export const VOICE_ENABLED = false;
+
 export const LINKS = {
 	contact: '/contact',
 	calendly: 'https://calendly.com/carltonkarani/30min',

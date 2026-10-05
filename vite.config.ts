@@ -5,5 +5,9 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	css: {
 		postcss: {}
+	},
+	preview: {
+		// Lets Cloudflare quick tunnels (phone testing) reach `vite preview`.
+		allowedHosts: ['.trycloudflare.com']
 	}
 });

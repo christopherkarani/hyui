@@ -1,45 +1,22 @@
 <script lang="ts">
-	import { onDestroy } from 'svelte';
-	import { LINKS } from './data.js';
+	import { LINKS, VOICE_UI, VOICE_ENABLED } from './data.js';
+	import {
+		voiceStatus,
+		voiceTranscript,
+		voiceMode,
+		voiceError,
+		toggleVoiceSession,
+		sendTextMessage
+	} from './voice.js';
 
-	let live = $state(false);
-	let step = $state(0);
-	let callEnabled = $state(false);
-	let timers: ReturnType<typeof setTimeout>[] = [];
+	let draft = $state('');
 
-	const SCRIPT = [
-		{ from: 'agent', text: 'Thanks for calling Maple Dental. How can I help?' },
-		{ from: 'caller', text: 'Hi, do you have anything open tomorrow morning?' },
-		{ from: 'agent', text: 'I have 9:15 and 10:30 AM. Which works better?' },
-		{ from: 'caller', text: '9:15 is perfect.' },
-		{ from: 'agent', text: 'Booked \u2014 tomorrow at 9:15 AM. See you then!' }
-	];
-
-	function clearTimers() {
-		timers.forEach(clearTimeout);
-		timers = [];
+	function sendDraft(e: SubmitEvent) {
+		e.preventDefault();
+		const text = draft;
+		draft = '';
+		void sendTextMessage(text);
 	}
-
-	function toggle() {
-		clearTimers();
-		if (live) {
-			live = false;
-			step = 0;
-			return;
-		}
-		live = true;
-		step = 0;
-		const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-		if (reduced) {
-			step = SCRIPT.length;
-			return;
-		}
-		SCRIPT.forEach((_, i) => {
-			timers.push(setTimeout(() => (step = i + 1), 900 * (i + 1)));
-		});
-	}
-
-	onDestroy(clearTimers);
 </script>
 
 <section class="r-hero" aria-label="Introduction">
@@ -62,26 +39,39 @@
 			<div class="r-voice" data-agent-interaction="true">
 				<div class="r-voice-stage">
 					<div class="r-orb-wrap">
-						<div class="r-orb" class:live>
+						<div
+							class="r-orb"
+							class:live={$voiceStatus === 'live'}
+							class:speaking={$voiceStatus === 'live' && $voiceMode === 'speaking'}
+						>
 							<img src="/receptionist/images/agent-1.png" alt="" loading="eager" />
 						</div>
-						<div class="r-voice-script" aria-live="polite">
-							{#each SCRIPT.slice(0, step) as line}
-								<p class="r-msg" class:caller={line.from === 'caller'}>{line.text}</p>
-							{/each}
-						</div>
+						{#if VOICE_ENABLED && VOICE_UI === 'custom'}
+							<div class="r-voice-script" aria-live="polite">
+								{#each $voiceTranscript.slice(-4) as line (line.id)}
+									<p class="r-msg" class:caller={line.from === 'caller'}>{line.text}</p>
+								{/each}
+							</div>
+						{/if}
 					</div>
 
-					{#if callEnabled}
+					{#if VOICE_ENABLED && VOICE_UI === 'custom'}
 					<button
 						type="button"
 						class="r-call-btn"
-						class:live
-						aria-label={live ? 'End voice demo' : 'Start voice call'}
-						onclick={toggle}
+						class:live={$voiceStatus === 'live'}
+						class:busy={$voiceStatus === 'connecting'}
+						aria-label={$voiceStatus === 'live'
+							? 'End voice call'
+							: $voiceStatus === 'connecting'
+								? 'Cancel voice call'
+								: 'Start voice call'}
+						onclick={toggleVoiceSession}
 					>
-						{#if live}
+						{#if $voiceStatus === 'live'}
 							<span class="r-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+						{:else if $voiceStatus === 'connecting'}
+							<span class="r-spin" aria-hidden="true"></span>
 						{:else}
 							<svg
 								width="20"
@@ -100,7 +90,47 @@
 							</svg>
 						{/if}
 					</button>
-					<p class="r-call-label">{live ? 'Live demo \u2014 tap to end' : 'Start call'}</p>
+					<p class="r-call-label">
+						{#if $voiceStatus === 'live'}
+							Live — tap to end
+						{:else if $voiceStatus === 'connecting'}
+							Connecting… tap to cancel
+						{:else if $voiceStatus === 'error' && $voiceError}
+							{$voiceError}
+						{:else}
+							Start call
+						{/if}
+					</p>
+					<form class="r-text-row" onsubmit={sendDraft}>
+						<input
+							type="text"
+							bind:value={draft}
+							maxlength={500}
+							placeholder="Type a message…"
+							aria-label="Type a message to the agent"
+							autocomplete="off"
+						/>
+						<button
+							type="submit"
+							aria-label="Send message"
+							disabled={!draft.trim()}
+						>
+							<svg
+								width="16"
+								height="16"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								aria-hidden="true"
+							>
+								<path d="m5 12 7-7 7 7" />
+								<path d="M12 19V5" />
+							</svg>
+						</button>
+					</form>
 					{/if}
 				</div>
 			</div>
@@ -307,15 +337,19 @@
 
 	.r-voice-script {
 		position: absolute;
-		inset: -3rem -0.75rem;
+		left: -0.75rem;
+		right: -0.75rem;
+		bottom: -1.25rem;
 		display: flex;
-		flex-direction: column-reverse;
-		justify-content: flex-start;
+		flex-direction: column;
+		justify-content: flex-end;
 		gap: 0.5rem;
-		padding: 5rem 0;
+		max-height: 75%;
+		overflow: hidden;
+		padding-top: 2rem;
 		pointer-events: none;
-		mask-image: linear-gradient(to bottom, transparent, white 3rem, white calc(100% - 5rem), transparent calc(100% - 2rem));
-		-webkit-mask-image: linear-gradient(to bottom, transparent, white 3rem, white calc(100% - 5rem), transparent calc(100% - 2rem));
+		mask-image: linear-gradient(to bottom, transparent, white 2rem);
+		-webkit-mask-image: linear-gradient(to bottom, transparent, white 2rem);
 	}
 
 	.r-msg {
@@ -369,6 +403,39 @@
 		color: #fff;
 	}
 
+	.r-call-btn.busy {
+		cursor: wait;
+	}
+
+	.r-spin {
+		height: 1rem;
+		width: 1rem;
+		border-radius: 9999px;
+		border: 2px solid rgba(0, 0, 0, 0.15);
+		border-top-color: #000;
+		animation: r-spin 0.7s linear infinite;
+	}
+
+	@keyframes r-spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.r-orb.speaking img {
+		animation: r-breathe 1.6s ease-in-out infinite;
+	}
+
+	@keyframes r-breathe {
+		0%,
+		100% {
+			transform: scale(1.02);
+		}
+		50% {
+			transform: scale(1.07);
+		}
+	}
+
 	.r-eq {
 		display: flex;
 		align-items: flex-end;
@@ -413,5 +480,60 @@
 		margin-top: 0.5rem;
 		font-size: 0.875rem;
 		color: var(--r-muted);
+		max-width: 18rem;
+	}
+
+	.r-text-row {
+		margin-top: 0.75rem;
+		display: flex;
+		align-items: center;
+		gap: 0.375rem;
+		width: 100%;
+		max-width: 19rem;
+		border-radius: 9999px;
+		background: #fff;
+		padding: 0.3rem 0.3rem 0.3rem 1rem;
+		box-shadow:
+			0 0 1px rgba(0, 0, 0, 0.4),
+			0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.r-text-row input {
+		flex: 1;
+		min-width: 0;
+		background: transparent;
+		border: none;
+		outline: none;
+		font-size: 0.875rem;
+		color: var(--r-foreground);
+	}
+
+	.r-text-row input::placeholder {
+		color: var(--r-muted-soft);
+	}
+
+	.r-text-row button {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 2rem;
+		width: 2rem;
+		border-radius: 9999px;
+		background: #171717;
+		color: #fff;
+		transition:
+			opacity 200ms ease-out,
+			transform 200ms ease-out;
+	}
+
+	.r-text-row button:hover:not(:disabled) {
+		transform: scale(1.06);
+	}
+
+	.r-text-row button:disabled {
+		cursor: not-allowed;
+		opacity: 0.25;
+		transform: none;
 	}
 </style>

@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { USE_CASES, INDUSTRIES, PROOF_CARDS, PLANS, FAQS, LINKS } from '../src/lib/receptionist/data';
+import { USE_CASES, INDUSTRIES, PROOF_CARDS, PLANS, FAQS, LINKS, VOICE_AGENT_ID, VOICE_UI, VOICE_ENABLED } from '../src/lib/receptionist/data';
+import { isVoiceConfigured } from '../src/lib/receptionist/voice';
 
 const ROOT = process.cwd();
 const SRC = join(ROOT, 'src/lib/receptionist');
@@ -70,6 +71,7 @@ describe('Receptionist page data', () => {
 describe('Receptionist brand isolation', () => {
 	const files = [
 		'data.ts',
+		'voice.ts',
 		'RNav.svelte',
 		'RHero.svelte',
 		'RLogoStrip.svelte',
@@ -81,17 +83,39 @@ describe('Receptionist brand isolation', () => {
 		'RCalculator.svelte',
 		'RFaq.svelte',
 		'RFinalCta.svelte',
-		'RFooter.svelte'
+		'RFooter.svelte',
+		'RWidget.svelte'
 	];
 
 	it.each(files)('%s mentions no reception.ai / elevenlabs brands', (f) => {
-		const body = readFileSync(join(SRC, f), 'utf8');
+		const body = readFileSync(join(SRC, f), 'utf8')
+			.split('\n')
+			// The voice SDK import and the drop-in widget embed are
+			// infrastructure, not user-facing branding.
+			.filter(
+				(line) =>
+					!line.includes('@elevenlabs/client') &&
+					!line.includes('elevenlabs-convai') &&
+					!line.includes('convai-widget')
+			)
+			.join('\n');
 		expect(body).not.toMatch(/reception\.ai|elevenlabs|elevenagents/i);
 	});
 
 	it('route page mentions no reception.ai / elevenlabs brands', () => {
 		const body = readFileSync(join(ROOT, 'src/routes/receptionist/+page.svelte'), 'utf8');
 		expect(body).not.toMatch(/reception\.ai|elevenlabs|elevenagents/i);
+	});
+
+	it('VOICE_UI selects a known voice UI', () => {
+		expect(['custom', 'widget']).toContain(VOICE_UI);
+		expect(typeof VOICE_ENABLED).toBe('boolean');
+	});
+
+	it('drop-in widget embeds the configured agent id', () => {
+		const body = readFileSync(join(SRC, 'RWidget.svelte'), 'utf8');
+		expect(body).toContain('VOICE_AGENT_ID');
+		expect(body).toContain('elevenlabs-convai');
 	});
 
 	it('has no Get started free CTAs in live components', () => {
@@ -119,6 +143,11 @@ describe('Receptionist brand isolation', () => {
 		const page = readFileSync(join(ROOT, 'src/routes/receptionist/+page.svelte'), 'utf8');
 		expect(page).not.toContain('<RLogoStrip');
 		expect(page).not.toContain('<RProof');
+	});
+
+	it('voice agent ID is a single configurable value', () => {
+		expect(typeof VOICE_AGENT_ID).toBe('string');
+		expect(isVoiceConfigured()).toBe(VOICE_AGENT_ID.trim().length > 0);
 	});
 
 	it('pricing section is a sales CTA linking to the sales call', () => {

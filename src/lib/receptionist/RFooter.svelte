@@ -1,6 +1,15 @@
 <script lang="ts">
 	import RDivider from './RDivider.svelte';
-	import { LINKS } from './data.js';
+	import { LINKS, VOICE_UI, VOICE_ENABLED } from './data.js';
+	import { voiceStatus, toggleVoiceSession, isVoiceConfigured } from './voice.js';
+
+	function onPill() {
+		if (!isVoiceConfigured() && $voiceStatus !== 'live' && $voiceStatus !== 'connecting') {
+			window.location.href = LINKS.contact;
+			return;
+		}
+		toggleVoiceSession();
+	}
 </script>
 
 <footer aria-label="Footer">
@@ -27,15 +36,32 @@
 	</div>
 </footer>
 
-<a class="r-pill" href={LINKS.contact} aria-label="Try a Pantaa agent">
+{#if VOICE_ENABLED && VOICE_UI === 'custom'}
+<button
+	type="button"
+	class="r-pill"
+	class:live={$voiceStatus === 'live'}
+	aria-label={$voiceStatus === 'live' ? 'End voice call' : 'Try a Pantaa agent'}
+	onclick={onPill}
+>
 	<span class="r-pill-avatar">
 		<img src="/receptionist/images/agent-2.png" alt="" loading="lazy" />
 	</span>
 	<span class="r-pill-text">
-		<strong>Try a Pantaa agent</strong>
-		<span class="r-pill-sub">Pantaa Receptionist <i aria-hidden="true"></i> Ready</span>
+		<strong>{$voiceStatus === 'live' ? 'End voice call' : 'Try a Pantaa agent'}</strong>
+		<span class="r-pill-sub">
+			Pantaa Receptionist <i aria-hidden="true"></i>
+			{#if $voiceStatus === 'live'}
+				Live now
+			{:else if $voiceStatus === 'connecting'}
+				Connecting…
+			{:else}
+				Ready
+			{/if}
+		</span>
 	</span>
-</a>
+</button>
+{/if}
 
 <style>
 	.r-foot {
@@ -105,12 +131,31 @@
 		width: fit-content;
 		max-width: calc(100% - 2rem);
 		padding: 0.5rem 1.25rem 0.5rem 3.5rem;
+		border: none;
 		border-radius: 1.75rem;
 		background: #fff;
+		color: var(--r-foreground);
+		font: inherit;
+		text-align: left;
+		cursor: pointer;
 		box-shadow:
 			0 0 0 1px rgba(0, 0, 0, 0.08),
 			0 6px 16px rgba(78, 50, 23, 0.08);
 		transition: background-color 200ms ease-out;
+	}
+
+	.r-pill.live .r-pill-sub i {
+		animation: r-blink 1.2s ease-in-out infinite;
+	}
+
+	@keyframes r-blink {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.25;
+		}
 	}
 
 	.r-pill:hover {

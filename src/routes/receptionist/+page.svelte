@@ -10,6 +10,8 @@
 	import RFaq from '$lib/receptionist/RFaq.svelte';
 	import RFinalCta from '$lib/receptionist/RFinalCta.svelte';
 	import RFooter from '$lib/receptionist/RFooter.svelte';
+	import RWidget from '$lib/receptionist/RWidget.svelte';
+	import { VOICE_UI, VOICE_ENABLED } from '$lib/receptionist/data.js';
 </script>
 
 <svelte:head>
@@ -46,6 +48,9 @@
 		<RFinalCta />
 	</main>
 	<RFooter />
+	{#if VOICE_ENABLED && VOICE_UI === 'widget'}
+		<RWidget />
+	{/if}
 </div>
 
 <style>

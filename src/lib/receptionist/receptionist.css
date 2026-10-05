@@ -103,12 +103,14 @@
 }
 
 .r-div > .r-div-dot.left {
-	left: 0;
+	/* Inset half the dot: centered on the divider end it bled 4px past the
+	viewport edge and caused page-level horizontal scroll on mobile. */
+	left: 0.25rem;
 	transform: translate(-50%, -50%);
 }
 
 .r-div > .r-div-dot.right {
-	right: 0;
+	right: 0.25rem;
 	transform: translate(50%, -50%);
 }
 
